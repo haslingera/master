@@ -69,6 +69,7 @@
     <None Include="Assets\PostProcessing\Shaders\Builtins\AutoExposure.shader" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
+    <None Include="Assets\Shader\AlphaSelfIllum.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />

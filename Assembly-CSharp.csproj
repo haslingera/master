@@ -106,6 +106,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TargetPool.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureLerper.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\ShipController.cs" />
     <Compile Include="Assets\Scripts\Game\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayer.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayerLineRenderer.cs" />
@@ -146,6 +147,7 @@
     <None Include="Assets\PostProcessing\Shaders\Builtins\AutoExposure.shader" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
+    <None Include="Assets\Shader\AlphaSelfIllum.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
