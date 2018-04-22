@@ -1,0 +1,33 @@
+﻿#pragma kernel COGMain
+
+struct BufferStruct
+{
+	float3 id;
+	uint xCount;
+	uint yCount;
+	uint count;
+};
+
+RWStructuredBuffer<float2> Centroids;
+RWStructuredBuffer<BufferStruct> Bss;
+RWTexture2D<float4> Source;
+
+
+[numthreads(16,16,1)]
+void COGMain (uint3 id : SV_DispatchThreadID)
+{
+    uint idx;
+    uint elementCount;
+	uint stride;
+	
+	Bss.GetDimensions(elementCount, stride);
+    
+    for (idx = 0; idx < elementCount; idx++) 
+    {   
+        if (Source[id.xy].r > Bss[idx].id.r - 0.01 &&  Source[id.xy].r < Bss[idx].id.r + 0.01 && Source[id.xy].g > Bss[idx].id.g - 0.01 &&  Source[id.xy].g < Bss[idx].id.g + 0.01 && Source[id.xy].b > Bss[idx].id.b - 0.01 &&  Source[id.xy].b < Bss[idx].id.b + 0.01) {
+            InterlockedAdd(Bss[idx].xCount, id.x);
+            InterlockedAdd(Bss[idx].yCount, id.y);
+            InterlockedAdd(Bss[idx].count, 1);
+        }
+    }
+}

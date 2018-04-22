@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b23232cd-9cc0-4ce2-9359-bc6f4ca33fef" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Master.sln" afterPath="$PROJECT_DIR$/Master.sln" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptMapper" afterPath="$PROJECT_DIR$/Library/ScriptMapper" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/00/0000000000000000e100000000000000" afterPath="$PROJECT_DIR$/Library/metadata/00/0000000000000000e100000000000000" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/expandedItems" afterPath="$PROJECT_DIR$/Library/expandedItems" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>start</find>
+      <find>delta</find>
+      <find>addout</find>
+      <find>outlineShaderMaterial</find>
+      <find>SetCurrentColor</find>
+      <find>HoldDistance</find>
+      <find>Color.white</find>
+      <find>centroid</find>
+      <find>renderer</find>
+      <find>rb</find>
+      <find>_currentIndex</find>
+      <find>_modulationValue</find>
+      <find>_border</find>
+      <find>_size</find>
+      <find>_imageBuffer</find>
+      <find>trackable</find>
+      <find>OptimizeForPerceivedBrightness</find>
+      <find>_debugMaterial</find>
+      <find>color</find>
+      <find>size</find>
+      <find>_ismMaterial</find>
+      <find>cursor.lockstate</find>
+      <find>ModulationPositionXY</find>
+      <find>modulationtype</find>
+      <find>smoothgaze</find>
+      <find>SmoothGazeVector</find>
+      <find>gazevector</find>
+      <find>_modulateImageSpace</find>
+      <find>AutoDistance</find>
+      <find>CancelAngle</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guidance/SubtleGazeDirection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/PlayerGuidanceSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CameraFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/DebugDrawingExtension/DebugExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gaze/GazeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gaze/GazeInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/ImageSpaceModulationEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/DissolveAwayFromPlayerLineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gaze/GazePointObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mapping/Screenshot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mapping/ItemBufferObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Tobii/Framework/TobiiAPI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mapping/ItemBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guidance/GazeGuidanceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mapping/CenterOfGravityMapping.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SpaceshipControls.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gaze/SlidingBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulationImageEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/DrawRing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/RotateAroundObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Tobii/Framework/Editor/EyeTrackingSettingsWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gaze/GazeType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guidance/PointsOfInterest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/ListEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/DissolveAwayFromPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PostProcessing/Shaders/Debug/Histogram.compute" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PostProcessing/Runtime/Utils/RuntimeUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guidance/PointOfInterest.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Grabable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Random/RotateAroundChild.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Random/RotateAroundParent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/OutlineEffect/Outline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/OutlineEffect/OutlineEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/Outline.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/OutlineEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Random/DrawRing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Random/RotateAroundObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/GazeFixation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/SlidingBuffer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Grab.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/PostProcessing/Resources/Shaders/Fog.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/DissolveAroundPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/RotateAroundObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shader &amp; Materials/Shader/ImageSpaceModulationLuminance.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/DissolveAwayFromPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/DrawRing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/DissolveAwayFromPlayerLineRenderer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/PlayerGuidanceSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulationParams.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulationParameters.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/DebugDrawingExtension/DebugExtension.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulationImageEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ListEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PointOfInterest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/PointOfInterestManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/IsPointOfInterest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/GazeGuidanceManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/PointsOfInterest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/Trackable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/ItemBuffer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/ItemBufferObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/ListEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulationObjects/IImageSpaceModulationObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulationObjects/ImageSpaceModulationBrightness.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulationObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/ImageSpaceModulationEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shader &amp; Materials/Shader/ImageSpaceModulation.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/GazeType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/SmoothRotation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/ImageSpaceModulation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/SubtleGazeDirection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Guidance/PointOfInterest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/CenterOfGravityMapping.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/GazeInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/GazeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/SpaceshipControls.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="115" />
+    <option name="y" value="-36" />
+    <option name="width" value="1920" />
+    <option name="height" value="1105" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Gaze" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Guidance" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Mapping" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Unity Debug.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b23232cd-9cc0-4ce2-9359-bc6f4ca33fef" name="Default" comment="" />
+      <created>1514305443654</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514305443654</updated>
+      <workItem from="1514305450799" duration="220000" />
+      <workItem from="1514305693896" duration="500000" />
+      <workItem from="1514306213389" duration="28000" />
+      <workItem from="1514307551302" duration="178000" />
+      <workItem from="1514311434032" duration="3014000" />
+      <workItem from="1514387063070" duration="17546000" />
+      <workItem from="1514465028959" duration="660000" />
+      <workItem from="1514465713972" duration="16351000" />
+      <workItem from="1514544990719" duration="1103000" />
+      <workItem from="1514546202243" duration="5478000" />
+      <workItem from="1514552210208" duration="194000" />
+      <workItem from="1514552590499" duration="7204000" />
+      <workItem from="1514562987617" duration="1452000" />
+      <workItem from="1514889178601" duration="24263000" />
+      <workItem from="1514919459492" duration="12694000" />
+      <workItem from="1514975412769" duration="36888000" />
+      <workItem from="1515069440158" duration="14018000" />
+      <workItem from="1515147159642" duration="2231000" />
+      <workItem from="1515159545874" duration="5666000" />
+      <workItem from="1515166854545" duration="1230000" />
+      <workItem from="1515236787166" duration="16258000" />
+      <workItem from="1515261122855" duration="3749000" />
+      <workItem from="1515410324399" duration="2549000" />
+      <workItem from="1515415621130" duration="1663000" />
+      <workItem from="1515430168769" duration="28727000" />
+      <workItem from="1515495278118" duration="1140000" />
+      <workItem from="1515500309717" duration="5825000" />
+      <workItem from="1515665814831" duration="2421000" />
+      <workItem from="1515675567522" duration="11059000" />
+      <workItem from="1515697752729" duration="12640000" />
+      <workItem from="1516357117159" duration="1324000" />
+      <workItem from="1516544790021" duration="17283000" />
+      <workItem from="1516617705543" duration="20368000" />
+      <workItem from="1516706839094" duration="27590000" />
+      <workItem from="1516791535222" duration="36363000" />
+      <workItem from="1516972874052" duration="15006000" />
+      <workItem from="1517341017803" duration="2787000" />
+      <workItem from="1517740728478" duration="5603000" />
+      <workItem from="1524337293658" duration="6643000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="369916000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="115" y="-36" width="1920" height="1105" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5013889" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22689076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39987162" sideWeight="0.49861112" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="13" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+</project>
