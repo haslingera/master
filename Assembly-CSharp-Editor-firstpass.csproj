@@ -121,6 +121,7 @@
     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\XboxOne.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Sampling.hlsl" />
+    <None Include="Assets\Shader\two_side_shader.shader" />
     <None Include="Assets\Shader\Item Buffer.shader" />
     <None Include="Assets\Shader\CenterOfGravityMapping.compute" />
     <None Include="Assets\PostProcessing\Shaders\Editor\CurveGrid.shader" />

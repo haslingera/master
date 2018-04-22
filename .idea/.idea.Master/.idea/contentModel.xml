@@ -277,6 +277,8 @@
             <e p="DrawRing.cs" t="Include" />
             <e p="Grab.cs" t="Include" />
             <e p="Grabable.cs" t="Include" />
+            <e p="InfinteStarfield.cs" t="Include" />
+            <e p="KeepAtDistance.cs" t="Include" />
             <e p="Movement.cs" t="Include" />
             <e p="PlayerGuidanceSystem.cs" t="Include" />
             <e p="RotateAroundObject.cs" t="Include" />
@@ -307,6 +309,7 @@
           </e>
         </e>
         <e p="Shader" t="Include">
+          <e p="AlphaSelfIllum.shader" t="Include" />
           <e p="CenterOfGravityMapping.compute" t="Include" />
           <e p="DissolveByDistance.shader" t="Include" />
           <e p="DissolveByDistanceFade.shader" t="Include" />
@@ -314,6 +317,7 @@
           <e p="DissolveByHeightFade.shader" t="Include" />
           <e p="ImageSpaceModulation.shader" t="Include" />
           <e p="Item Buffer.shader" t="Include" />
+          <e p="two_side_shader.shader" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

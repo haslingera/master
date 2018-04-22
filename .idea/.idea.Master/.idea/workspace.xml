@@ -20,6 +20,57 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SpaceshipControls.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/SpaceshipControls.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <marker date="1524429111838" expanded="false" signature="6:32" ph="..." />
+                <marker date="1524429111838" expanded="true" signature="48:2845" ph="{...}" />
+                <marker date="1524429111838" expanded="true" signature="98:2843" ph="{...}" />
+                <marker date="1524429111838" expanded="true" signature="815:1021" ph="{...}" />
+                <marker date="1524429111838" expanded="true" signature="1043:2160" ph="{...}" />
+                <marker date="1524429111838" expanded="true" signature="1129:1756" ph="{...}" />
+                <marker date="1524429111838" expanded="true" signature="1589:1652" ph="{...}" />
+                <marker date="1524429111838" expanded="true" signature="1764:1842" ph="{...}" />
+                <marker date="1524429111838" expanded="true" signature="2212:2839" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeepAtDistance.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/KeepAtDistance.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <marker date="1524429404827" expanded="true" signature="63:351" ph="{...}" />
+                <marker date="1524429404827" expanded="true" signature="136:211" ph="{...}" />
+                <marker date="1524429404827" expanded="true" signature="229:349" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraFollow.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/CameraFollow.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="104" lean-forward="false" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
+              <folding>
+                <marker date="1524428699413" expanded="true" signature="61:634" ph="{...}" />
+                <marker date="1524428699413" expanded="true" signature="234:632" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>start</find>
@@ -86,16 +137,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/DissolveAwayFromPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PostProcessing/Shaders/Debug/Histogram.compute" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shader/AlphaSelfIllum.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PostProcessing/Runtime/Utils/RuntimeUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Guidance/PointOfInterest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/KeepAtDistance.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/FirstPersonController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Grabable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Random/RotateAroundChild.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Random/RotateAroundParent.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/OutlineEffect/Outline.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/OutlineEffect/OutlineEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/Outline.cs" />
@@ -141,8 +190,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/CenterOfGravityMapping.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/GazeInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gaze/GazeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Final Scenes/_Assets/ShipController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shader/AlphaSelfIllum.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Final Scenes/_Assets/InfinteStarfield.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/SpaceshipControls.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/KeepAtDistance.cs" />
       </list>
     </option>
   </component>
@@ -152,7 +205,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="115" />
     <option name="y" value="-36" />
     <option name="width" value="1920" />
@@ -173,6 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -201,34 +255,13 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Game" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp-Editor" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp-Editor" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Gaze" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Guidance" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Master (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Mapping" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -236,7 +269,6 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,11 +342,12 @@
       <workItem from="1517341017803" duration="2787000" />
       <workItem from="1517740728478" duration="5603000" />
       <workItem from="1524337293658" duration="6643000" />
+      <workItem from="1524383417265" duration="25187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369916000" />
+    <option name="totallyTimeSpent" value="395103000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,7 +359,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="115" y="-36" width="1920" height="1105" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -336,7 +369,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22689076" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -361,5 +394,109 @@
       <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/SpaceshipControls.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1524429111838" expanded="false" signature="6:32" ph="..." />
+            <marker date="1524429111838" expanded="true" signature="48:2845" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="98:2843" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="815:1021" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1043:2160" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1129:1756" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1589:1652" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1764:1842" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="2212:2839" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <marker date="1524428699413" expanded="true" signature="61:634" ph="{...}" />
+            <marker date="1524428699413" expanded="true" signature="234:632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Final Scenes/_Assets/ShipController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2703">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shader/AlphaSelfIllum.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <marker date="1524412030260" expanded="true" signature="24:568" ph="{...}" />
+            <marker date="1524412030260" expanded="true" signature="41:164" ph="{...}" />
+            <marker date="1524412030260" expanded="true" signature="178:566" ph="{...}" />
+            <marker date="1524412030260" expanded="true" signature="322:560" ph="{...}" />
+            <marker date="1524412030260" expanded="true" signature="345:393" ph="{...}" />
+            <marker date="1524412030260" expanded="true" signature="411:550" ph="{...}" />
+            <marker date="1524412030260" expanded="true" signature="450:536" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Final Scenes/_Assets/InfinteStarfield.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/CameraFollow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="104" lean-forward="false" selection-start-line="15" selection-start-column="104" selection-end-line="15" selection-end-column="104" />
+          <folding>
+            <marker date="1524428699413" expanded="true" signature="61:634" ph="{...}" />
+            <marker date="1524428699413" expanded="true" signature="234:632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/KeepAtDistance.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1524429404827" expanded="true" signature="63:351" ph="{...}" />
+            <marker date="1524429404827" expanded="true" signature="136:211" ph="{...}" />
+            <marker date="1524429404827" expanded="true" signature="229:349" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Game/SpaceshipControls.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <marker date="1524429111838" expanded="false" signature="6:32" ph="..." />
+            <marker date="1524429111838" expanded="true" signature="48:2845" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="98:2843" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="815:1021" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1043:2160" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1129:1756" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1589:1652" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="1764:1842" ph="{...}" />
+            <marker date="1524429111838" expanded="true" signature="2212:2839" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

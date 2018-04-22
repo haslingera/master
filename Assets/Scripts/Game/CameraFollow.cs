@@ -13,20 +13,13 @@ public class CameraFollow : MonoBehaviour
 	{
 
 		Vector3 desiredPosition = target.position;
-		Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, SmoothSpeedRotation);
+		Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, SmoothSpeedPosition);
 
 		Quaternion desiredRotation = target.rotation;
-		Quaternion smoothedRotation = Quaternion.Slerp(transform.rotation, desiredRotation, SmoothSpeedPosition);
+		Quaternion smoothedRotation = Quaternion.Slerp(transform.rotation, desiredRotation, SmoothSpeedRotation);
 		
 		transform.rotation = smoothedRotation;
 		transform.position = smoothedPosition;
 		
-		Debug.Log(target.localRotation.eulerAngles);
-
-		/*Vector3 tmp = transform.localRotation.eulerAngles;
-		tmp.z = 0;
-		transform.localRotation = Quaternion.Euler(tmp);*/
-
-		//transform.LookAt(target);
 	}
 }
