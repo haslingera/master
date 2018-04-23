@@ -269,6 +269,17 @@
             <e p="xRLib.hlsl" t="Include" />
           </e>
         </e>
+        <e p="Scenes" t="Include">
+          <e p="Final Scenes" t="Include">
+            <e p="_Assets" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="Crosshair.cs" t="Include" />
+              <e p="Enemy.cs" t="Include" />
+              <e p="EnemySpawner.cs" t="Include" />
+              <e p="FireLaser.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
             <e p="CameraFollow.cs" t="Include" />
@@ -317,6 +328,8 @@
           <e p="DissolveByHeightFade.shader" t="Include" />
           <e p="ImageSpaceModulation.shader" t="Include" />
           <e p="Item Buffer.shader" t="Include" />
+          <e p="Scifi Additive Glow.shader" t="Include" />
+          <e p="Scifi Multiply Distort.shader" t="Include" />
           <e p="two_side_shader.shader" t="Include" />
         </e>
       </e>

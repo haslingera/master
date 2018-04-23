@@ -27,5 +27,11 @@ public class Bullet : MonoBehaviour
 		_targetPosition = targetPosition;
 		_enabled = true;
 	}
-	
+
+	private void OnCollisionEnter(Collision other)
+	{		
+		if(other.gameObject.GetComponent<Enemy>()){
+			other.gameObject.GetComponent<Enemy>().DestroyEnemy();
+		}
+	}
 }

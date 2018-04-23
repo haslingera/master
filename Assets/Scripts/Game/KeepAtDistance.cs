@@ -6,9 +6,14 @@ public class KeepAtDistance : MonoBehaviour
 	public Transform Target;
 
 	private float _distance;
-	
-	void Start ()
+
+	private void Awake()
 	{
+		if (Target == null && GameObject.Find("Spaceship"))
+		{
+			Target = GameObject.Find("Spaceship").transform;
+		}
+			
 		_distance = Vector3.Distance(Target.position, transform.position);
 	}
 	

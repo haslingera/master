@@ -31,6 +31,8 @@ namespace Game
 		private Quaternion _targetRotation;
 		private Quaternion _targetRotationLean;
 		private Vector3 _centeredNormalizedMousePosition;
+		private Vector3 _lastPosition;
+		private Vector3 _currentPosition;
 	
 		void Start()
 		{
@@ -40,6 +42,8 @@ namespace Game
 			_targetPosition = transform.position;
 			_targetRotation = transform.rotation;
 			_targetRotationLean = LeanObject.rotation;
+
+			_lastPosition = transform.position;
 		}
 
 		void FixedUpdate()
@@ -71,7 +75,10 @@ namespace Game
 			LeanObject.localRotation =  Quaternion.Lerp(LeanObject.localRotation, _targetRotationLean, LeanSmoothing);
 			transform.position = Vector3.Lerp(transform.position, _targetPosition, AccelerationSmoothing);
 			transform.rotation = Quaternion.Slerp(transform.rotation, _targetRotation, RotationSmoothing);
-			
+
+			_lastPosition = _currentPosition;
+			_currentPosition = transform.position;
+
 		}
 		
 		void CenterSquaredAndNormalizeMousePosition ()
@@ -89,6 +96,16 @@ namespace Game
 				_centeredNormalizedMousePosition.x = _centeredNormalizedMousePosition.x < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.x, 4) :(float) Math.Pow(_centeredNormalizedMousePosition.x, 4);
 				_centeredNormalizedMousePosition.y = _centeredNormalizedMousePosition.y < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.y, 4) :(float) Math.Pow(_centeredNormalizedMousePosition.y, 4);
 			}
+		}
+
+		public float GetSpaceShipSpeed()
+		{
+			return (_currentPosition - _lastPosition).magnitude * 100f;
+		}
+
+		public Vector2 GetSpaceShipTurn()
+		{
+			return new Vector2(Math.Abs(_centeredNormalizedMousePosition.x) * HorizontalTurnFactor, Math.Abs(_centeredNormalizedMousePosition.y) * VerticalTurnFactor);
 		}
 
 	}

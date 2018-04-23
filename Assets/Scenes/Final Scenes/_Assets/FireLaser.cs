@@ -42,10 +42,17 @@ public class FireLaser : MonoBehaviour
 				MuzzleLightLeft.intensity = _muzzleLight;
 			}
 
+			/*var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+			if (Physics.Raycast(ray, out hit))
+			{
+				Debug.Log(hit.transform.name);
+			}*/
+
 			_right = !_right;
 			_time = 0f;
 		}
-
+		
 		MuzzleLightLeft.intensity = Mathf.Lerp(MuzzleLightLeft.intensity, 0, MuzzleLightFade * Time.deltaTime);
 		MuzzleLightRight.intensity = Mathf.Lerp(MuzzleLightRight.intensity, 0, MuzzleLightFade * Time.deltaTime);
 		

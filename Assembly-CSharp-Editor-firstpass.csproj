@@ -65,6 +65,7 @@
     <None Include="Assets\PostProcessing\Shaders\Builtins\Bloom.shader" />
     <None Include="Assets\PostProcessing\Shaders\xRLib.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
+    <None Include="Assets\Shader\Scifi Multiply Distort.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\PSSL.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\AutoExposure.shader" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
