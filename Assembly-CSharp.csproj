@@ -106,6 +106,8 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TargetPool.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureLerper.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Bullet.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\FireLaser.cs" />
     <Compile Include="Assets\Scripts\Game\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayer.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayerLineRenderer.cs" />
@@ -200,6 +202,7 @@
     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\XboxOne.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Sampling.hlsl" />
+    <None Include="Assets\Shader\Scifi Additive Glow.shader" />
     <None Include="Assets\Shader\two_side_shader.shader" />
     <None Include="Assets\Shader\Item Buffer.shader" />
     <None Include="Assets\Shader\CenterOfGravityMapping.compute" />

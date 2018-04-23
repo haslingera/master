@@ -46,20 +46,20 @@ namespace Game
 		{
 			
 			CenterSquaredAndNormalizeMousePosition();
-
+			
+			_targetRotation *= Quaternion.AngleAxis(-_centeredNormalizedMousePosition.y * VerticalTurnFactor, Vector3.right);
+			_targetRotation *= Quaternion.AngleAxis(_centeredNormalizedMousePosition.x * HorizontalTurnFactor, Vector3.up);
+			_targetRotationLean = Quaternion.AngleAxis(-_centeredNormalizedMousePosition.x * LeanTurnFactor * 10f, Vector3.forward);
+				
+			
 			if (Input.GetKey(KeyCode.W))
 			{
-
-				_targetRotation *= Quaternion.AngleAxis(-_centeredNormalizedMousePosition.y * VerticalTurnFactor, Vector3.right);
-				_targetRotation *= Quaternion.AngleAxis(_centeredNormalizedMousePosition.x * HorizontalTurnFactor, Vector3.up);
-				_targetRotationLean = Quaternion.AngleAxis(-_centeredNormalizedMousePosition.x * LeanTurnFactor, Vector3.forward);
-
-
-				_targetPosition += transform.forward * Acceleration;
+				
+				_targetPosition += transform.forward * (Acceleration / 100f);
 
 				if (Input.GetKey(KeyCode.LeftShift))
 				{
-					_targetPosition += transform.forward * Boost;
+					_targetPosition += transform.forward * (Boost / 100f);
 				}
 				transform.position = Vector3.Lerp(transform.position, _targetPosition, AccelerationSmoothing);
 			}
@@ -78,9 +78,17 @@ namespace Game
 		{
 			_centeredNormalizedMousePosition.x = Mathf.Clamp(Input.mousePosition.x / _screenWidth - 0.5f, -0.5f, 0.5f);
 			_centeredNormalizedMousePosition.y = Mathf.Clamp(Input.mousePosition.y / _screenHeight - 0.5f, -0.5f, 0.5f);
-			
-			_centeredNormalizedMousePosition.x = _centeredNormalizedMousePosition.x < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.x, 2) :(float) Math.Pow(_centeredNormalizedMousePosition.x, 2);
-			_centeredNormalizedMousePosition.y = _centeredNormalizedMousePosition.y < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.y, 2) :(float) Math.Pow(_centeredNormalizedMousePosition.y, 2);
+
+			if (Input.GetKey(KeyCode.W))
+			{
+				_centeredNormalizedMousePosition.x = _centeredNormalizedMousePosition.x < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.x, 2) :(float) Math.Pow(_centeredNormalizedMousePosition.x, 2);
+				_centeredNormalizedMousePosition.y = _centeredNormalizedMousePosition.y < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.y, 2) :(float) Math.Pow(_centeredNormalizedMousePosition.y, 2);
+			}
+			else
+			{
+				_centeredNormalizedMousePosition.x = _centeredNormalizedMousePosition.x < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.x, 4) :(float) Math.Pow(_centeredNormalizedMousePosition.x, 4);
+				_centeredNormalizedMousePosition.y = _centeredNormalizedMousePosition.y < 0 ? -(float) Math.Pow(_centeredNormalizedMousePosition.y, 4) :(float) Math.Pow(_centeredNormalizedMousePosition.y, 4);
+			}
 		}
 
 	}
