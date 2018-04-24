@@ -24,6 +24,9 @@ namespace Game
 		public float AccelerationSmoothing = 0.5f;
 		public float RotationSmoothing = 0.5f;
 		public float LeanSmoothing = 0.5f;
+
+		[Header("Sound")]
+		public AudioSource ThrusterAudio;
 		
 		private float _screenWidth;
 		private float _screenHeight;
@@ -33,6 +36,8 @@ namespace Game
 		private Vector3 _centeredNormalizedMousePosition;
 		private Vector3 _lastPosition;
 		private Vector3 _currentPosition;
+		private float _maxThrusterVolume;
+		private float _desiredThrusterVolume;
 	
 		void Start()
 		{
@@ -44,6 +49,8 @@ namespace Game
 			_targetRotationLean = LeanObject.rotation;
 
 			_lastPosition = transform.position;
+
+			_maxThrusterVolume = ThrusterAudio.volume;
 		}
 
 		void FixedUpdate()
@@ -60,21 +67,27 @@ namespace Game
 			{
 				
 				_targetPosition += transform.forward * (Acceleration / 100f);
+				_desiredThrusterVolume = _maxThrusterVolume;
 
 				if (Input.GetKey(KeyCode.LeftShift))
 				{
 					_targetPosition += transform.forward * (Boost / 100f);
+					_desiredThrusterVolume = _maxThrusterVolume + 0.2f;
 				}
+				
 				transform.position = Vector3.Lerp(transform.position, _targetPosition, AccelerationSmoothing);
+	
 			}
 			else
 			{
 				_targetRotationLean = Quaternion.AngleAxis(0, Vector3.forward);
+				_desiredThrusterVolume = 0;
 			}
 			
 			LeanObject.localRotation =  Quaternion.Lerp(LeanObject.localRotation, _targetRotationLean, LeanSmoothing);
 			transform.position = Vector3.Lerp(transform.position, _targetPosition, AccelerationSmoothing);
 			transform.rotation = Quaternion.Slerp(transform.rotation, _targetRotation, RotationSmoothing);
+			ThrusterAudio.volume = Mathf.Lerp(ThrusterAudio.volume, _desiredThrusterVolume, AccelerationSmoothing);
 
 			_lastPosition = _currentPosition;
 			_currentPosition = transform.position;
