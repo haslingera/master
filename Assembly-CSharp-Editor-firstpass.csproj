@@ -104,6 +104,7 @@
     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
     <None Include="Assets\Shader\DissolveByHeight.shader" />
+    <None Include="Assets\Shader\PulsatingGlow.shader" />
     <None Include="Assets\Plugins\Tobii\Readme.txt" />
     <None Include="Assets\Shader\ImageSpaceModulation.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\D3D9.hlsl" />

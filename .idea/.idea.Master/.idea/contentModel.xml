@@ -328,6 +328,7 @@
           <e p="DissolveByHeightFade.shader" t="Include" />
           <e p="ImageSpaceModulation.shader" t="Include" />
           <e p="Item Buffer.shader" t="Include" />
+          <e p="PulsatingGlow.shader" t="Include" />
           <e p="Scifi Additive Glow.shader" t="Include" />
           <e p="Scifi Multiply Distort.shader" t="Include" />
           <e p="two_side_shader.shader" t="Include" />

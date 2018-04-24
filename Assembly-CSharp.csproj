@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Enemy.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\EnemySpawner.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\FireLaser.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\LightFlickerEffect.cs" />
     <Compile Include="Assets\Scripts\Game\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayer.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayerLineRenderer.cs" />
@@ -188,6 +189,7 @@
     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
     <None Include="Assets\Shader\DissolveByHeight.shader" />
+    <None Include="Assets\Shader\PulsatingGlow.shader" />
     <None Include="Assets\Plugins\Tobii\Readme.txt" />
     <None Include="Assets\Shader\ImageSpaceModulation.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\D3D9.hlsl" />

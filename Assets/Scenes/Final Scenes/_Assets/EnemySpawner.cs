@@ -50,14 +50,17 @@ public class EnemySpawner : MonoBehaviour
 			_buffer = 0;
 		}
 
-		if (SpaceshipControls.GetSpaceShipTurn().x >= SpaceshipHorizontalThreshold ||
-		    SpaceshipControls.GetSpaceShipTurn().y >= SpaceshipVerticalThreshold)
+		if (SpaceshipControls.GetSpaceShipTurn().x >= SpaceshipHorizontalThreshold || SpaceshipControls.GetSpaceShipTurn().y >= SpaceshipVerticalThreshold)
 		{
 			_buffer = 0;
 		}
 
 		_buffer += Time.deltaTime;
-		_time += Time.deltaTime;
+
+		if (!_currentEnemy)
+		{
+			_time += Time.deltaTime;
+		}
 			
 	}
 

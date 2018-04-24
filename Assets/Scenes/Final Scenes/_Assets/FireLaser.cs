@@ -7,9 +7,11 @@ public class FireLaser : MonoBehaviour
 	
 	public GameObject MuzzleLeft;
 	public Light MuzzleLightLeft;
+	public ParticleSystem MuzzleFlashLeft;
 	
 	public GameObject MuzzleRight;
 	public Light MuzzleLightRight;
+	public ParticleSystem MuzzleFlashRight;
 
 	public float LaserSpeed = 100f;
 	public float CoolOffTime = .5f;
@@ -34,12 +36,14 @@ public class FireLaser : MonoBehaviour
 				GameObject bullet = Instantiate(Bullet, MuzzleRight.transform.position, Quaternion.identity);
 				bullet.GetComponent<Bullet>().SetTargetPosition(GetMousePositionWorldPoint(), LaserSpeed);
 				MuzzleLightRight.intensity = _muzzleLight;
+				MuzzleFlashRight.Play();
 			}
 			else
 			{
 				GameObject bullet = Instantiate(Bullet, MuzzleLeft.transform.position, Quaternion.identity);
 				bullet.GetComponent<Bullet>().SetTargetPosition(GetMousePositionWorldPoint(), LaserSpeed);
 				MuzzleLightLeft.intensity = _muzzleLight;
+				MuzzleFlashLeft.Play();
 			}
 
 			/*var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
