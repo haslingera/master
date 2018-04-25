@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TimeFormatter : MonoBehaviour
@@ -13,6 +14,6 @@ public class TimeFormatter : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		_text.text =  (int) (TimeScoreManager.Instance.RemainingGameTime / 60) + ":" + (int) (TimeScoreManager.Instance.RemainingGameTime % 60);
+		_text.text =  (int) (TimeScoreManager.Instance.RemainingGameTime / 60) + ":" + String.Format("{0:0}", (int) (TimeScoreManager.Instance.RemainingGameTime % 60));
 	}
 }

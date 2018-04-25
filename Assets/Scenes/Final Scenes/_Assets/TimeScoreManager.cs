@@ -5,8 +5,9 @@ using UnityEngine;
 public class TimeScoreManager : MonoBehaviour
 {
 	public static TimeScoreManager Instance;
+	public GameObject Menu;
 
-	public float GameTime = 300;
+	public float GameTimeMinutes = 2.5f;
 
 	[HideInInspector]
 	public int Score;
@@ -24,12 +25,17 @@ public class TimeScoreManager : MonoBehaviour
 			Destroy(gameObject);
 		}
 
-		RemainingGameTime = GameTime;
+		RemainingGameTime = GameTimeMinutes * 60;
 	}
 
 	private void Update()
 	{
 		RemainingGameTime -= Time.deltaTime;
+
+		if (RemainingGameTime <= 0)
+		{
+			Menu.SetActive(true);
+		}
 	}
 
 	public void IncreaseScore()

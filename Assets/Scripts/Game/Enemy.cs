@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
 	
 	public float MinLifetime = 4f;
 	public float MaxLifetime = 6f;
+	public float BlinkTime = 0.5f;
 
 	private float _lifeTime;
 	private float _currentTime;
@@ -30,18 +31,13 @@ public class Enemy : MonoBehaviour
 	private bool _blink;
 	private bool _dead;
 
-	private float _hideTime;
-
 	void Start()
 	{
-		_lifeTime = Random.Range(MinLifetime, MaxLifetime);
+		_lifeTime = Random.Range(MinLifetime, MaxLifetime)+ BlinkTime;
 		_asteroidMaterial = GetComponent<MeshRenderer>().material;
 		_asteroidMaterial.SetColor("_EmissionColor", StartColor);
 		_initScale = transform.localScale.x;
 		transform.localScale = Vector3.zero;
-
-		LeanTween.value(gameObject, UpdateScale, 0f, _initScale, 0.5f).setEaseInOutCirc();
-		_tweenId = LeanTween.value(gameObject, UpdateScale, _initScale, _initScale + 4, _lifeTime).setDelay(0.5f).setEaseOutCirc().id;
 	}
 
 	private void Update()
@@ -66,13 +62,14 @@ public class Enemy : MonoBehaviour
 			{
 				_glowChanged = true;
 				_asteroidMaterial.SetColor("_EmissionColor", Color.Lerp(StartColor, EndColor,  1.0f - (_lifeTime - _currentTime) / _lifeTime));
+				_flashTime = _flashTime * 0.6f;
 			}
 
 			if (!_glowOn && !_glowChanged)
 			{
 				_glowChanged = true;
 				_asteroidMaterial.SetColor("_EmissionColor", FlashColor);
-				_flashTime = _flashTime * 0.9f;
+				_flashTime = _flashTime * 0.6f;
 			}
 			
 			
@@ -121,27 +118,21 @@ public class Enemy : MonoBehaviour
 
 			Invoke("Destroy", Explosion.duration + Explosion.startLifetime - 2.2f);
 			
-			GetComponent<AudioSource>().Play();
+			GameObject.Find("Enemy Explosion Sound").GetComponent<AudioSource>().Play();
 			
 			Destroy(GetComponent<PointOfInterest>());
 			
 			TimeScoreManager.Instance.IncreaseScore();
 		}
 	}
-
-	public void SetHideTimeAndInvokeFlash(float hideTime)
-	{
-		_hideTime = hideTime;
-		Invoke("FlashGlow", _hideTime + _lifeTime - 2.0f);
-	}
-
-	public void HideEnemy()
-	{
-		GetComponent<MeshRenderer>().enabled = false;
-	}
 	
 	public void ShowEnemy()
 	{
+		Invoke("FlashGlow", _lifeTime - BlinkTime);
+
+		LeanTween.value(gameObject, UpdateScale, 0f, _initScale, 0.5f).setEaseInOutCirc();
+		_tweenId = LeanTween.value(gameObject, UpdateScale, _initScale, _initScale + 4, _lifeTime).setDelay(0.5f).setEaseOutCirc().id;
+		
 		GetComponent<MeshRenderer>().enabled = true;
 	}
 

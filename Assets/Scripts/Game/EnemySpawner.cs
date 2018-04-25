@@ -13,10 +13,13 @@ public class EnemySpawner : MonoBehaviour
 	public GameObject Enemy;
 
 	[Header("Spaceship Dependent Parameters")]
+	[Range(0f, 5f)]
 	public float SpaceshipHorizontalThreshold = 5f;
+	[Range(0f, 5f)]
 	public float SpaceshipVerticalThreshold = 5f;
-	
+
 	[Header("Enemy Spawn Parameters")]
+	public float FirstWaitTime;
 	public float WaitTimeBetweenEnemySpawnMin = 5f;
 	public float WaitTimeBetweenEnemySpawnMax = 10f;
 	public float SpawnInset = 0.8f;
@@ -35,6 +38,7 @@ public class EnemySpawner : MonoBehaviour
 	private float _buffer = 2;
 	private Vector3 _enemyPositionToBe;
 	private bool _positionSet;
+	private float _currentFirstWaitTime;
 
 	private float _fovealRadius;
 
@@ -45,19 +49,27 @@ public class EnemySpawner : MonoBehaviour
 	}
 
 	void Update () {
-		
-		if (!_currentEnemy && _time >= _currentWaitTime && _buffer > EnemySpawnSafetyThreshold && IsSpaceShipTurningTooMuch())
+
+		if (_currentFirstWaitTime > FirstWaitTime)
 		{
-			SpawnEnemy();
-			_currentWaitTime = Random.Range(WaitTimeBetweenEnemySpawnMin, WaitTimeBetweenEnemySpawnMax);
-			_time = 0;
-			_buffer = 0;
+			if (!_currentEnemy && _time >= _currentWaitTime && _buffer > EnemySpawnSafetyThreshold &&
+			    IsSpaceShipTurningTooMuch())
+			{
+				SpawnEnemy();
+				_currentWaitTime = Random.Range(WaitTimeBetweenEnemySpawnMin, WaitTimeBetweenEnemySpawnMax);
+				_time = 0;
+				_buffer = 0;
+			}
+
+			CalculateEnemySpawnSafetyThreshold();
+
+			if (!_currentEnemy) _time += Time.deltaTime;
+		}
+		else
+		{
+			_currentFirstWaitTime += Time.deltaTime;
 		}
 
-		CalculateEnemySpawnSafetyThreshold();
-		
-		if (!_currentEnemy) _time += Time.deltaTime;
-			
 	}
 
 	bool IsSpaceShipTurningTooMuch()
@@ -75,17 +87,16 @@ public class EnemySpawner : MonoBehaviour
 	{
 		if (_currentEnemy != null) return;
 
-		Vector3 screenPointEnemyPosition = new Vector3(Random.Range(0, Screen.width * SpawnInset), Random.Range(0, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
+		Vector3 screenPointEnemyPosition = new Vector3(Random.Range(Screen.width - Screen.width * SpawnInset, Screen.width * SpawnInset), Random.Range(Screen.height - Screen.height * SpawnInset, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
 
 		while (!IsDistanceToGazeEnough(screenPointEnemyPosition))
 		{
-			screenPointEnemyPosition = new Vector3(Random.Range(0, Screen.width * SpawnInset), Random.Range(0, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
+			screenPointEnemyPosition = new Vector3(Random.Range(Screen.width - Screen.width * SpawnInset, Screen.width * SpawnInset), Random.Range(Screen.height - Screen.height * SpawnInset, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
 		}
 				
 		_enemyPositionToBe = Camera.main.ScreenToWorldPoint(screenPointEnemyPosition);
 		_currentEnemy = Instantiate(Enemy, _enemyPositionToBe, Quaternion.identity);
 		
-		_currentEnemy.GetComponent<Enemy>().SetHideTimeAndInvokeFlash(GazeDirectionTime);
 		Invoke("ShowEnemy", GazeDirectionTime);
 	}
 
@@ -105,7 +116,10 @@ public class EnemySpawner : MonoBehaviour
 
 	void ShowEnemy()
 	{
-		_currentEnemy.GetComponent<Enemy>().ShowEnemy();
+		if (_currentEnemy != null)
+		{
+			_currentEnemy.GetComponent<Enemy>().ShowEnemy();
+		}
 	}
 
 }

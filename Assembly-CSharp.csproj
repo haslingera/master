@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\ScoreFormatter.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\TimeFormatter.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\TimeScoreManager.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\UserInterface.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakeInstance.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakePresets.cs" />

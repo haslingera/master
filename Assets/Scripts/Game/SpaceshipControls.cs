@@ -65,6 +65,11 @@ namespace Game
 			
 			if (Input.GetKey(KeyCode.W))
 			{
+
+				if (!ThrusterAudio.isPlaying)
+				{
+					ThrusterAudio.Play();
+				}
 				
 				_targetPosition += transform.forward * (Acceleration / 100f);
 				_desiredThrusterVolume = _maxThrusterVolume;

@@ -78,17 +78,19 @@ public class ImageSpaceModulation : MonoBehaviour {
 
 	private void OnEnable()
 	{
-		
-		if (Camera.main.gameObject.GetComponent<ImageSpaceModulationImageEffect>() == null)
+		if (Camera.main != null)
 		{
-			_ism = Camera.main.gameObject.AddComponent<ImageSpaceModulationImageEffect>();
-			_ismMaterial = new Material(Shader.Find("ImageSpaceModulation/Standard"));
-			_ism.ImageSpaceModulationMaterial = _ismMaterial;
-		}
-		else
-		{
-			_ism = Camera.main.gameObject.GetComponent<ImageSpaceModulationImageEffect>();
-			_ismMaterial = _ism.ImageSpaceModulationMaterial;
+			if (Camera.main.GetComponent<ImageSpaceModulationImageEffect>() == null)
+			{
+				_ism = Camera.main.gameObject.AddComponent<ImageSpaceModulationImageEffect>();
+				_ismMaterial = new Material(Shader.Find("ImageSpaceModulation/Standard"));
+				_ism.ImageSpaceModulationMaterial = _ismMaterial;
+			}
+			else
+			{
+				_ism = Camera.main.gameObject.GetComponent<ImageSpaceModulationImageEffect>();
+				_ismMaterial = _ism.ImageSpaceModulationMaterial;
+			}
 		}
 	}
 

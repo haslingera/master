@@ -275,6 +275,7 @@
               <e p="ScoreFormatter.cs" t="Include" />
               <e p="TimeFormatter.cs" t="Include" />
               <e p="TimeScoreManager.cs" t="Include" />
+              <e p="UserInterface.cs" t="Include" />
             </e>
           </e>
         </e>

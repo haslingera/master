@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,6 @@ public class ScoreFormatter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		_text.text = TimeScoreManager.Instance.Score.ToString("D3");
+		_text.text = String.Format("{0:000}", TimeScoreManager.Instance.Score);    
 	}
 }

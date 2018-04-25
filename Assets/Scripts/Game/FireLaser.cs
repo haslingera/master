@@ -22,13 +22,19 @@ public class FireLaser : MonoBehaviour
 	private float _muzzleLight;
 	private bool _right = true;
 
+	private GameObject _menu;
+
 	void Start()
 	{
 		SetMuzzleLight();
+		_menu = GameObject.Find("Menu");
 	}
 
 
-	void Update () {
+	void Update ()
+	{
+
+		if (_menu != null && _menu.activeInHierarchy) return;
 		
 		if (Input.GetMouseButton(0) && _time >= CoolOffTime)
 		{
