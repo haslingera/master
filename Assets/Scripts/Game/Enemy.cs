@@ -30,6 +30,8 @@ public class Enemy : MonoBehaviour
 	private bool _blink;
 	private bool _dead;
 
+	private float _hideTime;
+
 	void Start()
 	{
 		_lifeTime = Random.Range(MinLifetime, MaxLifetime);
@@ -40,8 +42,6 @@ public class Enemy : MonoBehaviour
 
 		LeanTween.value(gameObject, UpdateScale, 0f, _initScale, 0.5f).setEaseInOutCirc();
 		_tweenId = LeanTween.value(gameObject, UpdateScale, _initScale, _initScale + 4, _lifeTime).setDelay(0.5f).setEaseOutCirc().id;
-		
-		Invoke("FlashGlow", _lifeTime - 2.0f);
 	}
 
 	private void Update()
@@ -74,6 +74,8 @@ public class Enemy : MonoBehaviour
 				_asteroidMaterial.SetColor("_EmissionColor", FlashColor);
 				_flashTime = _flashTime * 0.9f;
 			}
+			
+			
 
 			_currentFlashTime += Time.deltaTime;
 		}
@@ -81,8 +83,12 @@ public class Enemy : MonoBehaviour
 		{
 			_asteroidMaterial.SetColor("_EmissionColor", Color.Lerp(StartColor, EndColor,  1.0f - (_lifeTime - _currentTime) / _lifeTime));
 		}
+
+		if (GetComponent<MeshRenderer>().enabled)
+		{
+			_currentTime += Time.deltaTime;
+		}
 		
-		_currentTime += Time.deltaTime;
 	}
 
 	void UpdateScale(float scale)
@@ -113,13 +119,30 @@ public class Enemy : MonoBehaviour
 			LeanTween.cancel(_tweenId);
 			GetComponent<MeshRenderer>().enabled = false;
 
-			Invoke("Destroy", Explosion.duration + Explosion.startLifetime);
+			Invoke("Destroy", Explosion.duration + Explosion.startLifetime - 2.2f);
 			
 			GetComponent<AudioSource>().Play();
 			
+			Destroy(GetComponent<PointOfInterest>());
+			
 			TimeScoreManager.Instance.IncreaseScore();
-
 		}
+	}
+
+	public void SetHideTimeAndInvokeFlash(float hideTime)
+	{
+		_hideTime = hideTime;
+		Invoke("FlashGlow", _hideTime + _lifeTime - 2.0f);
+	}
+
+	public void HideEnemy()
+	{
+		GetComponent<MeshRenderer>().enabled = false;
+	}
+	
+	public void ShowEnemy()
+	{
+		GetComponent<MeshRenderer>().enabled = true;
 	}
 
 	void Destroy()

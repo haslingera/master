@@ -26,33 +26,56 @@ namespace Guidance
 		private Vector2 _lastFixationPoint;
 		private bool _lastFixationPointSet;
 
+		private float _fovealRadius;
+
 		private void Start()
 		{
 			_pois = GetComponent<PointsOfInterest>();
 			_ism = GetComponent<ImageSpaceModulation>();
+			_fovealRadius = CalculateFovealRadiusInPixel();
 		}
+
+		Vector3 _pointToDisplay;
 
 		private void Update()
 		{
 			if (!Active) return;
-			Vector3 pointToDisplay = ChooseGameObjectToDisplay();
+
+			if (ChooseGameObjectToDisplay())
+			{
+				_ism.ModulationPositionXYZ = _pointToDisplay;
+				SetLastFixationPoint();
+
+				if (_lastFixationPointSet)
+				{
+					ShowLastFixationSaccadePointTriangle(_pointToDisplay);
+				}
 			
-			if (pointToDisplay == Vector3.positiveInfinity) return;
-			_ism.ModulationPositionXYZ = pointToDisplay;
-			SetLastFixationPoint();
-
-			if (!_lastFixationPointSet) return;
-			ShowLastFixationSaccadePointTriangle(pointToDisplay);
-
-			_ism.ModulateImageSpace = ShowPoi(pointToDisplay);
+				_ism.ModulateImageSpace = ShowPoi(_pointToDisplay);
+			}
+			else
+			{
+				_ism.ModulateImageSpace = false;
+				_showPoi = false;
+			}
 			
 		}
 
-		private Vector3 ChooseGameObjectToDisplay()
+		private bool ChooseGameObjectToDisplay()
 		{
-			if (_pois.GetCurrentPointOfInterest(PointsOfInterest.Type.Essential) != null) return _pois.GetCurrentPointOfInterest(PointsOfInterest.Type.Essential).transform.position;
-			if (_pois.GetCurrentPointOfInterest(PointsOfInterest.Type.NonEssential) != null) return _pois.GetCurrentPointOfInterest(PointsOfInterest.Type.NonEssential).transform.position;
-			return Vector3.positiveInfinity;
+			if (_pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.Essential) != null)
+			{
+				_pointToDisplay = _pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.Essential).transform.position;
+				return true;
+			}
+
+			if (_pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.NonEssential) != null)
+			{
+				_pointToDisplay = _pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.NonEssential).transform.position;
+				return true;
+			}
+
+			return false;
 		}
 	
 
@@ -112,13 +135,15 @@ namespace Guidance
 			if (!PointIsWithinFieldOfView(pointToDisplay)) return false;
 			
 			Vector2 poiPositionScreen = Camera.main.WorldToScreenPoint(pointToDisplay);
-			Vector2 poiPositionScreenNormalized = new Vector2(poiPositionScreen.x / Screen.width, poiPositionScreen.y / Screen.height);
+			/*Vector2 poiPositionScreenNormalized = new Vector2(poiPositionScreen.x / Screen.width, poiPositionScreen.y / Screen.height);
 			
 			float distance = Vector2.Distance(GazeManager.Instance.SmoothGazeVectorNormalized, poiPositionScreenNormalized);
 
 			if (smallerThan) return distance < maxDistance;
 			
-			return distance > maxDistance;
+			return distance > maxDistance; */
+
+			return IsDistanceToGazeEnough(poiPositionScreen);
 		}
 		
 		
@@ -137,6 +162,19 @@ namespace Guidance
 		{
 			Vector3 viewportPoint = Camera.main.WorldToViewportPoint(point);
 			return viewportPoint.z > 0 && viewportPoint.x > 0 && viewportPoint.x < 1 && viewportPoint.y > 0 && viewportPoint.y < 1;
+		}
+		
+		float CalculateFovealRadiusInPixel ()
+		{
+			float distanceToComputerSquared = GazeManager.Instance.DistanceToComputer * GazeManager.Instance.DistanceToComputer;
+			float radiusCm = Mathf.Sqrt(distanceToComputerSquared + distanceToComputerSquared - 2f * distanceToComputerSquared * Mathf.Cos(GazeManager.Instance.FovealVisionRadians));
+			float radiusPx = Screen.dpi * (radiusCm / 2.54f);
+			return radiusPx / 2f;
+		}
+	
+		private bool IsDistanceToGazeEnough(Vector2 pointToDisplay)
+		{
+			return Vector2.Distance(pointToDisplay, GazeManager.Instance.SmoothGazeVector) > _fovealRadius;
 		}
 	
 	}

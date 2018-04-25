@@ -61,6 +61,12 @@ namespace Gaze
 			get { return new Vector2(_smoothGaze.x / Screen.width, _smoothGaze.y / Screen.height); }
 		}
 
+		public float DistanceToComputer = 50;
+
+		public float FovealVisionDegrees = 6;
+		
+		public float FovealVisionRadians = 6 * Mathf.Deg2Rad;
+
 		public void SetGazeVector(Vector2 gaze)
 		{	
 			_gaze = gaze;

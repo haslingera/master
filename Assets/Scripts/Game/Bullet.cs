@@ -32,6 +32,7 @@ public class Bullet : MonoBehaviour
 	{		
 		if(other.gameObject.GetComponent<Enemy>()){
 			other.gameObject.GetComponent<Enemy>().EnemyShot();
+			Destroy(gameObject);
 		}
 	}
 }

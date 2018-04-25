@@ -92,6 +92,7 @@ public class GazeType : MonoBehaviour {
 
 			GazeManager.Instance.Fixation = Fixation;
 			GazeManager.Instance.Saccade = Saccade;
+			GazeManager.Instance.DistanceToComputer = DistanceToComputer;
 		}
 	}
 

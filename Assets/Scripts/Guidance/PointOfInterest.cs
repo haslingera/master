@@ -17,7 +17,7 @@ public class PointOfInterest : MonoBehaviour
 	private bool _focus;
 	private readonly Vector3 _debugScale = new Vector3(1.1f, 1.1f, 1.1f);
 
-	private void OnValidate()
+	void Start()
 	{
 		if (Type == PoiType.OnlyTracking)
 		{
@@ -27,7 +27,11 @@ public class PointOfInterest : MonoBehaviour
 		{
 			AddPOI();
 		}
-		
+	}
+
+	private void OnDestroy()
+	{
+		RemovePOI();
 	}
 
 	private void OnDisable()

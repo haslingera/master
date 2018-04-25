@@ -64,6 +64,7 @@ namespace Gaze
 			foreach (var obj in _toRemove)
 			{
 				RemoveFromItemBuffer((GameObject) obj);
+				if ((GameObject) obj == null || ((GameObject) obj).GetComponent<PointOfInterest>() == null) return;
 				((GameObject) obj).GetComponent<PointOfInterest>().LostFocus();
 			}
 
@@ -110,9 +111,12 @@ namespace Gaze
 		{
 			foreach(KeyValuePair<GameObject,ItemBufferObject> bufferObj in ItemBufferObjects)
 			{
-				bufferObj.Key.layer = LayerMask.NameToLayer("ItemBuffer");
-				bufferObj.Value.CurrentColor = bufferObj.Key.GetComponent<Renderer>().material.color;
-				bufferObj.Key.GetComponent<PointOfInterest>().SetIDColor();
+				if (bufferObj.Key.gameObject != null)
+				{
+					bufferObj.Key.layer = LayerMask.NameToLayer("ItemBuffer");
+					bufferObj.Value.CurrentColor = bufferObj.Key.GetComponent<Renderer>().material.color;
+					bufferObj.Key.GetComponent<PointOfInterest>().SetIDColor();
+				}
 			}
 		}
 
@@ -120,8 +124,11 @@ namespace Gaze
 		{	
 			foreach(KeyValuePair<GameObject,ItemBufferObject> bufferObj in ItemBufferObjects)
 			{
-				bufferObj.Key.layer = bufferObj.Value.Layer;
-				bufferObj.Key.GetComponent<Renderer>().material.color = bufferObj.Value.CurrentColor;
+				if (bufferObj.Key.gameObject != null)
+				{
+					bufferObj.Key.layer = bufferObj.Value.Layer;
+					bufferObj.Key.GetComponent<Renderer>().material.color = bufferObj.Value.CurrentColor;
+				}
 			}
 		}
 
@@ -142,6 +149,11 @@ namespace Gaze
 		{
 			ItemBufferObjects.Remove(obj);
 			ItemBufferObjectColors.Remove(obj);
+		}
+
+		public void CheckItemBuffer()
+		{
+			GetItemBufferObjects();
 		}
 	}
 }	

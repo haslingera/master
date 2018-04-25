@@ -287,7 +287,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 341962898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec3159737edc8cc4699cdfd5f426f5df, type: 3}
   m_Name: 
@@ -597,7 +597,7 @@ Prefab:
     - target: {fileID: 114171766754299772, guid: c067b9b3c045293469d9c322dc288964,
         type: 2}
       propertyPath: _modulateImageSpace
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114571020161746486, guid: c067b9b3c045293469d9c322dc288964,
         type: 2}
@@ -637,7 +637,7 @@ MonoBehaviour:
   CancelAngle: 10
   AutoDistance: 1
   CancelDistance: 0.1
-  StartDistance: 0.4
+  StartDistance: 0.2
 --- !u!1 &487982555
 GameObject:
   m_ObjectHideFlags: 0

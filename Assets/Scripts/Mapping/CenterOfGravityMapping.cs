@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 namespace Gaze
@@ -58,6 +57,8 @@ namespace Gaze
 				TakeScreenshot = false;
 				Screenshot.RenderTextureToPng(_imageBuffer, Application.dataPath);
 			}
+
+			_itemBuffer.CheckItemBuffer();
 			
 			if (_itemBuffer.ItemBufferObjects.Count > 0)
 			{

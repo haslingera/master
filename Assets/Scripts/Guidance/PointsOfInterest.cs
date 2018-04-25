@@ -7,44 +7,28 @@ public class PointsOfInterest : MonoBehaviour
 	[HideInInspector]public List<GameObject> PoiEssential = new List<GameObject>();
 	[HideInInspector]public List<GameObject> PoiNonEssential = new List<GameObject>();
 	
-	public enum Type
-	{
-		Essential, NonEssential
-	}
-	
 	public bool IsPointOfInterest(GameObject go)
 	{
 		return PoiEssential.Contains(go) || PoiNonEssential.Contains(go);
 	}
 
-	public void AddPointOfInterestAtPosition(GameObject go, Type type, int position)
+	public GameObject GetCurrentPointOfInterest(PointOfInterest.PoiType type)
 	{
-		if (type == Type.Essential)
-		{
-			PoiEssential.Insert(position, go);
-		}
-		else
-		{
-			PoiNonEssential.Insert(position, go);
-		}
-	}
-
-	public GameObject GetCurrentPointOfInterest(Type type)
-	{
-		List<GameObject> iteratePoiList;
 		
-		if (type == Type.Essential)
+		if (type == PointOfInterest.PoiType.Essential)
 		{
-			iteratePoiList = PoiEssential;
-		}
-		else
-		{
-			iteratePoiList = PoiNonEssential;
+			if (PoiEssential.Count > 0)
+			{
+				return PoiEssential[0];
+			}
 		}
 		
-		if (iteratePoiList.Count > 0)
+		if (type == PointOfInterest.PoiType.NonEssential)
 		{
-			return iteratePoiList[0];
+			if (PoiNonEssential.Count > 0)
+			{
+				return PoiNonEssential[0];
+			}
 		}
 
 		return null;
