@@ -129,6 +129,7 @@
     <None Include="Assets\PostProcessing\Shaders\API\OpenGL.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
+    <None Include="Assets\Shader\Blur.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\ACES.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />

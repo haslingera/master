@@ -106,10 +106,6 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TargetPool.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureLerper.cs" />
-    <Compile Include="Assets\Scenes\Final Scenes\_Assets\ScoreFormatter.cs" />
-    <Compile Include="Assets\Scenes\Final Scenes\_Assets\TimeFormatter.cs" />
-    <Compile Include="Assets\Scenes\Final Scenes\_Assets\TimeScoreManager.cs" />
-    <Compile Include="Assets\Scenes\Final Scenes\_Assets\UserInterface.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakeInstance.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakePresets.cs" />
@@ -117,6 +113,8 @@
     <Compile Include="Assets\Scripts\Game\Camera Shake\Utilities\CameraUtilities.cs" />
     <Compile Include="Assets\Scripts\Game\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game\Crosshair.cs" />
+    <Compile Include="Assets\Scripts\Game\DataRecorder.cs" />
+    <Compile Include="Assets\Scripts\Game\DataSet.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayer.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayerLineRenderer.cs" />
     <Compile Include="Assets\Scripts\Game\DrawRing.cs" />
@@ -132,8 +130,12 @@
     <Compile Include="Assets\Scripts\Game\PlayerGuidanceSystem.cs" />
     <Compile Include="Assets\Scripts\Game\RotateAroundObject.cs" />
     <Compile Include="Assets\Scripts\Game\Rotation.cs" />
+    <Compile Include="Assets\Scripts\Game\ScoreFormatter.cs" />
     <Compile Include="Assets\Scripts\Game\SmoothRotation.cs" />
     <Compile Include="Assets\Scripts\Game\SpaceshipControls.cs" />
+    <Compile Include="Assets\Scripts\Game\TimeFormatter.cs" />
+    <Compile Include="Assets\Scripts\Game\TimeScoreManager.cs" />
+    <Compile Include="Assets\Scripts\Game\UserInterface.cs" />
     <Compile Include="Assets\Scripts\Gaze\GazeInput.cs" />
     <Compile Include="Assets\Scripts\Gaze\GazeManager.cs" />
     <Compile Include="Assets\Scripts\Gaze\GazePointObject.cs" />
@@ -180,6 +182,7 @@
     <None Include="Assets\PostProcessing\Shaders\API\OpenGL.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
+    <None Include="Assets\Shader\Blur.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\ACES.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />

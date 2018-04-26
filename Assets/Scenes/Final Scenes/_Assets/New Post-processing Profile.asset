@@ -58,6 +58,33 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 1
     value: 0
+--- !u!114 &114340434638818520
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3398f68818cfcef4ea48bb5ee08eb38d, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  Mode:
+    overrideState: 1
+    value: 0
+  Downsample:
+    overrideState: 1
+    value: 5
+  BlurIterations:
+    overrideState: 1
+    value: 7
+  BlurSize:
+    overrideState: 1
+    value: 3.37
 --- !u!114 &114585360735558948
 MonoBehaviour:
   m_ObjectHideFlags: 3

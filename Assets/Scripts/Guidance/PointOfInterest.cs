@@ -43,6 +43,8 @@ public class PointOfInterest : MonoBehaviour
 	{
 		if (!_focus)
 		{
+			DataRecorder.Instance.GetCurrentDataSet().Attended = true; 
+			DataRecorder.Instance.GetCurrentDataSet().TimeAttended = Time.time;
 			_focus = true;
 		}
 	}

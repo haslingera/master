@@ -38,6 +38,8 @@ public class Enemy : MonoBehaviour
 		_asteroidMaterial.SetColor("_EmissionColor", StartColor);
 		_initScale = transform.localScale.x;
 		transform.localScale = Vector3.zero;
+
+		DataRecorder.Instance.CreateNewDataSet();
 	}
 
 	private void Update()
@@ -99,11 +101,11 @@ public class Enemy : MonoBehaviour
 		{
 			_dead = true;
 			LeanTween.cancel(_tweenId);
-			LeanTween.value(gameObject, UpdateScale, transform.localScale.x, 0f, 0.2f).setEaseInBack().setDestroyOnComplete(gameObject);
+			LeanTween.value(gameObject, UpdateScale, transform.localScale.x, 0f, 0.2f).setEaseInBack().setOnComplete(Destroy);
 		}
 	}
 
-	public void EnemyShot()
+	public void EnemyShot(Bullet bullet)
 	{
 		if (!_dead)
 		{
@@ -115,14 +117,20 @@ public class Enemy : MonoBehaviour
 			CameraShaker.Instance.ShakeOnce(6f, 10f, 0.1f, 1f);
 			LeanTween.cancel(_tweenId);
 			GetComponent<MeshRenderer>().enabled = false;
-
-			Invoke("Destroy", Explosion.duration + Explosion.startLifetime - 2.2f);
 			
 			GameObject.Find("Enemy Explosion Sound").GetComponent<AudioSource>().Play();
 			
 			Destroy(GetComponent<PointOfInterest>());
 			
 			TimeScoreManager.Instance.IncreaseScore();
+			
+			DataRecorder.Instance.GetCurrentDataSet().ShotTriggered = true; 
+			DataRecorder.Instance.GetCurrentDataSet().TimeShotTriggered = bullet.BulletBirthTime;
+			
+			DataRecorder.Instance.GetCurrentDataSet().Shot = true; 
+			DataRecorder.Instance.GetCurrentDataSet().TimeShot = Time.time;
+			
+			Invoke("Destroy", Explosion.duration + Explosion.startLifetime - 2.2f);
 		}
 	}
 	
@@ -134,10 +142,12 @@ public class Enemy : MonoBehaviour
 		_tweenId = LeanTween.value(gameObject, UpdateScale, _initScale, _initScale + 4, _lifeTime).setDelay(0.5f).setEaseOutCirc().id;
 		
 		GetComponent<MeshRenderer>().enabled = true;
+		DataRecorder.Instance.GetCurrentDataSet().TimeAppeared = Time.time;
 	}
 
 	void Destroy()
 	{
+		DataRecorder.Instance.FinalizeCurrentDataSet();
 		Destroy(gameObject);
 	}
 	

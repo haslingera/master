@@ -7,7 +7,14 @@ public class Bullet : MonoBehaviour
 	private float _speed = 10f;
 	private bool _enabled;
 	private Vector3 _targetPosition;
-	
+
+	[HideInInspector] public float BulletBirthTime;
+
+	private void Start()
+	{
+		BulletBirthTime = Time.time;
+	}
+
 	void Update () {
 		
 		if (_enabled)
@@ -31,7 +38,7 @@ public class Bullet : MonoBehaviour
 	private void OnCollisionEnter(Collision other)
 	{		
 		if(other.gameObject.GetComponent<Enemy>()){
-			other.gameObject.GetComponent<Enemy>().EnemyShot();
+			other.gameObject.GetComponent<Enemy>().EnemyShot(this);
 			Destroy(gameObject);
 		}
 	}
