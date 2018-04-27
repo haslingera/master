@@ -12,6 +12,8 @@
           <e p="ImageSpaceModulationEditor.cs" t="Include" />
           <e p="ListEditor.cs" t="Include" />
         </e>
+        <e p="Fog.cs" t="Include" />
+        <e p="Fog.shader" t="Include" />
         <e p="LeanTween" t="Include">
           <e p="Editor" t="Include">
             <e p="LeanTweenDocumentationEditor.cs" t="Include" />
@@ -269,16 +271,6 @@
             <e p="xRLib.hlsl" t="Include" />
           </e>
         </e>
-        <e p="Scenes" t="Include">
-          <e p="Final Scenes" t="Include">
-            <e p="_Assets" t="Include">
-              <e p="ScoreFormatter.cs" t="Include" />
-              <e p="TimeFormatter.cs" t="Include" />
-              <e p="TimeScoreManager.cs" t="Include" />
-              <e p="UserInterface.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
             <e p="Bullet.cs" t="Include" />
@@ -292,6 +284,8 @@
             </e>
             <e p="CameraFollow.cs" t="Include" />
             <e p="Crosshair.cs" t="Include" />
+            <e p="DataRecorder.cs" t="Include" />
+            <e p="DataSet.cs" t="Include" />
             <e p="DissolveAwayFromPlayer.cs" t="Include" />
             <e p="DissolveAwayFromPlayerLineRenderer.cs" t="Include" />
             <e p="DrawRing.cs" t="Include" />
@@ -307,8 +301,12 @@
             <e p="PlayerGuidanceSystem.cs" t="Include" />
             <e p="RotateAroundObject.cs" t="Include" />
             <e p="Rotation.cs" t="Include" />
+            <e p="ScoreFormatter.cs" t="Include" />
             <e p="SmoothRotation.cs" t="Include" />
             <e p="SpaceshipControls.cs" t="Include" />
+            <e p="TimeFormatter.cs" t="Include" />
+            <e p="TimeScoreManager.cs" t="Include" />
+            <e p="UserInterface.cs" t="Include" />
           </e>
           <e p="Gaze" t="Include">
             <e p="GazeInput.cs" t="Include" />
@@ -334,6 +332,7 @@
         </e>
         <e p="Shader" t="Include">
           <e p="AlphaSelfIllum.shader" t="Include" />
+          <e p="Blur.shader" t="Include" />
           <e p="CenterOfGravityMapping.compute" t="Include" />
           <e p="DissolveByDistance.shader" t="Include" />
           <e p="DissolveByDistanceFade.shader" t="Include" />
