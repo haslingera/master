@@ -130,7 +130,7 @@ public class Enemy : MonoBehaviour
 			DataRecorder.Instance.GetCurrentDataSet().Shot = true; 
 			DataRecorder.Instance.GetCurrentDataSet().TimeShot = Time.time;
 			
-			Invoke("Destroy", Explosion.duration + Explosion.startLifetime - 2.2f);
+			Invoke("Destroy", Explosion.main.duration + Explosion.main.startLifetimeMultiplier - 2.2f);
 		}
 	}
 	
