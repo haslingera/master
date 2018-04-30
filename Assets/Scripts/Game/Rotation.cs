@@ -46,6 +46,7 @@ public class Rotation : MonoBehaviour {
 		           
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 		}
+
 	}
 
 }

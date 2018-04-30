@@ -32,7 +32,8 @@ public class SmoothRotation : MonoBehaviour {
 	void Update ()
 	{
 		if (axes == RotationAxes.MouseXAndY)
-		{			
+		{	
+			
 			rotAverageY = 0f;
 			rotAverageX = 0f;
  
@@ -68,7 +69,8 @@ public class SmoothRotation : MonoBehaviour {
 			transform.localRotation = originalRotation * xQuaternion * yQuaternion;
 		}
 		else if (axes == RotationAxes.MouseX)
-		{			
+		{	
+			
 			rotAverageX = 0f;
  
 			rotationX += Input.GetAxis("Mouse X") * sensitivityX;
@@ -89,7 +91,20 @@ public class SmoothRotation : MonoBehaviour {
 			transform.localRotation = originalRotation * xQuaternion;			
 		}
 		else
-		{			
+		{	
+			
+			if (Input.GetKeyDown(KeyCode.LeftShift))
+			{
+				LeanTween.cancel(_tweenID);
+				_tweenID = LeanTween.value(gameObject, TranslateCameraPosition, transform.localPosition.y, 0.2f, 0.2f).setEaseInOutQuad().id;
+			}
+		
+			if (Input.GetKeyUp(KeyCode.LeftShift))
+			{
+				LeanTween.cancel(_tweenID);
+				_tweenID = LeanTween.value(gameObject, TranslateCameraPosition,  transform.localPosition.y, 0.8f, 0.2f).setEaseInOutQuad().id;
+			}
+			
 			rotAverageY = 0f;
  
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
@@ -117,6 +132,14 @@ public class SmoothRotation : MonoBehaviour {
 				Cursor.lockState = CursorLockMode.Locked;
 			}
 		}
+		
+	}
+
+	private int _tweenID;
+
+	void TranslateCameraPosition(float value)
+	{
+		transform.localPosition = new Vector3(transform.localPosition.x, value, transform.localPosition.z);
 	}
  
 	void Start ()

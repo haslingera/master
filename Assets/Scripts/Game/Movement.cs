@@ -34,9 +34,9 @@ public class Movement : MonoBehaviour {
 			_rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
  
 			// Jump
-			if (canJump && Input.GetButton("Jump")) {
+			/*if (canJump && Input.GetButton("Jump")) {
 				_rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
-			}
+			}*/
 		}
  
 		// We apply gravity manually for more tuning control

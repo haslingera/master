@@ -8,6 +8,7 @@ public class TimeScoreManager : MonoBehaviour
 	public GameObject Menu;
 
 	public float GameTimeMinutes = 2.5f;
+	public bool GameHasTime = true;
 
 	[HideInInspector]
 	public int Score;
@@ -30,12 +31,16 @@ public class TimeScoreManager : MonoBehaviour
 
 	private void Update()
 	{
-		RemainingGameTime -= Time.deltaTime;
-
-		if (RemainingGameTime <= 0)
+		if (GameHasTime)
 		{
-			Menu.SetActive(true);
+			RemainingGameTime -= Time.deltaTime;
+
+			if (Menu != null && RemainingGameTime <= 0)
+			{
+				Menu.SetActive(true);
+			}
 		}
+		
 	}
 
 	public void IncreaseScore()
