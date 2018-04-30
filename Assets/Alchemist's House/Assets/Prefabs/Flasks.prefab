@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 402960}
   - component: {fileID: 3364622}
   - component: {fileID: 2345228}
+  - component: {fileID: 136934119106407150}
   m_Layer: 0
   m_Name: Flasks
   m_TagString: Untagged
@@ -27,6 +28,7 @@ GameObject:
   - component: {fileID: 423522}
   - component: {fileID: 3332498}
   - component: {fileID: 2362792}
+  - component: {fileID: 136339592087004276}
   m_Layer: 0
   m_Name: Flask_3
   m_TagString: Untagged
@@ -44,6 +46,7 @@ GameObject:
   - component: {fileID: 442390}
   - component: {fileID: 3300122}
   - component: {fileID: 2365134}
+  - component: {fileID: 136977106614945390}
   m_Layer: 0
   m_Name: Flask_cover 1
   m_TagString: Untagged
@@ -61,6 +64,7 @@ GameObject:
   - component: {fileID: 467530}
   - component: {fileID: 3323840}
   - component: {fileID: 2386318}
+  - component: {fileID: 136499182439438344}
   m_Layer: 0
   m_Name: Rack 1
   m_TagString: Untagged
@@ -78,6 +82,7 @@ GameObject:
   - component: {fileID: 434210}
   - component: {fileID: 3355232}
   - component: {fileID: 2379672}
+  - component: {fileID: 136646676542306426}
   m_Layer: 0
   m_Name: Gas-jet 1
   m_TagString: Untagged
@@ -91,8 +96,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 111742}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.824147, y: -0.3574233, z: 19.145378}
+  m_LocalRotation: {x: 0, y: 0.29132602, z: 0, w: 0.95662385}
+  m_LocalPosition: {x: 2.894, y: 1.095, z: 16.948}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423522}
@@ -168,7 +173,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ba93e51485ae77f40b7acdc04ada8e46, type: 2}
+  - {fileID: 2100000, guid: e39d342fc64f178458575e4947aeb863, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -202,7 +207,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ba93e51485ae77f40b7acdc04ada8e46, type: 2}
+  - {fileID: 2100000, guid: e39d342fc64f178458575e4947aeb863, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -370,3 +375,68 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 111742}
   m_IsPrefabParent: 1
+--- !u!136 &136339592087004276
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.12551591
+  m_Height: 0.42249492
+  m_Direction: 1
+  m_Center: {x: -0.0000004736893, y: 0.21124746, z: -0.0000009536743}
+--- !u!136 &136499182439438344
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1037457
+  m_Height: 0.1546646
+  m_Direction: 1
+  m_Center: {x: -0.0000014305115, y: 0.0773323, z: 0.0000009536743}
+--- !u!136 &136646676542306426
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1037457
+  m_Height: 0.2389749
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.11948745, z: 0.0000025592744}
+--- !u!136 &136934119106407150
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.17515856
+  m_Height: 0.42235243
+  m_Direction: 1
+  m_Center: {x: -0.049642645, y: 0.21117622, z: 0}
+--- !u!136 &136977106614945390
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128668}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.050700158
+  m_Height: 0.06297819
+  m_Direction: 1
+  m_Center: {x: -0.000000953689, y: 0.031489097, z: -0.0000000018626451}

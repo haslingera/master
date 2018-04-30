@@ -10,12 +10,13 @@ GameObject:
   - component: {fileID: 425436}
   - component: {fileID: 3337228}
   - component: {fileID: 2349718}
+  - component: {fileID: 64319721474498434}
   m_Layer: 0
   m_Name: Wall_round_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &134196
 GameObject:
@@ -27,12 +28,13 @@ GameObject:
   - component: {fileID: 481434}
   - component: {fileID: 3316850}
   - component: {fileID: 2351266}
+  - component: {fileID: 64686620366629446}
   m_Layer: 0
   m_Name: Door_aperture_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &184100
 GameObject:
@@ -49,8 +51,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
 --- !u!1 &185944
 GameObject:
   m_ObjectHideFlags: 1
@@ -66,8 +68,8 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 0
 --- !u!4 &401064
 Transform:
   m_ObjectHideFlags: 1
@@ -298,3 +300,31 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115502}
   m_IsPrefabParent: 1
+--- !u!64 &64319721474498434
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115502}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: eccdc458ec0e31446a677449c30229ab, type: 3}
+--- !u!64 &64686620366629446
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 84f681d295f1d3241b4ce2c657cbd367, type: 3}

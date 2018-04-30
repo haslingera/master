@@ -10,12 +10,14 @@ GameObject:
   - component: {fileID: 491976}
   - component: {fileID: 3308912}
   - component: {fileID: 2339964}
+  - component: {fileID: 65158350071798752}
+  - component: {fileID: 65260411611982634}
   m_Layer: 0
   m_Name: Wall_Corner_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &491976
 Transform:
@@ -23,8 +25,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109206}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: 42}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: -5.85, y: 0, z: 18.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +84,27 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 109206}
   m_IsPrefabParent: 1
+--- !u!65 &65158350071798752
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3703323, y: 3.000001, z: 2.185178}
+  m_Center: {x: 0, y: 1.5000002, z: -0.90742266}
+--- !u!65 &65260411611982634
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109206}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1851778, y: 3.000001, z: 0.3703323}
+  m_Center: {x: -0.90742284, y: 1.5000002, z: 0}

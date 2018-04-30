@@ -10,12 +10,13 @@ GameObject:
   - component: {fileID: 450090}
   - component: {fileID: 3320136}
   - component: {fileID: 2375708}
+  - component: {fileID: 64794041269385378}
   m_Layer: 0
   m_Name: Chest_cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &189264
 GameObject:
@@ -27,12 +28,13 @@ GameObject:
   - component: {fileID: 499300}
   - component: {fileID: 3348882}
   - component: {fileID: 2322222}
+  - component: {fileID: 64130963054882192}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &450090
 Transform:
@@ -53,8 +55,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189264}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.756, y: -0.003, z: 16.781}
+  m_LocalRotation: {x: -0, y: -0.42723736, z: -0, w: 0.9041396}
+  m_LocalPosition: {x: 3.9058223, y: -1.2887177, z: -17.494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450090}
@@ -154,3 +156,31 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189264}
   m_IsPrefabParent: 1
+--- !u!64 &64130963054882192
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 32841fb6fc71f6d4c91f0dce72be3768, type: 3}
+--- !u!64 &64794041269385378
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101252}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 49b71c8cdb1238c40853605e5fffd043, type: 3}

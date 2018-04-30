@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &160418
 GameObject:
@@ -27,12 +27,13 @@ GameObject:
   - component: {fileID: 431050}
   - component: {fileID: 3358782}
   - component: {fileID: 2351838}
+  - component: {fileID: 65173815277969964}
   m_Layer: 0
   m_Name: Ambry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &164810
 GameObject:
@@ -49,7 +50,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &431050
 Transform:
@@ -57,8 +58,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160418}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.6641779, y: -1.2887177, z: -0.31699944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 480708}
@@ -72,8 +73,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153516}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.60699975, y: 0.49, z: 0.32400003}
+  m_LocalRotation: {x: 0, y: 0.17419663, z: 0, w: 0.98471093}
+  m_LocalPosition: {x: 0.6069999, y: 0.49, z: 0.3239994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 431050}
@@ -86,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6070001, y: 0.49, z: 0.3239999}
+  m_LocalPosition: {x: -0.6070001, y: 0.49, z: 0.3239994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 431050}
@@ -226,3 +227,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160418}
   m_IsPrefabParent: 1
+--- !u!65 &65173815277969964
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6468612, y: 0.95000017, z: 0.94909227}
+  m_Center: {x: 0, y: 0.47500002, z: -0.000000074505806}

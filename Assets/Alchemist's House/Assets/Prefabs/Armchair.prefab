@@ -10,12 +10,13 @@ GameObject:
   - component: {fileID: 400604}
   - component: {fileID: 3317916}
   - component: {fileID: 2339794}
+  - component: {fileID: 64636170463630550}
   m_Layer: 0
   m_Name: Armchair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &400604
 Transform:
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165702}
   m_LocalRotation: {x: 0.000000020699582, y: -0.32093138, z: 0.0000000070141817, w: 0.9471025}
-  m_LocalPosition: {x: -2.62, y: 0, z: 12.97}
+  m_LocalPosition: {x: -2.7, y: 0, z: 9.079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +83,17 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165702}
   m_IsPrefabParent: 1
+--- !u!64 &64636170463630550
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: a87fcc44907640a46be21f83539ca4a6, type: 3}
