@@ -117,8 +117,9 @@ public class Enemy : MonoBehaviour
 			CameraShaker.Instance.ShakeOnce(6f, 10f, 0.1f, 1f);
 			LeanTween.cancel(_tweenId);
 			GetComponent<MeshRenderer>().enabled = false;
-			
+						
 			GameObject.Find("Enemy Explosion Sound").GetComponent<AudioSource>().Play();
+			GameObject.Find("Score Sound").GetComponent<AudioSource>().Play();
 			
 			Destroy(GetComponent<PointOfInterest>());
 			

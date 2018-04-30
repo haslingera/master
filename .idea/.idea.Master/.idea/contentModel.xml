@@ -7,12 +7,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
-      <e p="Assets\Alchemist's House" t="Include">
-        <e p="Readme.txt" t="Include" />
-        <e p="Scripts" t="Include">
-          <e p="CameraController.cs" t="Include" />
-        </e>
-      </e>
       <e p="Assets\Editor" t="Include">
         <e p="ImageSpaceModulationEditor.cs" t="Include" />
         <e p="ListEditor.cs" t="Include" />
@@ -332,6 +326,7 @@
           <e p="RotateAroundObject.cs" t="Include" />
           <e p="Rotation.cs" t="Include" />
           <e p="ScoreFormatter.cs" t="Include" />
+          <e p="ScoreWinCounter.cs" t="Include" />
           <e p="SmoothRotation.cs" t="Include" />
           <e p="SpaceshipControls.cs" t="Include" />
           <e p="TimeFormatter.cs" t="Include" />

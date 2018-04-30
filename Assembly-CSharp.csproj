@@ -15,7 +15,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -139,6 +139,7 @@
     <Compile Include="Assets\Scripts\Game\RotateAroundObject.cs" />
     <Compile Include="Assets\Scripts\Game\Rotation.cs" />
     <Compile Include="Assets\Scripts\Game\ScoreFormatter.cs" />
+    <Compile Include="Assets\Scripts\Game\ScoreWinCounter.cs" />
     <Compile Include="Assets\Scripts\Game\SmoothRotation.cs" />
     <Compile Include="Assets\Scripts\Game\SpaceshipControls.cs" />
     <Compile Include="Assets\Scripts\Game\TimeFormatter.cs" />
