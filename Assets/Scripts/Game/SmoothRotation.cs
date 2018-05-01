@@ -28,9 +28,14 @@ public class SmoothRotation : MonoBehaviour {
 	public float frameCounter = 20;
  
 	Quaternion originalRotation;
+
+	public bool Rotate = true;
  
 	void Update ()
 	{
+
+		if (!Rotate) return;
+			
 		if (axes == RotationAxes.MouseXAndY)
 		{	
 			

@@ -5,6 +5,10 @@ using UnityEngine;
 public class PickUpCoin : MonoBehaviour
 {
 
+	public AudioSource CoinPickupSound;
+
+	public GameObject ExitGameCanvas;
+
 	public float ReachDistance = 2f;
 
 	// Use this for initialization
@@ -14,17 +18,19 @@ public class PickUpCoin : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown(0))
+		if (!ExitGameCanvas.activeInHierarchy && Input.GetMouseButtonDown(0))
 		{
-			RaycastHit[] hits;			
-			hits = Physics.RaycastAll(Camera.main.transform.position, Camera.main.transform.forward, ReachDistance);
-
-			for (int i = 0; i < hits.Length; i++)
+			RaycastHit hit;
+			
+			//hit = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, ReachDistance);
+			
+			if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, ReachDistance))
 			{
-				if (hits[i].collider.gameObject.GetComponent<Coin>() != null)
+				Debug.Log(hit.collider.gameObject.name + " found");
+				if (hit.collider.gameObject.GetComponent<Coin>() != null)
 				{
-					Debug.Log(hits[i].collider.gameObject.name + " found");
-					Destroy(hits[i].collider.gameObject);
+					Destroy(hit.collider.gameObject);
+					CoinPickupSound.Play();
 					TimeScoreManager.Instance.IncreaseScore();
 				}
 			}

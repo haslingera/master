@@ -422,6 +422,8 @@
           <e p="_Assets" t="Include">
             <e p="Condition B" t="Include">
               <e p="Coin.cs" t="Include" />
+              <e p="CoinTextUpdater.cs" t="Include" />
+              <e p="ExitTextFormatter.cs" t="Include" />
               <e p="FinishGame.cs" t="Include" />
               <e p="PickUpCoin.cs" t="Include" />
             </e>
