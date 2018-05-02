@@ -1140,6 +1140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Menu: {fileID: 852585414}
   GameTimeMinutes: 2.5
+  GameHasTime: 1
   Score: 0
   RemainingGameTime: 0
 --- !u!4 &147490555
@@ -5530,6 +5531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8363288085294ad478d73f9141530e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultDataFallback: 0
 --- !u!4 &367685922
 Transform:
   m_ObjectHideFlags: 0
@@ -6536,7 +6538,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3159737edc8cc4699cdfd5f426f5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImageSpaceModulationMaterial: {fileID: 2018568696}
+  ImageSpaceModulationMaterial: {fileID: 2100000, guid: e63a6891abc593c45b35f42bf93cfbd8,
+    type: 2}
+  _modulateImageSpace: 0
+  _modulationRate: 10
+  AlternateModulation: 1
+  _blendMode: 0
+  _optimizeForPerceivedBrightness: 0
+  _intensity: 1
+  _modulationPositionX: 0.5
+  _modulationPositionY: 0.5
+  _falloffType: 2
+  _gaussianKernelSize: 0.8
+  _size: 0.2
+  _modulationType: 2
+  _color1: {r: 1, g: 0, b: 0, a: 1}
+  _color2: {r: 0, g: 0, b: 1, a: 1}
+  _brightness1: -3
+  _brightness2: 3
+  _contrast1: 1
+  _contrast2: 1
+  _saturation1: 0
+  _saturation2: 0
+  _noise: {fileID: 0}
+  _noiseScale: 1
 --- !u!1 &664723823
 GameObject:
   m_ObjectHideFlags: 0
@@ -10994,7 +11019,9 @@ Prefab:
       propertyPath: _optimizeForPerceivedBrightness
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114171766754299772, guid: c067b9b3c045293469d9c322dc288964, type: 2}
+    - {fileID: 114933662459375358, guid: c067b9b3c045293469d9c322dc288964, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c067b9b3c045293469d9c322dc288964, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1052680192 stripped
@@ -21083,48 +21110,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9defeac88977c0d448aa4541073ee9e4, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &2018568696
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: ImageSpaceModulation/Standard
-  m_Shader: {fileID: 4800000, guid: b866f52bee2348341a5a4a40381682a1, type: 3}
-  m_ShaderKeywords: _FALLOFFTYPE_LINEAR _MODULATIONBLENDMODE_BAILEY_(ADD) _MODULATIONTYPE_COLOR
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _noise:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _automaticModulationIntensity: 0
-    - _falloffType: 2
-    - _kernelSize: 0.8
-    - _modulationBlendMode: 0
-    - _modulationContrast: 1
-    - _modulationIntensity: 0.069
-    - _modulationPositionX: 0.5
-    - _modulationPositionY: 0.5
-    - _modulationSaturation: 0
-    - _modulationType: 7
-    - _modulationValueBrightness: 1
-    - _noiseScale: 1
-    - _size: 0.2
-    m_Colors:
-    - _modulationValueColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &2056208965
 GameObject:
   m_ObjectHideFlags: 0

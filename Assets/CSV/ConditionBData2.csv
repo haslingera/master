@@ -1,5 +1,0 @@
-GameObjectName,TimeAppeared,Attended,TimeAttended,Shot,TimeShot,ShotTriggered,TimeShotTriggered,TimeAppearedToAttend,TimeAppearedToTrigger,TimeAppearedUntilShot,TimeAttendedUntilShot,TimeAttendedUntilTriggered
-Coin B.7,0,True,0.8051724,False,0,False,0,0.8051724,0,0,0.8051724,0.8051724
-Coin B.3,0,True,1.129558,False,0,False,0,1.129558,0,0,1.129558,1.129558
-Kitchen,1.9,0,0,False,0,False,0,5.687815
-Coin B.8,0,True,2.995431,False,0,False,0,2.995431,0,0,2.995431,2.995431

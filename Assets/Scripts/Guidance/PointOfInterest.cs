@@ -12,6 +12,9 @@ public class PointOfInterest : MonoBehaviour
 	{
 		Essential, OnlyTracking
 	}
+
+	public bool Attended;
+	public float TimeAttended;
 	
 	private GameObject _gazeGuidance;
 	private bool _focus;

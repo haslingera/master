@@ -7,6 +7,14 @@ public class DataRecorder : MonoBehaviour {
 	
 	public static DataRecorder Instance;
 
+	public enum DataFallback
+	{
+		A,
+		B
+	};
+
+	public DataFallback DefaultDataFallback = DataFallback.A;
+
 	private readonly OrderedDictionary _dataSets = new OrderedDictionary();
 
 	private void Awake()
@@ -31,13 +39,24 @@ public class DataRecorder : MonoBehaviour {
 
 		if (_dataSets[go] == null)
 		{
-			if (typeof(DataSetConditionB) == typeof(T))
+			if (typeof(DataSetConditionA) == typeof(T))
+			{
+				CreateNewDataSet(go, new DataSetConditionA());
+			}
+			else if (typeof(DataSetConditionB) == typeof(T))
 			{
 				CreateNewDataSet(go, new DataSetConditionB());
 			}
 			else
 			{
-				CreateNewDataSet(go, new DataSetConditionA());
+				if (DefaultDataFallback == DataFallback.A)
+				{
+					CreateNewDataSet(go, new DataSetConditionA());
+				}
+				else
+				{
+					CreateNewDataSet(go, new DataSetConditionB());
+				}
 			}
 			
 		}

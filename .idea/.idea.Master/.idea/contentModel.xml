@@ -416,25 +416,6 @@
           </e>
         </e>
       </e>
-      <e p="Assets\Scenes" t="Include">
-        <e p="Final Scenes" t="Include">
-          <e p="_Assets" t="Include">
-            <e p="Condition B" t="Include">
-              <e p="Coin.cs" t="Include" />
-              <e p="CoinTextUpdater.cs" t="Include" />
-              <e p="CollectCoinData.cs" t="Include" />
-              <e p="CollectGameTimeData.cs" t="Include" />
-              <e p="CollectRoomData.cs" t="Include" />
-              <e p="ExitTextFormatter.cs" t="Include" />
-              <e p="IDataSet.cs" t="Include" />
-              <e p="IPointOfInterestSelectionProcess.cs" t="Include" />
-              <e p="PickUpCoin.cs" t="Include" />
-              <e p="PointOfInterestSelectionProcessB.cs" t="Include" />
-              <e p="StartAndFinishGame.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-      </e>
       <e p="Assets\Scripts" t="Include">
         <e p="Game" t="Include">
           <e p="Bullet.cs" t="Include" />
@@ -447,6 +428,11 @@
             </e>
           </e>
           <e p="CameraFollow.cs" t="Include" />
+          <e p="Coin.cs" t="Include" />
+          <e p="CoinTextUpdater.cs" t="Include" />
+          <e p="CollectCoinData.cs" t="Include" />
+          <e p="CollectGameTimeData.cs" t="Include" />
+          <e p="CollectRoomData.cs" t="Include" />
           <e p="Crosshair.cs" t="Include" />
           <e p="DataRecorder.cs" t="Include" />
           <e p="DataSetConditionA.cs" t="Include" />
@@ -456,20 +442,26 @@
           <e p="DrawRing.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
+          <e p="ExitTextFormatter.cs" t="Include" />
           <e p="FireLaser.cs" t="Include" />
           <e p="Grab.cs" t="Include" />
           <e p="Grabable.cs" t="Include" />
+          <e p="IDataSet.cs" t="Include" />
           <e p="InfinteStarfield.cs" t="Include" />
+          <e p="IPointOfInterestSelectionProcess.cs" t="Include" />
           <e p="KeepAtDistance.cs" t="Include" />
           <e p="LightFlickerEffect.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
+          <e p="PickUpCoin.cs" t="Include" />
           <e p="PlayerGuidanceSystem.cs" t="Include" />
+          <e p="PointOfInterestSelectionProcessB.cs" t="Include" />
           <e p="RotateAroundObject.cs" t="Include" />
           <e p="Rotation.cs" t="Include" />
           <e p="ScoreFormatter.cs" t="Include" />
           <e p="ScoreWinCounter.cs" t="Include" />
           <e p="SmoothRotation.cs" t="Include" />
           <e p="SpaceshipControls.cs" t="Include" />
+          <e p="StartAndFinishGame.cs" t="Include" />
           <e p="TimeFormatter.cs" t="Include" />
           <e p="TimeScoreManager.cs" t="Include" />
           <e p="UserInterface.cs" t="Include" />
@@ -482,8 +474,6 @@
           <e p="SlidingBuffer.cs" t="Include" />
         </e>
         <e p="Guidance" t="Include">
-          <e p="GazeGuidanceManager.cs" t="Include" />
-          <e p="ImageSpaceModulation.cs" t="Include" />
           <e p="ImageSpaceModulationImageEffect.cs" t="Include" />
           <e p="PointOfInterest.cs" t="Include" />
           <e p="PointsOfInterest.cs" t="Include" />

@@ -4071,6 +4071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &49306327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4549,6 +4551,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &62159679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9208,6 +9212,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &249263856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10272,6 +10278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &290231602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10705,6 +10713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &303584926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10887,6 +10897,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &306968217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13240,6 +13252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &387766768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14797,6 +14811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &429923501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15087,6 +15103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &438427180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15574,6 +15592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &453529239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16020,6 +16040,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &465980267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19943,6 +19965,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &598649737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20340,6 +20364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &612620516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25323,6 +25349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &652507204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25635,6 +25663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &662531991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26603,7 +26633,7 @@ Prefab:
         type: 2}
       propertyPath: ImageSpaceModulationMaterial
       value: 
-      objectReference: {fileID: 781527096}
+      objectReference: {fileID: 2100000, guid: e63a6891abc593c45b35f42bf93cfbd8, type: 2}
     - target: {fileID: 136551629370466096, guid: 06228623c7e6e4a4b82bd3ea73af7929,
         type: 2}
       propertyPath: m_Height
@@ -26626,7 +26656,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1155581885186816, guid: 06228623c7e6e4a4b82bd3ea73af7929, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20595404343508062, guid: 06228623c7e6e4a4b82bd3ea73af7929,
         type: 2}
@@ -26678,24 +26708,84 @@ Prefab:
     - target: {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929,
         type: 2}
       propertyPath: _modulateImageSpace
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114089939519634900, guid: 06228623c7e6e4a4b82bd3ea73af7929,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929,
         type: 2}
       propertyPath: _modulationType
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929,
         type: 2}
       propertyPath: _intensity
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114199462447590266, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1521161139244952, guid: 06228623c7e6e4a4b82bd3ea73af7929, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695798633689604, guid: 06228623c7e6e4a4b82bd3ea73af7929, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: _brightness1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: _brightness2
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: _modulationRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089939519634900, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: _modulateImageSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089939519634900, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: _modulationType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089939519634900, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: _brightness1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089939519634900, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: _brightness2
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114089939519634900, guid: 06228623c7e6e4a4b82bd3ea73af7929,
+        type: 2}
+      propertyPath: AlternateModulation
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114995900417252306, guid: 06228623c7e6e4a4b82bd3ea73af7929, type: 2}
+    - {fileID: 114311928937389064, guid: 06228623c7e6e4a4b82bd3ea73af7929, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 06228623c7e6e4a4b82bd3ea73af7929, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &701534966 stripped
@@ -26714,12 +26804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38bade5ed167c44a8677658354a9056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentRoom: 
   CheckDistance: 9
+  CoolOff: 1
   RaycastLayers:
     serializedVersion: 2
     m_Bits: 16384
-  OldPointOfInterest: {fileID: 0}
 --- !u!1001 &702631429
 Prefab:
   m_ObjectHideFlags: 0
@@ -27626,6 +27715,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &736182588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29172,48 +29263,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ac7c6398de8ece42b7a906bda9bd975, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &781527096
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: ImageSpaceModulation/Standard
-  m_Shader: {fileID: 4800000, guid: b866f52bee2348341a5a4a40381682a1, type: 3}
-  m_ShaderKeywords: _FALLOFFTYPE_LINEAR _MODULATIONBLENDMODE_BAILEY_(ADD) _MODULATIONTYPE_COLOR
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _noise:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _automaticModulationIntensity: 1
-    - _falloffType: 2
-    - _kernelSize: 0.8
-    - _modulationBlendMode: 0
-    - _modulationContrast: 1
-    - _modulationIntensity: 1
-    - _modulationPositionX: 0.5
-    - _modulationPositionY: 0.5
-    - _modulationSaturation: 0
-    - _modulationType: 7
-    - _modulationValueBrightness: 0
-    - _noiseScale: 1
-    - _size: 0.2
-    m_Colors:
-    - _modulationValueColor: {r: 1, g: 0.31034485, b: 0, a: 1}
 --- !u!1 &783071229
 GameObject:
   m_ObjectHideFlags: 0
@@ -29956,6 +30005,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &807277396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31425,6 +31476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &837740917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31931,6 +31984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &855590478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34153,6 +34208,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &946476375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38824,6 +38881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1005306069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41224,6 +41283,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1084053293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42195,6 +42256,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1118550320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42438,6 +42501,24 @@ Prefab:
     - {fileID: 95249568581427408, guid: 57ab0045d840098469755eb151f28679, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 57ab0045d840098469755eb151f28679, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1124848733 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109206, guid: 0ac7c6398de8ece42b7a906bda9bd975, type: 2}
+  m_PrefabInternal: {fileID: 1364263715}
+--- !u!64 &1124848734
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124848733}
+  m_Material: {fileID: 13400000, guid: 12c292d72c4a87f4dba526bbb34af358, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 4fa3bf5faa13c6b48bf5e2eab5e4af0e, type: 3}
 --- !u!1001 &1132582198
 Prefab:
   m_ObjectHideFlags: 0
@@ -42841,6 +42922,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1151474251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48359,6 +48442,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1226160846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48595,6 +48680,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1228682090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49167,6 +49254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1244722079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49226,6 +49315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1244840072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53542,7 +53633,9 @@ Prefab:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65158350071798752, guid: 0ac7c6398de8ece42b7a906bda9bd975, type: 2}
+    - {fileID: 65260411611982634, guid: 0ac7c6398de8ece42b7a906bda9bd975, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0ac7c6398de8ece42b7a906bda9bd975, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1369970222
@@ -60221,6 +60314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1608202209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60925,6 +61020,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1627324833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63536,6 +63633,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1744116126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63695,6 +63794,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1745415130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67746,6 +67847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8363288085294ad478d73f9141530e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultDataFallback: 1
 --- !u!1001 &1897299039
 Prefab:
   m_ObjectHideFlags: 0
@@ -69249,6 +69351,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 0
   Id: {r: 0, g: 0, b: 0, a: 0}
+  Attended: 0
+  TimeAttended: 0
 --- !u!114 &1930527021
 MonoBehaviour:
   m_ObjectHideFlags: 0

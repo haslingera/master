@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+﻿/*using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(ImageSpaceModulation))]
@@ -61,4 +61,4 @@ public class ImageSpaceModulationEditor : Editor
 		
 	} 
 
-}
+}*/

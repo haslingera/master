@@ -21,7 +21,6 @@ namespace Guidance
 		public float StartDistance = 0.4f;
 		
 		private PointsOfInterest _pois;
-		private ImageSpaceModulation _ism;
 
 		private Vector2 _lastFixationPoint;
 		private bool _lastFixationPointSet;
@@ -31,7 +30,6 @@ namespace Guidance
 		private void Start()
 		{
 			_pois = GetComponent<PointsOfInterest>();
-			_ism = GetComponent<ImageSpaceModulation>();
 			_fovealRadius = CalculateFovealRadiusInPixel();
 		}
 
@@ -43,7 +41,7 @@ namespace Guidance
 
 			if (ChooseGameObjectToDisplay())
 			{
-				_ism.ModulationPositionXYZ = _pointToDisplay;
+				Camera.main.GetComponent<ImageSpaceModulationImageEffect>().ModulationPositionXYZ = _pointToDisplay;
 				SetLastFixationPoint();
 
 				if (_lastFixationPointSet)
@@ -51,11 +49,11 @@ namespace Guidance
 					ShowLastFixationSaccadePointTriangle(_pointToDisplay);
 				}
 			
-				_ism.ModulateImageSpace = ShowPoi(_pointToDisplay);
+				Camera.main.GetComponent<ImageSpaceModulationImageEffect>().ModulateImageSpace = ShowPoi(_pointToDisplay);
 			}
 			else
 			{
-				_ism.ModulateImageSpace = false;
+				Camera.main.GetComponent<ImageSpaceModulationImageEffect>().ModulateImageSpace = false;
 				_showPoi = false;
 			}
 			
