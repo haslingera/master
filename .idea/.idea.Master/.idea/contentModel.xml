@@ -9,7 +9,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets\Editor" t="Include">
         <e p="ImageSpaceModulationEditor.cs" t="Include" />
-        <e p="ListEditor.cs" t="Include" />
       </e>
       <e p="Assets\LeanTween" t="Include">
         <e p="Editor" t="Include">
@@ -423,9 +422,15 @@
             <e p="Condition B" t="Include">
               <e p="Coin.cs" t="Include" />
               <e p="CoinTextUpdater.cs" t="Include" />
+              <e p="CollectCoinData.cs" t="Include" />
+              <e p="CollectGameTimeData.cs" t="Include" />
+              <e p="CollectRoomData.cs" t="Include" />
               <e p="ExitTextFormatter.cs" t="Include" />
-              <e p="FinishGame.cs" t="Include" />
+              <e p="IDataSet.cs" t="Include" />
+              <e p="IPointOfInterestSelectionProcess.cs" t="Include" />
               <e p="PickUpCoin.cs" t="Include" />
+              <e p="PointOfInterestSelectionProcessB.cs" t="Include" />
+              <e p="StartAndFinishGame.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -444,7 +449,8 @@
           <e p="CameraFollow.cs" t="Include" />
           <e p="Crosshair.cs" t="Include" />
           <e p="DataRecorder.cs" t="Include" />
-          <e p="DataSet.cs" t="Include" />
+          <e p="DataSetConditionA.cs" t="Include" />
+          <e p="DataSetConditionB.cs" t="Include" />
           <e p="DissolveAwayFromPlayer.cs" t="Include" />
           <e p="DissolveAwayFromPlayerLineRenderer.cs" t="Include" />
           <e p="DrawRing.cs" t="Include" />

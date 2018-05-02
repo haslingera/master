@@ -122,9 +122,15 @@
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\Coin.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\CoinTextUpdater.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\CollectCoinData.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\CollectGameTimeData.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\CollectRoomData.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\ExitTextFormatter.cs" />
-    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\FinishGame.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\IDataSet.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\IPointOfInterestSelectionProcess.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\PickUpCoin.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\PointOfInterestSelectionProcessB.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\StartAndFinishGame.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakeInstance.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakePresets.cs" />
@@ -133,7 +139,8 @@
     <Compile Include="Assets\Scripts\Game\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game\Crosshair.cs" />
     <Compile Include="Assets\Scripts\Game\DataRecorder.cs" />
-    <Compile Include="Assets\Scripts\Game\DataSet.cs" />
+    <Compile Include="Assets\Scripts\Game\DataSetConditionA.cs" />
+    <Compile Include="Assets\Scripts\Game\DataSetConditionB.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayer.cs" />
     <Compile Include="Assets\Scripts\Game\DissolveAwayFromPlayerLineRenderer.cs" />
     <Compile Include="Assets\Scripts\Game\DrawRing.cs" />

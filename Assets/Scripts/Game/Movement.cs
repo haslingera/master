@@ -3,7 +3,10 @@
 [RequireComponent (typeof (Rigidbody))]
 [RequireComponent (typeof (CapsuleCollider))]
 
-public class Movement : MonoBehaviour {
+public class Movement : MonoBehaviour
+{
+
+	public bool Move = true;
 
 	public float speed = 10.0f;
 	public float gravity = 10.0f;
@@ -19,30 +22,39 @@ public class Movement : MonoBehaviour {
 	}
 	 
 	void Update () {
-		if (grounded) {
-			// Calculate how fast we should be moving
-			Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-			targetVelocity = transform.TransformDirection(targetVelocity);
-			targetVelocity *= speed;
+
+		if (Move)
+		{
+			if (grounded) {
+				// Calculate how fast we should be moving
+				Vector3 targetVelocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+				targetVelocity = transform.TransformDirection(targetVelocity);
+				targetVelocity *= speed;
  
-			// Apply a force that attempts to reach our target velocity
-			Vector3 velocity = _rigidbody.velocity;
-			Vector3 velocityChange = (targetVelocity - velocity);
-			velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
-			velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
-			velocityChange.y = 0;
-			_rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
+				// Apply a force that attempts to reach our target velocity
+				Vector3 velocity = _rigidbody.velocity;
+				Vector3 velocityChange = (targetVelocity - velocity);
+				velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocityChange, maxVelocityChange);
+				velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocityChange, maxVelocityChange);
+				velocityChange.y = 0;
+				_rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
  
-			// Jump
-			/*if (canJump && Input.GetButton("Jump")) {
-				_rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
-			}*/
+				// Jump
+				/*if (canJump && Input.GetButton("Jump")) {
+					_rigidbody.velocity = new Vector3(velocity.x, CalculateJumpVerticalSpeed(), velocity.z);
+				}*/
+			}
+ 
+			// We apply gravity manually for more tuning control
+			_rigidbody.AddForce(new Vector3 (0, -gravity * _rigidbody.mass, 0));
+ 
+			grounded = false;
 		}
- 
-		// We apply gravity manually for more tuning control
-		_rigidbody.AddForce(new Vector3 (0, -gravity * _rigidbody.mass, 0));
- 
-		grounded = false;
+		else
+		{
+			_rigidbody.velocity = Vector3.zero;
+			_rigidbody.angularVelocity = Vector3.zero;
+		}
 	}
  
 	void OnCollisionStay () {

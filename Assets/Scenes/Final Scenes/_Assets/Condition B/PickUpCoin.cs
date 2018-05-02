@@ -29,7 +29,9 @@ public class PickUpCoin : MonoBehaviour
 				Debug.Log(hit.collider.gameObject.name + " found");
 				if (hit.collider.gameObject.GetComponent<Coin>() != null)
 				{
-					Destroy(hit.collider.gameObject);
+					hit.collider.gameObject.GetComponent<CollectCoinData>().CoinCollected();
+					hit.collider.gameObject.GetComponent<CollectCoinData>().DeleteCoinAfterDataCollection();
+					
 					CoinPickupSound.Play();
 					TimeScoreManager.Instance.IncreaseScore();
 				}

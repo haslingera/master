@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.IO;
+﻿using System.IO;
+using System.Collections.Specialized;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DataRecorder : MonoBehaviour {
 	
 	public static DataRecorder Instance;
-	
-	private ArrayList _dataSets = new ArrayList();
-	private static int _counter = -1;
+
+	private readonly OrderedDictionary _dataSets = new OrderedDictionary();
 
 	private void Awake()
 	{
@@ -20,74 +20,75 @@ public class DataRecorder : MonoBehaviour {
 		}
 	}
 
-	public void CreateNewDataSet()
+	private void CreateNewDataSet(GameObject go, IDataSet dataSet)
 	{
-		_counter++;
-		DataSet dataSet = new DataSet();
-		_dataSets.Add(dataSet);
+		_dataSets.Add(go, dataSet);
+		((IDataSet)_dataSets[go]).GameObjectName = go.name;
 	}
 	
-	public DataSet GetCurrentDataSet()
+	public T GetOrCreateDataSet<T>(GameObject go)
 	{
-		return (DataSet) _dataSets[_counter];
-	}
 
-	public void FinalizeCurrentDataSet()
-	{
-		DataSet dataSet = (DataSet) _dataSets[_counter];
-		dataSet.name = "Enemy " + _counter;
-		dataSet.TimeAppearedToAttend = dataSet.TimeAttended - dataSet.TimeAppeared;
-		dataSet.TimeAppearedToTrigger = dataSet.TimeShotTriggered - dataSet.TimeAppeared;
-		dataSet.TimeAppearedUntilShot = dataSet.TimeShot - dataSet.TimeAppeared;
-		dataSet.TimeAttendedUntilShot = dataSet.TimeAppearedToAttend - dataSet.TimeAppearedUntilShot;
-		dataSet.TimeAttendedUntilTriggered = dataSet.TimeAppearedToAttend - dataSet.TimeAppearedToTrigger;
+		if (_dataSets[go] == null)
+		{
+			if (typeof(DataSetConditionB) == typeof(T))
+			{
+				CreateNewDataSet(go, new DataSetConditionB());
+			}
+			else
+			{
+				CreateNewDataSet(go, new DataSetConditionA());
+			}
+			
+		}
+		
+		return (T) _dataSets[go];
 	}
 
 	public void WriteDataToCsv()
 	{
-		
-		string filePath = getPath ();
-		StreamWriter writer = new StreamWriter (filePath);
-		
-		writer.WriteLine ("Name,TimeAppeared,Attended,TimeAttended,ShotTriggered,TimeShotTriggered,Shot,TimeShot,TimeAppearedToAttend,TimeAppearedToTrigger,TimeAppearedUntilShot,TimeAttendedUntilShot,TimeAttendedUntilTriggered");
 
+		string filePath = CreateNewCSVFile();
+		StreamWriter writer = new StreamWriter (filePath);
+
+		if (_dataSets.Count > 0)
+		{
+			writer.WriteLine (((IDataSet)_dataSets[0]).GetDataSetHeader());
+		}
+		
 		for (int i = 0; i < _dataSets.Count; i++)
 		{
-			DataSet dataSet = (DataSet) _dataSets[i];
-			
-			writer.WriteLine (dataSet.name + 
-			                  "," + dataSet.TimeAppeared +
-			                  "," + dataSet.Attended +
-			                  "," + dataSet.TimeAttended +
-			                  "," + dataSet.ShotTriggered +
-			                  "," + dataSet.TimeShotTriggered +
-			                  "," + dataSet.Shot +
-			                  "," + dataSet.TimeShot +
-			                  "," + dataSet.TimeAppearedToAttend +
-			                  "," + dataSet.TimeAppearedToTrigger +
-			                  "," + dataSet.TimeAppearedUntilShot +
-			                  "," + dataSet.TimeAttendedUntilShot +
-			                  "," + dataSet.TimeAttendedUntilTriggered);
+			((IDataSet) _dataSets[i]).FinalizeDataSet();
+			writer.WriteLine (((IDataSet)_dataSets[i]).GetDataSetData());
 		}
 		
 		writer.Flush ();
 		writer.Close();
 	}
-	
-	private string getPath () {
+
+	private string CreateNewCSVFile()
+	{
 		
-		Debug.Log(Application.dataPath + "/CSV/" + "SaveData.csv");
+		if(!Directory.Exists(Application.dataPath + "/CSV/"))
+		{
+			Directory.CreateDirectory(Application.dataPath + "/CSV/");
+		}
 		
-		#if UNITY_EDITOR
-		return Application.dataPath + "/CSV/" + "SaveData.csv";
-        #else
-        return Application.dataPath +"/"+"Saved_Inventory.csv";
-		#endif
+		int counter = 1;
+		
+		while (File.Exists(Application.dataPath + "/CSV/" + SceneManager.GetActiveScene().name + "Data" + counter + ".csv"))
+		{
+			counter++;
+		}
+				
+		File.Create(Application.dataPath + "/CSV/" + SceneManager.GetActiveScene().name + "Data" + counter + ".csv").Close();
+		return Application.dataPath + "/CSV/" + SceneManager.GetActiveScene().name + "Data" + counter + ".csv";
+
 	}
 	
 	private void OnApplicationQuit()
 	{
-		DataRecorder.Instance.WriteDataToCsv();
+		WriteDataToCsv();
 	}
 	
 }

@@ -63,15 +63,9 @@ namespace Guidance
 
 		private bool ChooseGameObjectToDisplay()
 		{
-			if (_pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.Essential) != null)
+			if (_pois.GetRelevantPointOfInterest(PointOfInterest.PoiType.Essential) != null)
 			{
-				_pointToDisplay = _pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.Essential).transform.position;
-				return true;
-			}
-
-			if (_pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.NonEssential) != null)
-			{
-				_pointToDisplay = _pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.NonEssential).transform.position;
+				_pointToDisplay = _pois.GetRelevantPointOfInterest(PointOfInterest.PoiType.Essential).transform.position;
 				return true;
 			}
 
@@ -135,6 +129,7 @@ namespace Guidance
 			if (!PointIsWithinFieldOfView(pointToDisplay)) return false;
 			
 			Vector2 poiPositionScreen = Camera.main.WorldToScreenPoint(pointToDisplay);
+			
 			/*Vector2 poiPositionScreenNormalized = new Vector2(poiPositionScreen.x / Screen.width, poiPositionScreen.y / Screen.height);
 			
 			float distance = Vector2.Distance(GazeManager.Instance.SmoothGazeVectorNormalized, poiPositionScreenNormalized);

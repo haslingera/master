@@ -4,34 +4,47 @@ using UnityEngine;
 public class PointsOfInterest : MonoBehaviour
 {
 
-	[HideInInspector]public List<GameObject> PoiEssential = new List<GameObject>();
-	[HideInInspector]public List<GameObject> PoiNonEssential = new List<GameObject>();
+	public List<GameObject> PoiEssential = new List<GameObject>();
 	
-	public bool IsPointOfInterest(GameObject go)
+	private IPointOfInterestSelectionProcess Poisp;
+
+	private void Start()
 	{
-		return PoiEssential.Contains(go) || PoiNonEssential.Contains(go);
+		if (GetComponent<IPointOfInterestSelectionProcess>() != null)
+		{
+			Poisp = GetComponent<IPointOfInterestSelectionProcess>();
+		}
 	}
 
-	public GameObject GetCurrentPointOfInterest(PointOfInterest.PoiType type)
+	public bool IsPointOfInterest(GameObject go)
+	{
+		return PoiEssential.Contains(go);
+	}
+
+	public GameObject GetRelevantPointOfInterest(PointOfInterest.PoiType type)
 	{
 		
 		if (type == PointOfInterest.PoiType.Essential)
 		{
 			if (PoiEssential.Count > 0)
 			{
-				return PoiEssential[0];
+				if (Poisp == null)
+				{
+					return PoiEssential[0];
+				}
+				
+				return Poisp.GetPointOfInterest(this);
 			}
-		}
-		
-		if (type == PointOfInterest.PoiType.NonEssential)
-		{
-			if (PoiNonEssential.Count > 0)
-			{
-				return PoiNonEssential[0];
-			}
+			
 		}
 
 		return null;
+	}
+	
+	private bool PointIsWithinFieldOfView(Vector3 point)
+	{
+		Vector3 viewportPoint = Camera.main.WorldToViewportPoint(point);
+		return viewportPoint.z > 0 && viewportPoint.x > 0 && viewportPoint.x < 1 && viewportPoint.y > 0 && viewportPoint.y < 1;
 	}
 
 	

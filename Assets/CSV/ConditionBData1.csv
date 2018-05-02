@@ -1,0 +1,14 @@
+GameObjectName,TimeAppeared,Attended,TimeAttended,Shot,TimeShot,ShotTriggered,TimeShotTriggered,TimeAppearedToAttend,TimeAppearedToTrigger,TimeAppearedUntilShot,TimeAttendedUntilShot,TimeAttendedUntilTriggered
+Coin K.1,0,True,3.341926,False,0,False,0,3.341926,0,0,3.341926,3.341926
+Coin B.3,0,True,4.046751,False,0,False,0,4.046751,0,0,4.046751,4.046751
+Coin K.5,0,True,4.064837,False,0,False,0,4.064837,0,0,4.064837,4.064837
+Coin L.8,0,True,5.891688,False,0,False,0,5.891688,0,0,5.891688,5.891688
+Coin B.9,0,True,10.14848,False,0,False,0,10.14848,0,0,10.14848,10.14848
+Kitchen,14.5,39.4,24.9,False,0,False,0,51.92475
+Coin B.2,0,True,15.10242,False,0,False,0,15.10242,0,0,15.10242,15.10242
+Coin B.7,0,True,31.25162,False,0,False,0,31.25162,0,0,31.25162,31.25162
+Coin K.7,0,True,36.58756,False,0,False,0,36.58756,0,0,36.58756,36.58756
+Bedroom,41.3,45.5,4.200001,False,0,False,0,51.92475
+Coin K.6,0,True,43.42073,False,0,False,0,43.42073,0,0,43.42073,43.42073
+Coin K.3,0,True,46.51528,False,0,False,0,46.51528,0,0,46.51528,46.51528
+Kitchen,47.86,0,0,False,0,False,0,51.92475

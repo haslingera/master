@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\ImageSpaceModulationEditor.cs" />
-    <Compile Include="Assets\Editor\ListEditor.cs" />
     <Compile Include="Assets\LeanTween\Editor\LeanTweenDocumentationEditor.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Attributes\DecoratorAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessEditorAttribute.cs" />

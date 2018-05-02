@@ -10,12 +10,14 @@ public class PointOfInterest : MonoBehaviour
 	public Color Id;
 	public enum PoiType
 	{
-		Essential, NonEssential, OnlyTracking
+		Essential, OnlyTracking
 	}
 	
 	private GameObject _gazeGuidance;
 	private bool _focus;
 	private readonly Vector3 _debugScale = new Vector3(1.1f, 1.1f, 1.1f);
+
+	private bool first = true;
 
 	void Start()
 	{
@@ -43,8 +45,13 @@ public class PointOfInterest : MonoBehaviour
 	{
 		if (!_focus)
 		{
-			DataRecorder.Instance.GetCurrentDataSet().Attended = true; 
-			DataRecorder.Instance.GetCurrentDataSet().TimeAttended = Time.time;
+			if (first)
+			{
+				first = false;
+				DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).Attended = true; 
+				DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).TimeAttended = Time.time;
+			}
+			
 			_focus = true;
 		}
 	}
@@ -80,9 +87,6 @@ public class PointOfInterest : MonoBehaviour
 				if (pois.PoiEssential.Contains(gameObject))
 				{
 					pois.PoiEssential.Remove(gameObject);
-				} else if ( pois.PoiNonEssential.Contains(gameObject))
-				{
-					pois.PoiNonEssential.Remove(gameObject);
 				}
 			}
 		}
@@ -96,29 +100,10 @@ public class PointOfInterest : MonoBehaviour
 			PointsOfInterest pois = _gazeGuidance.GetComponent<PointsOfInterest>();
 			if (pois != null)
 			{
-				bool essentialContain = pois.PoiEssential.Contains(gameObject);
-				bool nonEssentialContain = pois.PoiNonEssential.Contains(gameObject);
-				
-				if (!essentialContain && !nonEssentialContain)
-				{
-					if (Type == PoiType.Essential)
-					{
-						pois.PoiEssential.Add(gameObject);
-					}
-					else
-					{
-						pois.PoiNonEssential.Add(gameObject);
-					}
-				} else if (essentialContain && Type == PoiType.NonEssential)
-				{
-					pois.PoiEssential.Remove(gameObject);
-					pois.PoiNonEssential.Add(gameObject);
-				} else if (nonEssentialContain && Type == PoiType.Essential)
+				if (!pois.PoiEssential.Contains(gameObject))
 				{
 					pois.PoiEssential.Add(gameObject);
-					pois.PoiNonEssential.Remove(gameObject);
 				}
-				
 			}
 		}
 	}

@@ -1,0 +1,6 @@
+GameObjectName,TimeAppeared,Attended,TimeAttended,Shot,TimeShot,ShotTriggered,TimeShotTriggered,TimeAppearedToAttend,TimeAppearedToTrigger,TimeAppearedUntilShot,TimeAttendedUntilShot,TimeAttendedUntilTriggered
+Enemy(Clone),3.622983,True,3.940002,True,4.32,True,4.044522,0.317019,0.4215393,0.6970167,-0.3799977,-0.1045203
+Enemy(Clone),5.783535,True,6.032162,True,6.46,True,6.205323,0.2486262,0.4217873,0.6764646,-0.4278383,-0.173161
+Enemy(Clone),7.840394,False,0,False,0,False,0,-7.840394,-7.840394,-7.840394,0,0
+Enemy(Clone),9.945754,True,10.46431,True,10.88,True,10.68314,0.5185528,0.7373896,0.9342461,-0.4156933,-0.2188368
+Enemy(Clone),12.26434,False,0,False,0,False,0,-12.26434,-12.26434,-12.26434,0,0

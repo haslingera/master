@@ -1,0 +1,2 @@
+GameObjectName,TimeAppeared,Attended,TimeAttended,Shot,TimeShot,ShotTriggered,TimeShotTriggered,TimeAppearedToAttend,TimeAppearedToTrigger,TimeAppearedUntilShot,TimeAttendedUntilShot,TimeAttendedUntilTriggered
+Coin B.8,0,True,1.204396,False,0,False,0,1.204396,0,0,1.204396,1.204396
