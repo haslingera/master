@@ -1,6 +1,7 @@
 ﻿public class DataSetConditionA : IDataSet {
 
 	private string _gameObjectName;
+	private bool _pointOfInterest;
 	private bool _attended;
 	private float _timeAttended;
 	public float TimeAppeared;
@@ -23,7 +24,12 @@
 	{
 		set { _timeAttended = value; }
 	}
-	
+
+	public bool IsPointOfInterest
+	{
+		set { _pointOfInterest = value; }
+	}
+
 	public string GameObjectName
 	{
 		set { _gameObjectName = value; }
@@ -43,6 +49,7 @@
 		return
 			"GameObjectName," +
 			"TimeAppeared," +
+			"WasPointOfInterest," +
 			"Attended," +
 			"TimeAttended," +
 			"Shot," +
@@ -61,6 +68,7 @@
 		return
 			_gameObjectName +
 			"," + TimeAppeared +
+			"," + _pointOfInterest + 
 			"," + _attended +
 			"," + _timeAttended +
 		    "," + Shot +

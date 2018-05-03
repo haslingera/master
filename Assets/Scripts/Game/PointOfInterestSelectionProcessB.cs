@@ -5,6 +5,8 @@ using UnityEngine;
 public class PointOfInterestSelectionProcessB : MonoBehaviour, IPointOfInterestSelectionProcess
 {
 
+	public string CurrentRoom;	
+
 	public float CheckDistance = 9.0f;
 	public float CoolOff = 2f;
 	public LayerMask RaycastLayers;
@@ -47,20 +49,22 @@ public class PointOfInterestSelectionProcessB : MonoBehaviour, IPointOfInterestS
 
 	private bool IsCandidate(GameObject toTest)
 	{
-
-		if (Vector3.Distance(Camera.main.transform.position, toTest.transform.position) < CheckDistance)
+		if (toTest.transform.parent.name == CurrentRoom)
 		{
-			if (PointIsWithinFieldOfView(toTest.transform.position))
+			if (Vector3.Distance(Camera.main.transform.position, toTest.transform.position) < CheckDistance)
 			{
-				RaycastHit hit;
-				
-				if (Physics.Linecast(Camera.main.transform.position, toTest.transform.position, out hit, RaycastLayers))
+				if (PointIsWithinFieldOfView(toTest.transform.position))
 				{
-					return false;
-				}
-
-				return true;
+					RaycastHit hit;
 				
+					if (Physics.Linecast(Camera.main.transform.position, toTest.transform.position, out hit, RaycastLayers))
+					{
+						return false;
+					}
+
+					return true;
+				
+				}
 			}
 		}
 		

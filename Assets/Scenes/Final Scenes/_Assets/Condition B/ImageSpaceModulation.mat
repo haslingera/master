@@ -85,7 +85,7 @@ Material:
     - _modulationPositionY: 0.5
     - _modulationSaturation: 0
     - _modulationType: 2
-    - _modulationValueBrightness: -3
+    - _modulationValueBrightness: 3
     - _noiseScale: 1
     - _size: 0.2
     m_Colors:

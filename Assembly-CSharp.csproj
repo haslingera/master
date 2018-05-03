@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,11 +10,11 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{FC01FE44-D7F4-DA83-EE91-2CA8D3F102A6}</ProjectGuid>
+    <ProjectGuid>{146BE81A-A203-16BC-4436-F0041FA6267E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -107,19 +106,6 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TargetPool.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureLerper.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
-    <Compile Include="Assets\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Constant.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Enum.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IconUtility.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_IgnoreSnapAttribute.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
-    <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakeInstance.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakePresets.cs" />
@@ -178,16 +164,10 @@
     <Compile Include="Assets\Scripts\Mapping\Screenshot.cs" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.compute" />
-    <None Include="Assets\ProCore\ProGrids\Shader\pg_GridShader.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Uber.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
-    <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStd.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Bloom.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\About\changelog.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
     <None Include="Assets\PostProcessing\Shaders\xRLib.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
     <None Include="Assets\Shader\Scifi Multiply Distort.shader" />
@@ -196,7 +176,6 @@
     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
     <None Include="Assets\Shader\AlphaSelfIllum.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
@@ -204,31 +183,21 @@
     <None Include="Assets\LeanTween\ReadMe.txt" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Colors.hlsl" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
-    <None Include="Assets\ProCore\ProGrids\About\pc_AboutEntry_ProGrids.txt" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\Vulkan.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Debug\LightMeter.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\D3D12.hlsl" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\OpenGL.hlsl" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
     <None Include="Assets\Shader\Blur.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\ACES.hlsl" />
-    <None Include="Assets\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
     <None Include="Assets\PostProcessing\Shaders\StdLib.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Fog.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
@@ -239,27 +208,20 @@
     <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
-    <None Include="Assets\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
     <None Include="Assets\Shader\DissolveByHeight.shader" />
     <None Include="Assets\Shader\PulsatingGlow.shader" />
-    <None Include="Assets\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
     <None Include="Assets\Shader\ImageSpaceModulation.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\D3D9.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Overlays.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\Metal.hlsl" />
-    <None Include="Assets\ProCore\ProGrids\About\changelog.txt" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.compute" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
     <None Include="Assets\LeanTween\License.txt" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
     <None Include="Assets\Shader\DissolveByDistance.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\Copy.shader" />
     <None Include="Assets\Shader\DissolveByHeightFade.shader" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
-    <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\PostProcessing\Shaders\API\D3D11.hlsl" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.shader" />
     <None Include="Assets\PostProcessing\Shaders\API\XboxOne.hlsl" />
@@ -268,7 +230,6 @@
     <None Include="Assets\Shader\two_side_shader.shader" />
     <None Include="Assets\Shader\Item Buffer.shader" />
     <None Include="Assets\Shader\CenterOfGravityMapping.compute" />
-    <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.compute" />
     <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.shader" />
     <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
@@ -282,7 +243,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor\Data/Managed/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
@@ -299,21 +260,6 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>C:/Users/hasli/Documents/Master/master/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>C:/Users/hasli/Documents/Master/master/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="KdTreeLib">
-      <HintPath>C:/Users/hasli/Documents/Master/master/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
-    </Reference>
-    <Reference Include="pb_Stl">
-      <HintPath>C:/Users/hasli/Documents/Master/master/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
-    </Reference>
-    <Reference Include="Poly2Tri">
-      <HintPath>C:/Users/hasli/Documents/Master/master/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -329,7 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{BFA14B87-0558-DAB1-045A-05D1F23ACE94}</Project>
+      <Project>{5B807416-A7D5-1C6F-4B11-438C282F2BCD}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

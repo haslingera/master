@@ -4,6 +4,10 @@
 public class PointOfInterest : MonoBehaviour
 {
 	
+	public PointOfInterestSelectionProcessB Poisp;
+
+	public PointsOfInterest Pois;
+	
 	public PoiType Type = PoiType.OnlyTracking;
 	
 	[HideInInspector]
@@ -12,9 +16,6 @@ public class PointOfInterest : MonoBehaviour
 	{
 		Essential, OnlyTracking
 	}
-
-	public bool Attended;
-	public float TimeAttended;
 	
 	private GameObject _gazeGuidance;
 	private bool _focus;
@@ -48,11 +49,33 @@ public class PointOfInterest : MonoBehaviour
 	{
 		if (!_focus)
 		{
-			if (first)
+
+			if (Poisp)
+			{
+				if (first && transform.parent.name == Poisp.CurrentRoom)
+				{
+					first = false;
+					DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).Attended = true; 
+					DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).TimeAttended = Time.time;
+
+					bool poi = Pois.IsPointOfInterest(gameObject);
+					if (poi)
+					{
+						DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).IsPointOfInterest = poi;
+					}
+				}
+			}
+			else if (first)
 			{
 				first = false;
 				DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).Attended = true; 
 				DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).TimeAttended = Time.time;
+				
+				bool poi = Pois.IsPointOfInterest(gameObject);
+				if (poi)
+				{
+					DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).IsPointOfInterest = poi;
+				}
 			}
 			
 			_focus = true;

@@ -8,5 +8,7 @@ public interface IDataSet
 	bool Attended{set;}
 	float TimeAttended{set;}
 	
+	bool IsPointOfInterest{set;}
+	
 	string GameObjectName{set;}
 }

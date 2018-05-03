@@ -9,6 +9,7 @@ public class DataSetConditionB : IDataSet
     public float TimeRoomExited;
     public float TimeSpentInRoom;
     
+    private bool _pointOfInterest;
     private bool _attended;
     private float _timeAttended;
     public bool Collected;
@@ -28,6 +29,7 @@ public class DataSetConditionB : IDataSet
             "TimeRoomEntered," +
             "TimeRoomExited," +
             "TimeSpentInRoom," +
+            "WasPointOfInterest," +
             "Attended," +
             "TimeAttended," +
             "Collected," +
@@ -42,6 +44,7 @@ public class DataSetConditionB : IDataSet
                "," + TimeRoomEntered +
                "," + TimeRoomExited +
                "," + TimeSpentInRoom +
+               "," + _pointOfInterest + 
                "," + _attended +
                "," + _timeAttended +
                "," + Collected +
@@ -57,6 +60,11 @@ public class DataSetConditionB : IDataSet
     public float TimeAttended
     {
         set { _timeAttended = value; }
+    }
+
+    public bool IsPointOfInterest
+    {
+        set { _pointOfInterest = value; }
     }
 
     public string GameObjectName

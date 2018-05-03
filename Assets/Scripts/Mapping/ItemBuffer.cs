@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
+using UnityEditor.Experimental.Build.AssetBundle;
 using UnityEngine;
 
 namespace Gaze
@@ -134,8 +135,21 @@ namespace Gaze
 
 		public void AddToItemBuffer(GameObject obj)
 		{
+			
+			//Color id = Color.white;
+			
+			/*if (obj.GetComponent<PointOfInterest>().Type == PointOfInterest.PoiType.Essential)
+			{	
+				id = Random.ColorHSV();
+			
+				while (ItemBufferObjectColors.ContainsValue(id))
+				{
+					id = Random.ColorHSV();
+				}
+			}*/
+			
 			Color id = Random.ColorHSV();
-
+			
 			while (ItemBufferObjectColors.ContainsValue(id))
 			{
 				id = Random.ColorHSV();

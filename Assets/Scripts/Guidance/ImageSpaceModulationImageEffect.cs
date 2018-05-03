@@ -206,6 +206,38 @@ namespace Guidance
             NoiseScale = _noiseScale;
 
         }
+
+        private void SetMaterialProperty(string property, float value)
+        {
+            if (ImageSpaceModulationMaterial)
+            {
+                ImageSpaceModulationMaterial.SetFloat(property, value);
+            }
+        }
+        
+        private void SetMaterialProperty(string property, int value)
+        {
+            if (ImageSpaceModulationMaterial)
+            {
+                ImageSpaceModulationMaterial.SetInt(property, value);
+            }
+        }
+        
+        private void SetMaterialProperty(string property, Color value)
+        {
+            if (ImageSpaceModulationMaterial)
+            {
+                ImageSpaceModulationMaterial.SetColor(property, value);
+            }
+        }
+        
+        private void SetMaterialProperty(string property, Texture2D value)
+        {
+            if (ImageSpaceModulationMaterial)
+            {
+                ImageSpaceModulationMaterial.SetTexture(property, value);
+            }
+        }
 		
         //------------------------------------------------------------------------------
         //-------------------------------GETTERS&SETTERS--------------------------------
@@ -215,7 +247,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetInt("_modulationType", (int)value);
+                SetMaterialProperty("_modulationType", (int)value);
                 _modulationType = value;
             }
             get { return _modulationType; }
@@ -226,7 +258,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetFloat("_kernelSize", value);
+                SetMaterialProperty("_kernelSize", value);
                 _gaussianKernelSize = value;
             }
             get { return _gaussianKernelSize; }
@@ -236,7 +268,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetFloat("_size", value);
+                SetMaterialProperty("_size", value);
                 _size = value;
             }
             get { return _size; }
@@ -246,7 +278,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetFloat("_modulationIntensity", value);
+                SetMaterialProperty("_modulationIntensity", value);
                 _intensity = value;
             }
             get { return _intensity; }
@@ -265,8 +297,8 @@ namespace Guidance
                     _modulationPositionX = screenPoint.x / Screen.width; 
                     _modulationPositionY = screenPoint.y / Screen.height; 
 			
-                    ImageSpaceModulationMaterial.SetFloat("_modulationPositionX", _modulationPositionX);
-                    ImageSpaceModulationMaterial.SetFloat("_modulationPositionY", _modulationPositionY);
+                    SetMaterialProperty("_modulationPositionX", _modulationPositionX);
+                    SetMaterialProperty("_modulationPositionY", _modulationPositionY);
                 }
 			
             }
@@ -276,7 +308,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetInt("_falloffType", (int)value);
+                SetMaterialProperty("_falloffType", (int)value);
                 _falloffType = value;
             }
             get { return _falloffType; }
@@ -287,7 +319,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetInt("_automaticModulationIntensity", value ? 1 : 0);
+                SetMaterialProperty("_automaticModulationIntensity", value ? 1 : 0);
                 _optimizeForPerceivedBrightness = value;
             }
             get { return _optimizeForPerceivedBrightness; }
@@ -312,9 +344,11 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetInt("_modulationBlendMode", (int)value);
-                _blendMode = value;
-			
+                if (ImageSpaceModulationMaterial)
+                {
+                    SetMaterialProperty("_modulationBlendMode", (int)value);
+                    _blendMode = value;
+                }
             }
 
             get { return _blendMode; }
@@ -326,7 +360,7 @@ namespace Guidance
             {
                 _modulationPositionY = value; 
 			
-                ImageSpaceModulationMaterial.SetFloat("_modulationPositionY", value);
+                SetMaterialProperty("_modulationPositionY", value);
             }
         }
 	
@@ -336,7 +370,7 @@ namespace Guidance
             {
                 _modulationPositionX = value; 
 			
-                ImageSpaceModulationMaterial.SetFloat("_modulationPositionX", value);
+                SetMaterialProperty("_modulationPositionX", value);
             }
         }
 
@@ -344,7 +378,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetColor("_modulationValueColor", value);
+                SetMaterialProperty("_modulationValueColor", value);
                 _color1 = value;
             }
 
@@ -355,7 +389,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetFloat("_modulationValueBrightness", value);
+                SetMaterialProperty("_modulationValueBrightness", value);
                 _brightness1 = value;
             }
 
@@ -366,7 +400,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetFloat("_modulationContrast", value);
+                SetMaterialProperty("_modulationContrast", value);
                 _contrast1 = value;
             }
 
@@ -377,7 +411,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetFloat("_modulationSaturation", value);
+                SetMaterialProperty("_modulationSaturation", value);
                 _saturation1 = value;
             }
 
@@ -418,7 +452,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetFloat("_modulationSaturation", value);
+                SetMaterialProperty("_modulationSaturation", value);
                 _saturation1 = value;
             }
 
@@ -429,7 +463,7 @@ namespace Guidance
         {
             set
             {
-                ImageSpaceModulationMaterial.SetTexture("_noise", value);
+                SetMaterialProperty("_noise", value);
                 _noise = value;
             }
 
@@ -442,7 +476,7 @@ namespace Guidance
             {
                 if (value < 0) { value = 0; }
                 _noiseScale = value;
-                ImageSpaceModulationMaterial.SetFloat("_noiseScale", value);			
+                SetMaterialProperty("_noiseScale", value);			
             }
 
             get { return _noiseScale; }

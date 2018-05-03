@@ -1519,7 +1519,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -1568,7 +1568,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -739031415
+  randomSeed: -944725235
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7546,7 +7546,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -7595,7 +7595,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -513347227
+  randomSeed: -1350791862
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -11591,7 +11591,7 @@ ParticleSystem:
   simulationSpeed: 1
   stopAction: 0
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -11640,7 +11640,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1877827905
+  randomSeed: 490986094
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -12036,7 +12036,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 500
     size3D: 0
     rotation3D: 0
     gravityModifier:

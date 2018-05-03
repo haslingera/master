@@ -16,9 +16,11 @@ public class PointsOfInterest : MonoBehaviour
 		}
 	}
 
+	private GameObject _currentPointOfInterest;
+
 	public bool IsPointOfInterest(GameObject go)
 	{
-		return PoiEssential.Contains(go);
+		return _currentPointOfInterest == go;
 	}
 
 	public GameObject GetRelevantPointOfInterest(PointOfInterest.PoiType type)
@@ -33,11 +35,13 @@ public class PointsOfInterest : MonoBehaviour
 					return PoiEssential[0];
 				}
 				
-				return Poisp.GetPointOfInterest(this);
+				_currentPointOfInterest = Poisp.GetPointOfInterest(this);
+				return _currentPointOfInterest;
 			}
 			
 		}
 
+		_currentPointOfInterest = null;
 		return null;
 	}
 	
