@@ -26,7 +26,6 @@ public class PickUpCoin : MonoBehaviour
 			
 			if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, ReachDistance))
 			{
-				Debug.Log(hit.collider.gameObject.name + " found");
 				if (hit.collider.gameObject.GetComponent<Coin>() != null)
 				{
 					hit.collider.gameObject.GetComponent<CollectCoinData>().CoinCollected();

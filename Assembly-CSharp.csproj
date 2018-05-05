@@ -2,6 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -10,11 +11,11 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{146BE81A-A203-16BC-4436-F0041FA6267E}</ProjectGuid>
+    <ProjectGuid>{FC01FE44-D7F4-DA83-EE91-2CA8D3F102A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
@@ -106,6 +107,8 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TargetPool.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureLerper.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\DataRecorderNew.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\DataSetNew.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakeInstance.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakePresets.cs" />
@@ -115,7 +118,6 @@
     <Compile Include="Assets\Scripts\Game\Coin.cs" />
     <Compile Include="Assets\Scripts\Game\CoinTextUpdater.cs" />
     <Compile Include="Assets\Scripts\Game\CollectCoinData.cs" />
-    <Compile Include="Assets\Scripts\Game\CollectGameTimeData.cs" />
     <Compile Include="Assets\Scripts\Game\CollectRoomData.cs" />
     <Compile Include="Assets\Scripts\Game\Crosshair.cs" />
     <Compile Include="Assets\Scripts\Game\DataRecorder.cs" />
@@ -159,6 +161,7 @@
     <Compile Include="Assets\Scripts\Guidance\PointsOfInterest.cs" />
     <Compile Include="Assets\Scripts\Guidance\SubtleGazeDirection.cs" />
     <Compile Include="Assets\Scripts\Mapping\CenterOfGravityMapping.cs" />
+    <Compile Include="Assets\Scripts\Mapping\GazeToObjectMapping.cs" />
     <Compile Include="Assets\Scripts\Mapping\ItemBuffer.cs" />
     <Compile Include="Assets\Scripts\Mapping\ItemBufferObject.cs" />
     <Compile Include="Assets\Scripts\Mapping\Screenshot.cs" />
@@ -243,7 +246,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Editor\Data/Managed/nunit.framework.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
@@ -275,7 +278,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{5B807416-A7D5-1C6F-4B11-438C282F2BCD}</Project>
+      <Project>{BFA14B87-0558-DAB1-045A-05D1F23ACE94}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

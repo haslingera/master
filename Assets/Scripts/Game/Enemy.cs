@@ -31,13 +31,17 @@ public class Enemy : MonoBehaviour
 	private bool _blink;
 	private bool _dead;
 
+	private bool _canBeShot;
+
 	void Start()
 	{
 		_lifeTime = Random.Range(MinLifetime, MaxLifetime)+ BlinkTime;
 		_asteroidMaterial = GetComponent<MeshRenderer>().material;
 		_asteroidMaterial.SetColor("_EmissionColor", StartColor);
+		float newScale = transform.localScale.x * Random.Range(1f, 1.5f);
+		transform.localScale = new Vector3(newScale,newScale,newScale);
 		_initScale = transform.localScale.x;
-		transform.localScale = Vector3.zero;
+		transform.localScale = new Vector3(_initScale - 1f, _initScale - 1f, _initScale - 1f);
 	}
 
 	private void Update()
@@ -105,7 +109,7 @@ public class Enemy : MonoBehaviour
 
 	public void EnemyShot(Bullet bullet)
 	{
-		if (!_dead)
+		if (!_dead && _canBeShot)
 		{
 			_dead = true;
 			if (Explosion != null)
@@ -120,14 +124,10 @@ public class Enemy : MonoBehaviour
 			GameObject.Find("Score Sound").GetComponent<AudioSource>().Play();
 			
 			Destroy(GetComponent<PointOfInterest>());
-			
 			TimeScoreManager.Instance.IncreaseScore();
 			
-			DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionA>(gameObject).ShotTriggered = true; 
-			DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionA>(gameObject).TimeShotTriggered = bullet.BulletBirthTime;
-			
-			DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionA>(gameObject).Shot = true;
-			DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionA>(gameObject).TimeShot = Time.time;
+			DataRecorderNew.Instance.AddNewDataSet(bullet.BulletBirthTime, gameObject, DataRecorderNew.Action.ShotTriggered);
+			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.Shot);
 			
 			Invoke("Destroy", Explosion.main.duration + Explosion.main.startLifetimeMultiplier - 2.2f);
 		}
@@ -137,11 +137,13 @@ public class Enemy : MonoBehaviour
 	{
 		Invoke("FlashGlow", _lifeTime - BlinkTime);
 
-		LeanTween.value(gameObject, UpdateScale, 0f, _initScale, 0.5f).setEaseInOutCirc();
+		LeanTween.value(gameObject, UpdateScale, _initScale - 1f, _initScale, 0.5f).setEaseInOutCirc();
 		_tweenId = LeanTween.value(gameObject, UpdateScale, _initScale, _initScale + 4, _lifeTime).setDelay(0.5f).setEaseOutCirc().id;
 		
 		GetComponent<MeshRenderer>().enabled = true;
-		DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionA>(gameObject).TimeAppeared = Time.time;
+		_canBeShot = true;
+		
+		DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.Appeared);
 	}
 
 	void Destroy()

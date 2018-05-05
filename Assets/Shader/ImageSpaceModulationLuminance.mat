@@ -41,6 +41,6 @@ Material:
     - _modulationType: 1
     - _modulationValueBrightness: 7.15
     - _noiseScale: 1.99
-    - _size: 0.188
+    - _size: 0.2
     m_Colors:
     - _modulationValueColor: {r: 1, g: 0, b: 0.972414, a: 1}

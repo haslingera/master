@@ -1,4 +1,5 @@
-﻿using Gaze;
+﻿using System;
+using Gaze;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,25 +13,46 @@ namespace Guidance
 		[Header("Angle Parameters")] 
 		[Range(0, 180)]
 		public float CancelAngle = 10;
+
+		[Header("Modulation Parameters")]
 		
-		[Header("Distance Parameters")]
-		public bool AutoDistance = true;
-		[Range(0, 1)]
-		public float CancelDistance = 0.1f;
-		[Range(0, 1)]
-		public float StartDistance = 0.4f;
+		public float ModulationRadius = 0.76f;
+		public float PerceptualSpanRadius = 3.8f;
+		
+		[Space(10)]
+		public bool IntensityCanBeModulated = true;
+		public int ModulationRate = 10;
+		public float ModulationIntensity;
+		public float ModulationIntensityStepSize = 0.005f;
+		public float MaxModulationDistanceMultiplier = 2f;
 		
 		private PointsOfInterest _pois;
-
 		private Vector2 _lastFixationPoint;
 		private bool _lastFixationPointSet;
+		private float _originalModulationRadius;
+		private ImageSpaceModulationImageEffect _ism;
 
-		private float _fovealRadius;
+		public float ModulationRadiusPixel
+		{
+			get { return CalculateDegreesToPixel(ModulationRadius); }
+		}
+		
+		public float PerceptualSpanPixel
+		{
+			get { return CalculateDegreesToPixel(PerceptualSpanRadius); }
+		}
 
 		private void Start()
 		{
 			_pois = GetComponent<PointsOfInterest>();
-			_fovealRadius = CalculateFovealRadiusInPixel();
+
+			_originalModulationRadius = ModulationRadius;
+
+			_ism = Camera.main.GetComponent<ImageSpaceModulationImageEffect>();
+			_ism.ModulationRate = ModulationRate;
+			_ism.Size = (ModulationRadiusPixel * 2f) / Screen.height;
+			_ism.Intensity = ModulationIntensity;
+			
 		}
 
 		Vector3 _pointToDisplay;
@@ -39,9 +61,23 @@ namespace Guidance
 		{
 			if (!Active) return;
 
+			if (IntensityCanBeModulated)
+			{
+				if (Input.GetKeyUp(KeyCode.KeypadPlus))
+				{
+					ModulationIntensity = Mathf.Min(ModulationIntensityStepSize + ModulationIntensity, 1f);
+					_ism.Intensity = ModulationIntensity;
+				} else if (Input.GetKeyUp(KeyCode.KeypadMinus))
+				{
+					ModulationIntensity = Mathf.Max(ModulationIntensityStepSize - ModulationIntensity, 0f);
+					_ism.Intensity = ModulationIntensity;
+				}
+			}
+
 			if (ChooseGameObjectToDisplay())
 			{
-				Camera.main.GetComponent<ImageSpaceModulationImageEffect>().ModulationPositionXYZ = _pointToDisplay;
+				_ism.ModulationPositionXYZ = _pointToDisplay;
+				CalculateSizeModulation(_pointToDisplay);
 				SetLastFixationPoint();
 
 				if (_lastFixationPointSet)
@@ -49,11 +85,11 @@ namespace Guidance
 					ShowLastFixationSaccadePointTriangle(_pointToDisplay);
 				}
 			
-				Camera.main.GetComponent<ImageSpaceModulationImageEffect>().ModulateImageSpace = ShowPoi(_pointToDisplay);
+				_ism.ModulateImageSpace = ShowPoi(_pointToDisplay);
 			}
 			else
 			{
-				Camera.main.GetComponent<ImageSpaceModulationImageEffect>().ModulateImageSpace = false;
+				_ism.ModulateImageSpace = false;
 				_showPoi = false;
 			}
 			
@@ -96,16 +132,13 @@ namespace Guidance
 			
 			float angle = CalculateAngleBetweenFixationSaccadePoi(pointToDisplay);
 
-			if (angle > 0 && angle <= CancelAngle || CalcPoiDistance(pointToDisplay, CancelDistance, true))
+			if (angle > 0 && angle <= CancelAngle)
 			{
 				_showPoi = false;
-			}
-
-			if (_showPoi == false)
-			{
-				_showPoi = CalcPoiDistance(pointToDisplay, StartDistance, false);
+				return _showPoi;
 			}
 			
+			_showPoi = CalcPoiDistance(pointToDisplay);
 			return _showPoi;
 			
 		}
@@ -121,20 +154,12 @@ namespace Guidance
 			return angle;
 		}
 
-		private bool CalcPoiDistance(Vector3 pointToDisplay, float maxDistance, bool smallerThan)
+		private bool CalcPoiDistance(Vector3 pointToDisplay)
 		{
 
 			if (!PointIsWithinFieldOfView(pointToDisplay)) return false;
 			
 			Vector2 poiPositionScreen = Camera.main.WorldToScreenPoint(pointToDisplay);
-			
-			/*Vector2 poiPositionScreenNormalized = new Vector2(poiPositionScreen.x / Screen.width, poiPositionScreen.y / Screen.height);
-			
-			float distance = Vector2.Distance(GazeManager.Instance.SmoothGazeVectorNormalized, poiPositionScreenNormalized);
-
-			if (smallerThan) return distance < maxDistance;
-			
-			return distance > maxDistance; */
 
 			return IsDistanceToGazeEnough(poiPositionScreen);
 		}
@@ -157,17 +182,24 @@ namespace Guidance
 			return viewportPoint.z > 0 && viewportPoint.x > 0 && viewportPoint.x < 1 && viewportPoint.y > 0 && viewportPoint.y < 1;
 		}
 		
-		float CalculateFovealRadiusInPixel ()
+		float CalculateDegreesToPixel (float degrees)
 		{
 			float distanceToComputerSquared = GazeManager.Instance.DistanceToComputer * GazeManager.Instance.DistanceToComputer;
-			float radiusCm = Mathf.Sqrt(distanceToComputerSquared + distanceToComputerSquared - 2f * distanceToComputerSquared * Mathf.Cos(GazeManager.Instance.FovealVisionRadians));
-			float radiusPx = Screen.dpi * (radiusCm / 2.54f);
-			return radiusPx / 2f;
+			float radiusCm = Mathf.Sqrt(distanceToComputerSquared + distanceToComputerSquared - 2f * distanceToComputerSquared * Mathf.Cos(degrees * Mathf.Deg2Rad));
+			float diameterPx = radiusCm * Screen.dpi / 2.54f;
+			return diameterPx / 2f;
 		}
 	
 		private bool IsDistanceToGazeEnough(Vector2 pointToDisplay)
 		{
-			return Vector2.Distance(pointToDisplay, GazeManager.Instance.SmoothGazeVector) > _fovealRadius;
+			return Vector2.Distance(pointToDisplay, GazeManager.Instance.SmoothGazeVector) > ModulationRadiusPixel + PerceptualSpanPixel;
+		}
+
+		private void CalculateSizeModulation(Vector3 pointToDisplay)
+		{
+			Vector3 viewportPoint = Camera.main.WorldToScreenPoint(pointToDisplay);	
+			ModulationRadius = _originalModulationRadius * (1f + (Mathf.Max(MaxModulationDistanceMultiplier - 1, 0f) * Mathf.Min(Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), GazeManager.Instance.SmoothGazeVector) / Screen.height, 1f)));			
+			_ism.Size = (ModulationRadiusPixel * 2f) / Screen.height;
 		}
 	
 	}

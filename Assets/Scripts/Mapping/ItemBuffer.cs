@@ -17,7 +17,7 @@ namespace Gaze
 		public float RayCastRadius = 4;
 		
 		public readonly Dictionary<GameObject,ItemBufferObject> ItemBufferObjects = new Dictionary<GameObject,ItemBufferObject>();
-		private readonly Dictionary<GameObject,Color> ItemBufferObjectColors = new Dictionary<GameObject,Color>();
+		//private readonly Dictionary<GameObject,Color> ItemBufferObjectColors = new Dictionary<GameObject,Color>();
 		
 		private ArrayList _toRemove = new ArrayList();
 
@@ -114,6 +114,8 @@ namespace Gaze
 			{
 				if (bufferObj.Key.gameObject != null)
 				{
+					bufferObj.Value.MeshEnabled = bufferObj.Key.GetComponent<MeshRenderer>().enabled;
+					bufferObj.Key.GetComponent<MeshRenderer>().enabled = true;
 					bufferObj.Key.layer = LayerMask.NameToLayer("ItemBuffer");
 					bufferObj.Value.CurrentColor = bufferObj.Key.GetComponent<Renderer>().material.color;
 					bufferObj.Key.GetComponent<PointOfInterest>().SetIDColor();
@@ -127,6 +129,7 @@ namespace Gaze
 			{
 				if (bufferObj.Key.gameObject != null)
 				{
+					bufferObj.Key.GetComponent<MeshRenderer>().enabled = bufferObj.Value.MeshEnabled;
 					bufferObj.Key.layer = bufferObj.Value.Layer;
 					bufferObj.Key.GetComponent<Renderer>().material.color = bufferObj.Value.CurrentColor;
 				}
@@ -136,33 +139,28 @@ namespace Gaze
 		public void AddToItemBuffer(GameObject obj)
 		{
 			
-			//Color id = Color.white;
+			Color id = Color.white;
 			
-			/*if (obj.GetComponent<PointOfInterest>().Type == PointOfInterest.PoiType.Essential)
+			if (obj.GetComponent<PointOfInterest>().Type == PointOfInterest.PoiType.Essential)
 			{	
 				id = Random.ColorHSV();
 			
-				while (ItemBufferObjectColors.ContainsValue(id))
+				/*while (ItemBufferObjectColors.ContainsValue(id))
 				{
 					id = Random.ColorHSV();
-				}
-			}*/
-			
-			Color id = Random.ColorHSV();
-			
-			while (ItemBufferObjectColors.ContainsValue(id))
-			{
-				id = Random.ColorHSV();
+				}*/
 			}
+			
+			//Color id = Random.ColorHSV();
 	
 			ItemBufferObjects.Add(obj, new ItemBufferObject(obj, obj.layer, id));
-			ItemBufferObjectColors.Add(obj, id);
+			//ItemBufferObjectColors.Add(obj, id);
 		}
 		
 		public void RemoveFromItemBuffer(GameObject obj)
 		{
 			ItemBufferObjects.Remove(obj);
-			ItemBufferObjectColors.Remove(obj);
+			//ItemBufferObjectColors.Remove(obj);
 		}
 
 		public void CheckItemBuffer()

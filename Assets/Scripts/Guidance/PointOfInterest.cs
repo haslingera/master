@@ -4,90 +4,97 @@
 public class PointOfInterest : MonoBehaviour
 {
 	
-	public PointOfInterestSelectionProcessB Poisp;
-
-	public PointsOfInterest Pois;
-	
-	public PoiType Type = PoiType.OnlyTracking;
+	public PoiType Type = PoiType.Essential;
 	
 	[HideInInspector]
 	public Color Id;
 	public enum PoiType
 	{
-		Essential, OnlyTracking
+		Essential, OnlyTracking, Occluder
 	}
 	
 	private GameObject _gazeGuidance;
-	private bool _focus;
+	public bool HasFocus;
 	private readonly Vector3 _debugScale = new Vector3(1.1f, 1.1f, 1.1f);
 
 	private bool first = true;
 
 	void Start()
 	{
-		if (Type == PoiType.OnlyTracking)
+		/*if (Type == PoiType.OnlyTracking)
 		{
 			RemovePOI();
 		}
-		else
+		else */
+		if (Type == PoiType.Essential)
 		{
 			AddPOI();
 		}
 	}
 
 	private void OnDestroy()
-	{
+	{	
+		if (_hasFocusBuffer)
+		{
+			DataRecorderNew.Instance.AddNewDataSet(_originalTimeUnattended, gameObject, DataRecorderNew.Action.Unattended);
+		}
+		
 		RemovePOI();
 	}
 
 	private void OnDisable()
-	{
+	{		
 		RemovePOI();
+	}
+
+	private float _buffer;
+	private float _bufferMax = 0.3f;
+	private bool _hasFocusBuffer;
+
+	private float _originalTimeAttended;
+	private float _originalTimeUnattended;
+
+	private void Update()
+	{
+
+		if (HasFocus && !_hasFocusBuffer)
+		{
+			DataRecorderNew.Instance.AddNewDataSet(_originalTimeAttended, gameObject, DataRecorderNew.Action.Attended);
+			_buffer = 0;
+			_hasFocusBuffer = true;
+		}
+		
+		if (!HasFocus && _hasFocusBuffer && _buffer >= _bufferMax)
+		{
+			_hasFocusBuffer = false;
+			_buffer = 0;
+			DataRecorderNew.Instance.AddNewDataSet(_originalTimeUnattended, gameObject, DataRecorderNew.Action.Unattended);
+		}
+		
+		if (!HasFocus)
+		{
+			_buffer += Time.deltaTime;
+		}
+		
 	}
 
 	public void GainedFocus()
 	{
-		if (!_focus)
+		if (!HasFocus)
 		{
-
-			if (Poisp)
-			{
-				if (first && transform.parent.name == Poisp.CurrentRoom)
-				{
-					first = false;
-					DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).Attended = true; 
-					DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).TimeAttended = Time.time;
-
-					bool poi = Pois.IsPointOfInterest(gameObject);
-					if (poi)
-					{
-						DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).IsPointOfInterest = poi;
-					}
-				}
-			}
-			else if (first)
-			{
-				first = false;
-				DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).Attended = true; 
-				DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).TimeAttended = Time.time;
-				
-				bool poi = Pois.IsPointOfInterest(gameObject);
-				if (poi)
-				{
-					DataRecorder.Instance.GetOrCreateDataSet<IDataSet>(gameObject).IsPointOfInterest = poi;
-				}
-			}
-			
-			_focus = true;
+			_originalTimeAttended = Time.time;
+			HasFocus = true;
 		}
 	}
 
 	public void LostFocus()
 	{
-		if (_focus)
-		{
-			_focus = false;
+		if (HasFocus)
+		{	
+			_originalTimeUnattended = Time.time;
+			HasFocus = false;
 		}
+		
 	}
 
 	public void SetIDColor()
@@ -97,7 +104,7 @@ public class PointOfInterest : MonoBehaviour
 	
 	private void OnDrawGizmos()
 	{
-		if (_focus)
+		if (_hasFocusBuffer)
 		{
 			DebugExtension.DrawLocalCube(transform,_debugScale, new Color(25/255f, 115/255f, 232/255f));
 		}
@@ -105,6 +112,9 @@ public class PointOfInterest : MonoBehaviour
 
 	private void RemovePOI()
 	{
+
+		LostFocus();
+		
 		if (_gazeGuidance != null)
 		{
 			PointsOfInterest pois = _gazeGuidance.GetComponent<PointsOfInterest>();
@@ -133,4 +143,5 @@ public class PointOfInterest : MonoBehaviour
 			}
 		}
 	}
+
 }

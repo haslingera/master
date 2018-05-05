@@ -1,6 +1,9 @@
 ﻿using System;
+using System.CodeDom;
+using System.Linq.Expressions;
 using Game;
 using Gaze;
+using Guidance;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -40,12 +43,12 @@ public class EnemySpawner : MonoBehaviour
 	private bool _positionSet;
 	private float _currentFirstWaitTime;
 
-	private float _fovealRadius;
+	private SubtleGazeDirection _subtleGazeDirection;
 
 	void Start()
 	{
 		_currentWaitTime = Random.Range(WaitTimeBetweenEnemySpawnMin, WaitTimeBetweenEnemySpawnMax);
-		_fovealRadius = CalculateFovealRadiusInPixel();
+		_subtleGazeDirection = GameObject.Find("Gaze Guidance").GetComponent<SubtleGazeDirection>();
 	}
 
 	void Update () {
@@ -88,11 +91,19 @@ public class EnemySpawner : MonoBehaviour
 		if (_currentEnemy != null) return;
 
 		Vector3 screenPointEnemyPosition = new Vector3(Random.Range(Screen.width - Screen.width * SpawnInset, Screen.width * SpawnInset), Random.Range(Screen.height - Screen.height * SpawnInset, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
-
-		while (!IsDistanceToGazeEnough(screenPointEnemyPosition))
+		
+		while (true)
 		{
+			if (IsDistanceToGazeEnough(screenPointEnemyPosition) && !IsInsideSpaceShip(screenPointEnemyPosition))
+			{
+				break;
+			}
+			
 			screenPointEnemyPosition = new Vector3(Random.Range(Screen.width - Screen.width * SpawnInset, Screen.width * SpawnInset), Random.Range(Screen.height - Screen.height * SpawnInset, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
 		}
+
+		lastX = screenPointEnemyPosition.x;
+		lastY = screenPointEnemyPosition.y;
 				
 		_enemyPositionToBe = Camera.main.ScreenToWorldPoint(screenPointEnemyPosition);
 		_currentEnemy = Instantiate(Enemy, _enemyPositionToBe, Quaternion.identity);
@@ -100,18 +111,58 @@ public class EnemySpawner : MonoBehaviour
 		Invoke("ShowEnemy", GazeDirectionTime);
 	}
 
-	float CalculateFovealRadiusInPixel ()
+	private bool IsInsideSpaceShip(Vector3 pointToDisplay)
 	{
-		float distanceToComputerSquared = GazeManager.Instance.DistanceToComputer * GazeManager.Instance.DistanceToComputer;
-		float radiusCm = Mathf.Sqrt(distanceToComputerSquared + distanceToComputerSquared - 2f * distanceToComputerSquared * Mathf.Cos(GazeManager.Instance.FovealVisionRadians));
-		float radiusPx = Screen.dpi * (radiusCm / 2.54f);
-		return radiusPx / 2f;
+		Rect rect = new Rect(0.3857f * Screen.width, 0.1708f * Screen.height, 0.2285f * Screen.width, 0.1927f * Screen.height);
+		
+		if (rect.Contains(new Vector2(pointToDisplay.x, pointToDisplay.y)))
+		{
+			return true;
+		}
+
+		return false;
 	}
+
+	private float lastX;
+	private float lastY;
 	
 	
 	private bool IsDistanceToGazeEnough(Vector3 pointToDisplay)
 	{
-		return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _fovealRadius;
+		
+		/*if (lastX < Screen.width / 2f)
+		{
+			if (pointToDisplay.x < Screen.width / 2f)
+			{
+				return false;
+			}
+		}
+		
+		if ( lastX >= Screen.width / 2f)
+		{
+			if (pointToDisplay.x >= Screen.width / 2f)
+			{
+				return false;
+			}
+		}
+		
+		if (lastY < Screen.height / 2f)
+		{
+			if (pointToDisplay.y < Screen.height / 2f)
+			{
+				return false;
+			}
+		}
+		
+		if ( lastY >= Screen.height / 2f)
+		{
+			if (pointToDisplay.y >= Screen.height / 2f)
+			{
+				return false;
+			}
+		}*/
+				
+		return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _subtleGazeDirection.PerceptualSpanPixel + _subtleGazeDirection.ModulationRadiusPixel;
 	}
 
 	void ShowEnemy()

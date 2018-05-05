@@ -10,16 +10,15 @@ public class CollectRoomData : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		Poisp.CurrentRoom = name;
-		DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionB>(gameObject).TimeRoomEntered = Time.time;
+		DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.RoomEnter);
 	}
 	
 	private void OnTriggerExit(Collider other)
 	{
 		Poisp.CurrentRoom = "";
 		
-		DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionB>(gameObject).TimeRoomExited = Time.time;
-		DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionB>(gameObject).TimeSpentInRoom = DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionB>(gameObject).TimeRoomExited - DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionB>(gameObject).TimeRoomEntered;
-			
+		DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.RoomExit);
+				
 		GameObject newGameObject = Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
 		newGameObject.name = gameObject.name;
 		newGameObject.transform.parent = gameObject.transform.parent;

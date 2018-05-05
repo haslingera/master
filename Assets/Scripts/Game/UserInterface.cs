@@ -29,7 +29,7 @@ public class UserInterface : MonoBehaviour
 			IsActive = false;
 			Time.timeScale = 1f;
 			StartAudioSource.Play();
-			BackgroundAudioSource.Play();
+			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.GameStarted);
 			gameObject.SetActive(false);
 			StartCanvas.SetActive(false);
 			EndCanvas.SetActive(true);

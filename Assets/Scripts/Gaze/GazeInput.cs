@@ -9,7 +9,7 @@ namespace Gaze
 		[Header("General Settings")]
 		[Range(1, 100)]
 		public int BufferWindow = 10;
-		public bool UseMouseAsInput;
+		public bool UseMouseAsGaze;
 		public bool CursorLocked;
 		public bool ShowGaze;
 
@@ -35,17 +35,20 @@ namespace Gaze
 				CursorLocked = false;
 			}
 		
-			if (UseMouseAsInput && !CursorLocked)
+			if (UseMouseAsGaze && !CursorLocked)
 			{
+				GazeManager.Instance.MouseAsGaze = true;
 				GazeManager.Instance.SetGazeAvailable();
 				GazeManager.Instance.SetGazeVector(Input.mousePosition);
-			} else if (UseMouseAsInput && CursorLocked)
+			} else if (UseMouseAsGaze && CursorLocked)
 			{
+				GazeManager.Instance.MouseAsGaze = true;
 				GazeManager.Instance.SetGazeAvailable();
 				GazeManager.Instance.SetGazeVector(new Vector2(Screen.width/2f, Screen.height/2f));
 			}
 			else
 			{
+				GazeManager.Instance.MouseAsGaze = false;
 				GazeManager.Instance.SetGazeAvailable();
 				GazeManager.Instance.SetGazeVector(TobiiAPI.GetGazePoint().Screen);
 			}

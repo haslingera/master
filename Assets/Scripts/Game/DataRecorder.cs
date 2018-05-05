@@ -1,4 +1,4 @@
-﻿using System.IO;
+﻿/*using System.IO;
 using System.Collections.Specialized;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -110,4 +110,4 @@ public class DataRecorder : MonoBehaviour {
 		WriteDataToCsv();
 	}
 	
-}
+}*/

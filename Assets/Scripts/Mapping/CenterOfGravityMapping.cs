@@ -110,24 +110,36 @@ namespace Gaze
 
 				if (fixated == null)
 				{
+					
+					if (currentMappedObject && currentMappedObject.GetComponent<PointOfInterest>() != null)
+					{
+						currentMappedObject.GetComponent<PointOfInterest>().LostFocus();
+					}
+					
 					currentMappedObject = null;
 					return;
 				}
-				
-				foreach (var obj in _itemBuffer.ItemBufferObjects)
-				{
-					obj.Key.GetComponent<PointOfInterest>().LostFocus();
-				}
 
-				currentMappedObject = fixated.go;
-				fixated.go.GetComponent<PointOfInterest>().GainedFocus();
+				if (fixated.go != currentMappedObject)
+				{
+					if (currentMappedObject != null)
+					{
+						currentMappedObject.GetComponent<PointOfInterest>().LostFocus();
+					}
+
+					fixated.go.GetComponent<PointOfInterest>().GainedFocus();
+					currentMappedObject = fixated.go;
+				}
 				
 			} else if (!ShowGazeMapping)
 			{
-				foreach (var obj in _itemBuffer.ItemBufferObjects)
+				
+				if (currentMappedObject != null)
 				{
-					obj.Value.go.GetComponent<PointOfInterest>().LostFocus();
+					currentMappedObject.GetComponent<PointOfInterest>().LostFocus();
 				}
+					
+				currentMappedObject = null;
 			}
 		}
 		
@@ -241,7 +253,6 @@ namespace Gaze
 				{
 					if (bufferObj.Value.Co.x > 0 && bufferObj.Value.Co.y > 0)
 					DebugExtension.DebugPoint(Camera.main.ScreenToWorldPoint(new Vector3(bufferObj.Value.Co.x * Screen.width, bufferObj.Value.Co.y * Screen.height, Camera.main.nearClipPlane + 1)), Color.cyan, 0.2f);
-					//Handles.Label(bufferObj.Key.transform.position, "P(O|g) = " + bufferObj.Value.CmPog, _style);
 				}
 			}
 		}

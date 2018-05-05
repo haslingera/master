@@ -32,6 +32,19 @@ public class PointsOfInterest : MonoBehaviour
 			{
 				if (Poisp == null)
 				{
+					if (PoiEssential[0] != _currentPointOfInterest)
+					{
+						
+						if (_currentPointOfInterest)
+						{
+							DataRecorderNew.Instance.AddNewDataSet(Time.time, _currentPointOfInterest, DataRecorderNew.Action.UnmarkedAsPOI);
+						}
+						
+						_currentPointOfInterest = PoiEssential[0];
+						
+						DataRecorderNew.Instance.AddNewDataSet(Time.time, _currentPointOfInterest, DataRecorderNew.Action.MarkedAsPOI);
+					}
+						
 					return PoiEssential[0];
 				}
 				
@@ -41,6 +54,11 @@ public class PointsOfInterest : MonoBehaviour
 			
 		}
 
+		if (_currentPointOfInterest)
+		{
+			DataRecorderNew.Instance.AddNewDataSet(Time.time, _currentPointOfInterest, DataRecorderNew.Action.UnmarkedAsPOI);
+		}
+		
 		_currentPointOfInterest = null;
 		return null;
 	}

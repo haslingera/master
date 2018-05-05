@@ -6,8 +6,7 @@ public class CollectCoinData : MonoBehaviour {
 	
 	public void CoinCollected()
 	{
-		DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionB>(gameObject).Collected = true;
-		DataRecorder.Instance.GetOrCreateDataSet<DataSetConditionB>(gameObject).TimeCollected = Time.time;
+		DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.Collected);
 	}
 
 	public void DeleteCoinAfterDataCollection()

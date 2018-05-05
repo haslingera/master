@@ -8,8 +8,6 @@ public class GazeType : MonoBehaviour {
 	public Types Type = Types.Spatial;
 	
 	[Header("Temporal Settings")]
-	[Tooltip("Distance to computer in centimeters")]
-	public float DistanceToComputer = 60;
 	public float MinimumSaccadeTime = 300;
 
 	private bool _saccade;
@@ -46,6 +44,7 @@ public class GazeType : MonoBehaviour {
 			{
 				return DebugType == DebugTypes.Fixation;
 			}
+
 			return !_saccade;
 		}
 	}
@@ -92,7 +91,6 @@ public class GazeType : MonoBehaviour {
 
 			GazeManager.Instance.Fixation = Fixation;
 			GazeManager.Instance.Saccade = Saccade;
-			GazeManager.Instance.DistanceToComputer = DistanceToComputer;
 		}
 	}
 
@@ -131,7 +129,7 @@ public class GazeType : MonoBehaviour {
 
 	private float SpeedInDegreesPerSecond(GazePointObject gpo1, GazePointObject gpo2)
 	{
-		double degrees = RadiansToDegrees(Math.Atan((gpo1.GazePoint - gpo2.GazePoint).magnitude / Screen.dpi / (DistanceToComputer / 2.54f)));
+		double degrees = RadiansToDegrees(Math.Atan((gpo1.GazePoint - gpo2.GazePoint).magnitude / Screen.dpi / (GazeManager.Instance.DistanceToComputer / 2.54f)));
 		float time = (gpo2.DateTime - gpo1.DateTime).Milliseconds / 1000f;
 		return (float) (degrees / time);
 	}

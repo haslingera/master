@@ -4,7 +4,6 @@ using UnityEngine;
 public class StartAndFinishGame : MonoBehaviour
 {
 
-	
 	public GameObject StartGameCanvas;
 	public GameObject CoinCanvas;
 	public GameObject CursorCanvas;
@@ -30,16 +29,19 @@ public class StartAndFinishGame : MonoBehaviour
 	{
 		if (StartGameCanvas.activeInHierarchy && Input.GetMouseButtonUp(0))
 		{
+			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.GameStarted);
 			GameObject.Find("Door Opening Sound").GetComponent<AudioSource>().Play();
-			//LeanTween.delayedCall(gameObject, 0.5f, UnPauseGame);
 			UnPauseGame();
 		}
 	}
 
 	private void OnCollisionEnter(Collision other)
 	{
-		GameObject.Find("Exit Game Sound").GetComponent<AudioSource>().Play();
-		PauseGame(true);
+		if (GetComponent<Renderer>().isVisible)
+		{
+			GameObject.Find("Exit Game Sound").GetComponent<AudioSource>().Play();
+			PauseGame(true);
+		}
 	}
 
 	public void QuitGame ()

@@ -5,6 +5,7 @@ public class ItemBufferObject {
 	public GameObject go;
 	public int Layer;
 	public Color CurrentColor;
+	public bool MeshEnabled;
 	
 	public float CmPog;
 	public float CmPgo;

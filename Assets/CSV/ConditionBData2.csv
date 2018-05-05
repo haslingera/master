@@ -1,5 +1,0 @@
-GameObjectName,TimeRoomEntered,TimeRoomExited,TimeSpentInRoom,WasPointOfInterest,Attended,TimeAttended,Collected,TimeCollected,TimePlayedTotal
-Kitchen,1.56,0,0,False,False,0,False,0,11.58167
-Coin K.6,0,0,0,False,True,1.596586,False,0,11.58167
-Coin K.8,0,0,0,False,True,3.076236,False,0,11.58167
-Coin K.2,0,0,0,True,True,6.315766,False,0,11.58167
