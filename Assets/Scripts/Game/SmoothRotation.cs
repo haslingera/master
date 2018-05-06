@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor;
 
 [AddComponentMenu("Camera-Control/Smooth Mouse Look")]
 public class SmoothRotation : MonoBehaviour {
@@ -171,10 +170,10 @@ public class SmoothRotation : MonoBehaviour {
 
 	public bool MouseScreenCheck()
 	{
-		if (Input.mousePosition.x == 0 || Input.mousePosition.y == 0 || Input.mousePosition.x >= Handles.GetMainGameViewSize().x - 1 || Input.mousePosition.y >= Handles.GetMainGameViewSize().y - 1)
+		/*if (Input.mousePosition.x == 0 || Input.mousePosition.y == 0 || Input.mousePosition.x >= Handles.GetMainGameViewSize().x - 1 || Input.mousePosition.y >= Handles.GetMainGameViewSize().y - 1)
 		{
 			return false;
-		}
+		}*/
 		
 		return true;
 	}

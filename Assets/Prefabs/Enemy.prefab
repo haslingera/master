@@ -92,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 1489504461198570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4099161516619476}
   m_Father: {fileID: 0}
@@ -210,9 +210,9 @@ MonoBehaviour:
   StartColor: {r: 0, g: 0.26896477, b: 2.0790005, a: 1}
   EndColor: {r: 3, g: 2.1, b: 3, a: 1}
   FlashColor: {r: 3, g: 2.5770001, b: 3, a: 1}
-  MinLifetime: 0.5
-  MaxLifetime: 0.8
-  BlinkTime: 0.5
+  MinLifetime: 0.3
+  MaxLifetime: 0.6
+  BlinkTime: 0.1
 --- !u!114 &114575024732163966
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,0 +1,15 @@
+Time,Name,Id,Action
+0,Menu,57278,GameStarted
+1,Gaze Guidance,-330732,ModulationIntensity
+1,Gaze Guidance,-330732,ModulationIntensity
+3.39671,Enemy(Clone),-912480,MarkedAsPOI
+3.9,Enemy(Clone),-912480,Appeared
+5.118689,Enemy(Clone),-913212,MarkedAsPOI
+5.604025,Enemy(Clone),-913212,Appeared
+7.304499,Enemy(Clone),-913612,Appeared
+8.80167,Enemy(Clone),-913914,Appeared
+10.34354,Enemy(Clone),-914216,Appeared
+11.8256,Enemy(Clone),-914518,Appeared
+13.22326,Enemy(Clone),-914692,Appeared
+14.58102,Enemy(Clone),-914866,Appeared
+15.46403,Data Recorder,57124,GameExited

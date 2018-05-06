@@ -21,8 +21,11 @@ namespace Guidance
 		
 		[Space(10)]
 		public bool IntensityCanBeModulated = true;
+		public bool ModulateAlways = false;
+		public bool FullIntensity = false;
 		public int ModulationRate = 10;
-		public float ModulationIntensity;
+		public float ModulationIntensityMin;
+		public float ModulationIntensityMax;
 		public float ModulationIntensityStepSize = 0.005f;
 		public float MaxModulationDistanceMultiplier = 2f;
 		
@@ -44,6 +47,25 @@ namespace Guidance
 
 		private void Start()
 		{
+
+			if (IntensityManager.Instance != null)
+			{
+				if (!IntensityCanBeModulated)
+				{
+					ModulationIntensityMin = IntensityManager.Instance.IntensityMin;
+					ModulationIntensityMax = IntensityManager.Instance.IntensityMax;
+				}
+			}
+
+			if (FullIntensity)
+			{
+				ModulationIntensityMin = 1f;
+				ModulationIntensityMax = 1f;
+			}
+			
+			DataRecorderNew.Instance.AddNewDataSet(ModulationIntensityMin, gameObject, DataRecorderNew.Action.ModulationIntensity);
+			DataRecorderNew.Instance.AddNewDataSet(ModulationIntensityMax, gameObject, DataRecorderNew.Action.ModulationIntensity);
+			
 			_pois = GetComponent<PointsOfInterest>();
 
 			_originalModulationRadius = ModulationRadius;
@@ -51,7 +73,8 @@ namespace Guidance
 			_ism = Camera.main.GetComponent<ImageSpaceModulationImageEffect>();
 			_ism.ModulationRate = ModulationRate;
 			_ism.Size = (ModulationRadiusPixel * 2f) / Screen.height;
-			_ism.Intensity = ModulationIntensity;
+			_ism.Intensity = ModulationIntensityMin;
+			_ism.ModulateImageSpace = false;
 			
 		}
 
@@ -59,39 +82,62 @@ namespace Guidance
 
 		private void Update()
 		{
-			if (!Active) return;
+			if (!Active)
+			{
+				_ism.ModulateImageSpace = false;
+				return;
+			}
 
 			if (IntensityCanBeModulated)
 			{
 				if (Input.GetKeyUp(KeyCode.KeypadPlus))
 				{
-					ModulationIntensity = Mathf.Min(ModulationIntensityStepSize + ModulationIntensity, 1f);
-					_ism.Intensity = ModulationIntensity;
+					ModulationIntensityMin = Mathf.Min(ModulationIntensityMin + ModulationIntensityStepSize, 1f);
+					ModulationIntensityMax = Mathf.Min(ModulationIntensityMax + ModulationIntensityStepSize, 1f);
 				} else if (Input.GetKeyUp(KeyCode.KeypadMinus))
 				{
-					ModulationIntensity = Mathf.Max(ModulationIntensityStepSize - ModulationIntensity, 0f);
-					_ism.Intensity = ModulationIntensity;
+					ModulationIntensityMin = Mathf.Max(ModulationIntensityMin - ModulationIntensityStepSize, 0f);
+					ModulationIntensityMax = Mathf.Max(ModulationIntensityMax - ModulationIntensityStepSize, 0f);
 				}
 			}
 
-			if (ChooseGameObjectToDisplay())
+			if (ModulateAlways)
 			{
-				_ism.ModulationPositionXYZ = _pointToDisplay;
-				CalculateSizeModulation(_pointToDisplay);
-				SetLastFixationPoint();
-
-				if (_lastFixationPointSet)
+				if (ChooseGameObjectToDisplay())
 				{
-					ShowLastFixationSaccadePointTriangle(_pointToDisplay);
+					_ism.ModulationPositionXYZ = _pointToDisplay;
+					CalculateSizeAndIntensityModulation(_pointToDisplay);
+					SetLastFixationPoint();
+					_ism.ModulateImageSpace = true;
 				}
-			
-				_ism.ModulateImageSpace = ShowPoi(_pointToDisplay);
+				else
+				{
+					_ism.ModulateImageSpace = false;
+				}
 			}
 			else
 			{
-				_ism.ModulateImageSpace = false;
-				_showPoi = false;
+				if (ChooseGameObjectToDisplay())
+				{
+					_ism.ModulationPositionXYZ = _pointToDisplay;
+					CalculateSizeAndIntensityModulation(_pointToDisplay);
+					SetLastFixationPoint();
+
+					if (_lastFixationPointSet)
+					{
+						ShowLastFixationSaccadePointTriangle(_pointToDisplay);
+					}
+			
+					_ism.ModulateImageSpace = ShowPoi(_pointToDisplay);
+				}
+				else
+				{
+					_ism.ModulateImageSpace = false;
+					_showPoi = false;
+				}
 			}
+
+			
 			
 		}
 
@@ -195,11 +241,12 @@ namespace Guidance
 			return Vector2.Distance(pointToDisplay, GazeManager.Instance.SmoothGazeVector) > ModulationRadiusPixel + PerceptualSpanPixel;
 		}
 
-		private void CalculateSizeModulation(Vector3 pointToDisplay)
+		private void CalculateSizeAndIntensityModulation(Vector3 pointToDisplay)
 		{
 			Vector3 viewportPoint = Camera.main.WorldToScreenPoint(pointToDisplay);	
 			ModulationRadius = _originalModulationRadius * (1f + (Mathf.Max(MaxModulationDistanceMultiplier - 1, 0f) * Mathf.Min(Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), GazeManager.Instance.SmoothGazeVector) / Screen.height, 1f)));			
 			_ism.Size = (ModulationRadiusPixel * 2f) / Screen.height;
+			_ism.Intensity = Mathf.Lerp(ModulationIntensityMin, ModulationIntensityMax, Mathf.Min(Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), GazeManager.Instance.SmoothGazeVector) / Screen.height, 1f));
 		}
 	
 	}

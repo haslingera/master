@@ -92,14 +92,17 @@ public class EnemySpawner : MonoBehaviour
 
 		Vector3 screenPointEnemyPosition = new Vector3(Random.Range(Screen.width - Screen.width * SpawnInset, Screen.width * SpawnInset), Random.Range(Screen.height - Screen.height * SpawnInset, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
 		
-		while (true)
-		{
-			if (IsDistanceToGazeEnough(screenPointEnemyPosition) && !IsInsideSpaceShip(screenPointEnemyPosition))
+		if (GazeManager.Instance.GazeAvailable) {
+			while (true)
 			{
-				break;
+				if (IsDistanceToGazeEnough(screenPointEnemyPosition) && !IsInsideSpaceShip(screenPointEnemyPosition))
+				{
+					break;
+				}
+			
+				screenPointEnemyPosition = new Vector3(Random.Range(Screen.width - Screen.width * SpawnInset, Screen.width * SpawnInset), Random.Range(Screen.height - Screen.height * SpawnInset, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
 			}
 			
-			screenPointEnemyPosition = new Vector3(Random.Range(Screen.width - Screen.width * SpawnInset, Screen.width * SpawnInset), Random.Range(Screen.height - Screen.height * SpawnInset, Screen.height * SpawnInset), Random.Range(SpawnDistanceMin, SpawnDistanceMax));
 		}
 
 		lastX = screenPointEnemyPosition.x;
@@ -130,7 +133,7 @@ public class EnemySpawner : MonoBehaviour
 	private bool IsDistanceToGazeEnough(Vector3 pointToDisplay)
 	{
 		
-		/*if (lastX < Screen.width / 2f)
+		if (lastX < Screen.width / 2f)
 		{
 			if (pointToDisplay.x < Screen.width / 2f)
 			{
@@ -160,7 +163,7 @@ public class EnemySpawner : MonoBehaviour
 			{
 				return false;
 			}
-		}*/
+		}
 				
 		return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _subtleGazeDirection.PerceptualSpanPixel + _subtleGazeDirection.ModulationRadiusPixel;
 	}

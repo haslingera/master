@@ -24,11 +24,17 @@ public class FireLaser : MonoBehaviour
 
 	private GameObject _menu;
 
+	private LineRenderer _lineRenderer;
+
 	void Start()
 	{
 		SetMuzzleLight();
 		_menu = GameObject.Find("Menu");
+
+		_lineRenderer = GetComponent<LineRenderer>();
 	}
+
+	private Vector3 _currentEnemyPoint;
 
 
 	void Update ()
@@ -40,30 +46,51 @@ public class FireLaser : MonoBehaviour
 		{
 			if (_right)
 			{
-				GameObject bullet = Instantiate(Bullet, MuzzleRight.transform.position, Quaternion.identity);
-				bullet.GetComponent<Bullet>().SetTargetPosition(GetMousePositionWorldPoint(), LaserSpeed);
+				//GameObject bullet = Instantiate(Bullet, MuzzleRight.transform.position, Quaternion.identity);
+				//bullet.GetComponent<Bullet>().SetTargetPosition(GetMousePositionWorldPoint(), LaserSpeed);
+
+				_currentEnemyPoint = GetMousePositionWorldPoint();	
+				_lineRenderer.enabled = true;
+				_lineRenderer.SetPosition(0, MuzzleRight.transform.position);
+				_lineRenderer.SetPosition(1, _currentEnemyPoint);
+				_lineRenderer.endWidth = 0.5f;
+				_lineRenderer.startWidth = 0.5f;
+				
 				MuzzleLightRight.intensity = _muzzleLight;
 				MuzzleFlashRight.Play();
 				BulletAudio.Play();
 			}
 			else
 			{
-				GameObject bullet = Instantiate(Bullet, MuzzleLeft.transform.position, Quaternion.identity);
-				bullet.GetComponent<Bullet>().SetTargetPosition(GetMousePositionWorldPoint(), LaserSpeed);
+				//GameObject bullet = Instantiate(Bullet, MuzzleLeft.transform.position, Quaternion.identity);
+				//bullet.GetComponent<Bullet>().SetTargetPosition(GetMousePositionWorldPoint(), LaserSpeed);
+				
+				_currentEnemyPoint = GetMousePositionWorldPoint();
+				_lineRenderer.enabled = true;
+				_lineRenderer.SetPosition(0, MuzzleLeft.transform.position);
+				_lineRenderer.SetPosition(1, _currentEnemyPoint);
+				_lineRenderer.endWidth = 0.5f;
+				_lineRenderer.startWidth = 0.5f;
+				
 				MuzzleLightLeft.intensity = _muzzleLight;
 				MuzzleFlashLeft.Play();
 				BulletAudio.Play();
 			}
 
-			/*var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
-			if (Physics.Raycast(ray, out hit))
-			{
-				Debug.Log(hit.transform.name);
-			}*/
-
 			_right = !_right;
 			_time = 0f;
+		}
+
+		_lineRenderer.SetPosition(0, Vector3.Lerp(_lineRenderer.GetPosition(0), _currentEnemyPoint, 5 * Time.deltaTime));
+
+		if (Vector3.Distance(_lineRenderer.GetPosition(0), _lineRenderer.GetPosition(1)) < 10)
+		{
+			_lineRenderer.enabled = false;
+		}
+		else
+		{
+			_lineRenderer.endWidth = Mathf.Lerp(_lineRenderer.endWidth, 0, 5 * Time.deltaTime);
+			_lineRenderer.startWidth = Mathf.Lerp(_lineRenderer.startWidth, 0, 5 * Time.deltaTime);
 		}
 		
 		MuzzleLightLeft.intensity = Mathf.Lerp(MuzzleLightLeft.intensity, 0, MuzzleLightFade * Time.deltaTime);
@@ -73,10 +100,27 @@ public class FireLaser : MonoBehaviour
 
 	}
 
+	public LayerMask IgnoreShip;
+
 	Vector3 GetMousePositionWorldPoint()
 	{
+
+		RaycastHit hit;
+		
+		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		
+		if (Physics.Raycast(ray, out hit, 500f, IgnoreShip)) {
+			if (hit.collider.gameObject.GetComponent<Enemy>())
+			{
+				hit.collider.gameObject.GetComponent<Enemy>().EnemyShot();
+				return hit.collider.gameObject.transform.position;
+			}
+		}
+
+		//return Vector3.zero;
+
 		var v3 = Input.mousePosition;
-		v3.z = 300.0f;
+		v3.z = 50.0f;
 		return Camera.main.ScreenToWorldPoint(v3);
 	}
 

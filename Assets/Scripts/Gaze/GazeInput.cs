@@ -96,16 +96,17 @@ namespace Gaze
 			if (ShowGaze)
 			{
 				if (_slidingBuffer == null) return;
-				
-				foreach (GazePointObject gpo in _slidingBuffer)
+
+				if (GazeManager.Instance.GazeAvailable)
 				{
-					DebugExtension.DrawPoint(Camera.main.ScreenToWorldPoint(new Vector3(gpo.GazePoint.x, gpo.GazePoint.y, Camera.main.nearClipPlane + 5)), new Color(25/255f, 25/255f, 25/255f),0.1f);
+					foreach (GazePointObject gpo in _slidingBuffer)
+					{
+						DebugExtension.DrawPoint(Camera.main.ScreenToWorldPoint(new Vector3(gpo.GazePoint.x, gpo.GazePoint.y, Camera.main.nearClipPlane + 5)), new Color(25/255f, 25/255f, 25/255f),0.1f);
+					}
+				
+					DebugExtension.DrawCircle(Camera.main.ScreenToWorldPoint(new Vector3(GazeManager.Instance.SmoothGazeVector.x, GazeManager.Instance.SmoothGazeVector.y, Camera.main.nearClipPlane + 5)), Camera.main.transform.forward, Color.white, 0.8f);
+					DebugExtension.DrawPoint(Camera.main.ScreenToWorldPoint(new Vector3(GazeManager.Instance.SmoothGazeVector.x, GazeManager.Instance.SmoothGazeVector.y, Camera.main.nearClipPlane + 5)), new Color(25/255f, 115/255f, 232/255f),0.4f);
 				}
-				
-				DebugExtension.DrawCircle(Camera.main.ScreenToWorldPoint(new Vector3(GazeManager.Instance.SmoothGazeVector.x, GazeManager.Instance.SmoothGazeVector.y, Camera.main.nearClipPlane + 5)), Camera.main.transform.forward, Color.white, 0.8f);
-				DebugExtension.DrawPoint(Camera.main.ScreenToWorldPoint(new Vector3(GazeManager.Instance.SmoothGazeVector.x, GazeManager.Instance.SmoothGazeVector.y, Camera.main.nearClipPlane + 5)), new Color(25/255f, 115/255f, 232/255f),0.4f);
-				
-				//Gizmos.DrawSphere(Camera.main.ScreenToWorldPoint(new Vector3(GazeManager.Instance.SmoothGazeVector.x, GazeManager.Instance.SmoothGazeVector.y, Camera.main.nearClipPlane + 5)), 0.05f);
 			}
 		}
 	

@@ -1,0 +1,44 @@
+Time,Name,Id,Action
+0,Menu,57278,GameStarted
+1,Gaze Guidance,-330732,ModulationIntensity
+1,Gaze Guidance,-330732,ModulationIntensity
+3.456972,Enemy(Clone),-369938,MarkedAsPOI
+3.94515,Enemy(Clone),-369938,Appeared
+5.402814,Enemy(Clone),-370744,MarkedAsPOI
+5.880752,Enemy(Clone),-370744,Appeared
+7.761276,Enemy(Clone),-371470,MarkedAsPOI
+8.245648,Enemy(Clone),-371470,Appeared
+9.789692,Enemy(Clone),-372254,MarkedAsPOI
+10.28063,Enemy(Clone),-372254,Appeared
+12.30067,Enemy(Clone),-373076,MarkedAsPOI
+12.78204,Enemy(Clone),-373076,Appeared
+14.18022,Enemy(Clone),-373660,MarkedAsPOI
+14.66503,Enemy(Clone),-373660,Appeared
+16.35618,Enemy(Clone),-374644,MarkedAsPOI
+16.84149,Enemy(Clone),-374644,Appeared
+18.31525,Enemy(Clone),-375518,MarkedAsPOI
+18.80304,Enemy(Clone),-375518,Appeared
+20.65452,Enemy(Clone),-376168,MarkedAsPOI
+21.14367,Enemy(Clone),-376168,Appeared
+21.61737,Enemy(Clone),-376168,ShotTriggered
+21.84,Enemy(Clone),-376168,Shot
+21.84333,Enemy(Clone),-376168,UnmarkedAsPOI
+22.99767,Enemy(Clone),-376772,MarkedAsPOI
+23.48177,Enemy(Clone),-376772,Appeared
+24.4596,Enemy(Clone),-376772,ShotTriggered
+24.68,Enemy(Clone),-376772,Shot
+24.68143,Enemy(Clone),-376772,UnmarkedAsPOI
+25.84574,Enemy(Clone),-377608,MarkedAsPOI
+26.3252,Enemy(Clone),-377608,Appeared
+27.01849,Enemy(Clone),-377608,ShotTriggered
+27.26,Enemy(Clone),-377608,Shot
+27.26418,Enemy(Clone),-377608,UnmarkedAsPOI
+28.56198,Enemy(Clone),-378228,MarkedAsPOI
+29.0406,Enemy(Clone),-378228,Appeared
+30.47931,Enemy(Clone),-378594,MarkedAsPOI
+30.96204,Enemy(Clone),-378594,Appeared
+31.6223,Enemy(Clone),-378594,ShotTriggered
+31.88,Enemy(Clone),-378594,Shot
+31.88257,Enemy(Clone),-378594,UnmarkedAsPOI
+33.07856,Enemy(Clone),-379270,MarkedAsPOI
+33.23534,Data Recorder,57124,GameExited

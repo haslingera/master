@@ -1,0 +1,27 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-66266,ModulationIntensity
+0,Gaze Guidance,-66266,ModulationIntensity
+0,Menu,31330,GameStarted
+3.7233,Enemy(Clone),-103946,Appeared
+4.481087,Enemy(Clone),-103946,ShotTriggered
+4.74,Enemy(Clone),-103946,Shot
+6.165577,Enemy(Clone),-104558,Appeared
+6.777367,Enemy(Clone),-104558,ShotTriggered
+7.04,Enemy(Clone),-104558,Shot
+8.801197,Enemy(Clone),-105110,Appeared
+9.403194,Enemy(Clone),-105110,ShotTriggered
+9.679999,Enemy(Clone),-105110,Shot
+11.20643,Enemy(Clone),-105586,Appeared
+12.18917,Enemy(Clone),-105586,ShotTriggered
+12.4,Enemy(Clone),-105586,Shot
+13.7852,Enemy(Clone),-105954,Appeared
+15.84588,Enemy(Clone),-106464,Appeared
+16.55909,Enemy(Clone),-106464,ShotTriggered
+16.8,Enemy(Clone),-106464,Shot
+18.14101,Enemy(Clone),-107076,Appeared
+18.69727,Enemy(Clone),-107076,ShotTriggered
+18.92,Enemy(Clone),-107076,Shot
+20.3655,Enemy(Clone),-107552,Appeared
+20.81967,Enemy(Clone),-107552,ShotTriggered
+21.06,Enemy(Clone),-107552,Shot
+22.02514,Data Recorder,31176,GameExited

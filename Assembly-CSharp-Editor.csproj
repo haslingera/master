@@ -86,6 +86,9 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\GlobalSettings.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\SerializedParameterOverride.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\Styling.cs" />
+    <Compile Include="Assets\Tobii\Framework\Editor\EyeTrackingClientLibraryDeployer.cs" />
+    <Compile Include="Assets\Tobii\Framework\Editor\EyeTrackingSettingsWindow.cs" />
+    <Compile Include="Assets\Tobii\Framework\Editor\TobiiEulaCheck.cs" />
     <None Include="Assets\PostProcessing\Shaders\Editor\Trackball.shader" />
     <None Include="Assets\PostProcessing\Shaders\Editor\ConvertToLog.shader" />
     <None Include="Assets\PostProcessing\Shaders\Editor\CurveGrid.shader" />
@@ -185,10 +188,6 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{FC01FE44-D7F4-DA83-EE91-2CA8D3F102A6}</Project>
       <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{759B50BE-94E7-D19D-CD47-01CD6FD11C3C}</Project>
-      <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

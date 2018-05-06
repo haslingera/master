@@ -3,7 +3,6 @@
   <component name="ContentModelStore">
     <e p="C:\Users\hasli\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_Master.-1564186280.00" t="ExcludeRecursive" />
     <e p="C:\Users\hasli\Documents\Master\Master" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -29,59 +28,6 @@
           <e p="LTDescr.cs" t="Include" />
           <e p="LTDescrOptional.cs" t="Include" />
           <e p="LTSeq.cs" t="Include" />
-        </e>
-        <e p="Tobii" t="Include">
-          <e p="Framework" t="Include">
-            <e p="DisplayInfo.cs" t="Include" />
-            <e p="Editor" t="Include">
-              <e p="EyeTrackingClientLibraryDeployer.cs" t="Include" />
-              <e p="EyeTrackingSettingsWindow.cs" t="Include" />
-              <e p="TobiiEulaCheck.cs" t="Include" />
-            </e>
-            <e p="GazeAware.cs" t="Include" />
-            <e p="GazePoint.cs" t="Include" />
-            <e p="HeadPose.cs" t="Include" />
-            <e p="Internal" t="Include">
-              <e p="DataProviderBase.cs" t="Include" />
-              <e p="DataProviderStub.cs" t="Include" />
-              <e p="FocusedObject.cs" t="Include" />
-              <e p="GameViewInfo.cs" t="Include" />
-              <e p="GazeFocus.cs" t="Include" />
-              <e p="GazeFocusSettings.cs" t="Include" />
-              <e p="GazeFocusStub.cs" t="Include" />
-              <e p="GazePointDataProvider.cs" t="Include" />
-              <e p="HeadPoseDataProvider.cs" t="Include" />
-              <e p="HitTestFromPoint.cs" t="Include" />
-              <e p="IDataProvider.cs" t="Include" />
-              <e p="IGazeFocus.cs" t="Include" />
-              <e p="IGazeFocusable.cs" t="Include" />
-              <e p="IGazeFocusInternal.cs" t="Include" />
-              <e p="Interop.cs" t="Include" />
-              <e p="IRegisterGazeFocusable.cs" t="Include" />
-              <e p="IScorer.cs" t="Include" />
-              <e p="IStateValue.cs" t="Include" />
-              <e p="ITimestamped.cs" t="Include" />
-              <e p="ITobiiHost.cs" t="Include" />
-              <e p="MultiRaycastHistoricHitScore.cs" t="Include" />
-              <e p="ScoredObject.cs" t="Include" />
-              <e p="ScreenHelpers.cs" t="Include" />
-              <e p="SingleRaycastHistoricHitScore.cs" t="Include" />
-              <e p="SingleRaycastNoScore.cs" t="Include" />
-              <e p="StateValue.cs" t="Include" />
-              <e p="StateValueStub.cs" t="Include" />
-              <e p="TobiiEulaFile.cs" t="Include" />
-              <e p="TobiiHost.cs" t="Include" />
-              <e p="TobiiHostStub.cs" t="Include" />
-              <e p="Win32Helpers.cs" t="Include" />
-              <e p="WindowHelpers.cs" t="Include" />
-            </e>
-            <e p="TobiiAPI.cs" t="Include" />
-            <e p="UserPresence.cs" t="Include" />
-          </e>
-          <e p="Plugins" t="Include">
-            <e p="SimpleJSON.cs" t="Include" />
-          </e>
-          <e p="Readme.txt" t="Include" />
         </e>
       </e>
       <e p="Assets\PostProcessing" t="Include">
@@ -265,9 +211,10 @@
       <e p="Assets\Scenes" t="Include">
         <e p="Final Scenes" t="Include">
           <e p="_Assets" t="Include">
-            <e p="Condition B" t="Include">
-              <e p="DataRecorderNew.cs" t="Include" />
-              <e p="DataSetNew.cs" t="Include" />
+            <e p="Condition A" t="Include">
+              <e p="GazeCalibrationA.cs" t="Include" />
+              <e p="GazeCalibrationB.cs" t="Include" />
+              <e p="ShowGaze.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -290,8 +237,10 @@
           <e p="CollectRoomData.cs" t="Include" />
           <e p="Crosshair.cs" t="Include" />
           <e p="DataRecorder.cs" t="Include" />
+          <e p="DataRecorderNew.cs" t="Include" />
           <e p="DataSetConditionA.cs" t="Include" />
           <e p="DataSetConditionB.cs" t="Include" />
+          <e p="DataSetNew.cs" t="Include" />
           <e p="DissolveAwayFromPlayer.cs" t="Include" />
           <e p="DissolveAwayFromPlayerLineRenderer.cs" t="Include" />
           <e p="DrawRing.cs" t="Include" />
@@ -303,9 +252,11 @@
           <e p="Grabable.cs" t="Include" />
           <e p="IDataSet.cs" t="Include" />
           <e p="InfinteStarfield.cs" t="Include" />
+          <e p="IntensityManager.cs" t="Include" />
           <e p="IPointOfInterestSelectionProcess.cs" t="Include" />
           <e p="KeepAtDistance.cs" t="Include" />
           <e p="LightFlickerEffect.cs" t="Include" />
+          <e p="LoadScene.cs" t="Include" />
           <e p="Movement.cs" t="Include" />
           <e p="PickUpCoin.cs" t="Include" />
           <e p="PlayerGuidanceSystem.cs" t="Include" />
@@ -356,6 +307,59 @@
         <e p="Scifi Additive Glow.shader" t="Include" />
         <e p="Scifi Multiply Distort.shader" t="Include" />
         <e p="two_side_shader.shader" t="Include" />
+      </e>
+      <e p="Assets\Tobii" t="Include">
+        <e p="Framework" t="Include">
+          <e p="DisplayInfo.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="EyeTrackingClientLibraryDeployer.cs" t="Include" />
+            <e p="EyeTrackingSettingsWindow.cs" t="Include" />
+            <e p="TobiiEulaCheck.cs" t="Include" />
+          </e>
+          <e p="GazeAware.cs" t="Include" />
+          <e p="GazePoint.cs" t="Include" />
+          <e p="HeadPose.cs" t="Include" />
+          <e p="Internal" t="Include">
+            <e p="DataProviderBase.cs" t="Include" />
+            <e p="DataProviderStub.cs" t="Include" />
+            <e p="FocusedObject.cs" t="Include" />
+            <e p="GameViewInfo.cs" t="Include" />
+            <e p="GazeFocus.cs" t="Include" />
+            <e p="GazeFocusSettings.cs" t="Include" />
+            <e p="GazeFocusStub.cs" t="Include" />
+            <e p="GazePointDataProvider.cs" t="Include" />
+            <e p="HeadPoseDataProvider.cs" t="Include" />
+            <e p="HitTestFromPoint.cs" t="Include" />
+            <e p="IDataProvider.cs" t="Include" />
+            <e p="IGazeFocus.cs" t="Include" />
+            <e p="IGazeFocusable.cs" t="Include" />
+            <e p="IGazeFocusInternal.cs" t="Include" />
+            <e p="Interop.cs" t="Include" />
+            <e p="IRegisterGazeFocusable.cs" t="Include" />
+            <e p="IScorer.cs" t="Include" />
+            <e p="IStateValue.cs" t="Include" />
+            <e p="ITimestamped.cs" t="Include" />
+            <e p="ITobiiHost.cs" t="Include" />
+            <e p="MultiRaycastHistoricHitScore.cs" t="Include" />
+            <e p="ScoredObject.cs" t="Include" />
+            <e p="ScreenHelpers.cs" t="Include" />
+            <e p="SingleRaycastHistoricHitScore.cs" t="Include" />
+            <e p="SingleRaycastNoScore.cs" t="Include" />
+            <e p="StateValue.cs" t="Include" />
+            <e p="StateValueStub.cs" t="Include" />
+            <e p="TobiiEulaFile.cs" t="Include" />
+            <e p="TobiiHost.cs" t="Include" />
+            <e p="TobiiHostStub.cs" t="Include" />
+            <e p="Win32Helpers.cs" t="Include" />
+            <e p="WindowHelpers.cs" t="Include" />
+          </e>
+          <e p="TobiiAPI.cs" t="Include" />
+          <e p="UserPresence.cs" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="SimpleJSON.cs" t="Include" />
+        </e>
+        <e p="Readme.txt" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="Master.sln" t="IncludeFlat" />

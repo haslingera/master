@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UserInterface : MonoBehaviour
@@ -17,6 +18,8 @@ public class UserInterface : MonoBehaviour
 	
 	private void Start()
 	{
+		Cursor.visible = false;
+		
 		IsActive = true;
 		Time.timeScale = 0;
 	}
@@ -39,8 +42,10 @@ public class UserInterface : MonoBehaviour
 			Time.timeScale = 0;
 			Score.text = "SCORE " + TimeScoreManager.Instance.Score; 
 			if (!Input.GetMouseButtonDown(0)) return;
+			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.GameEnded);
+			DataRecorderNew.Instance.WriteDataToCsv();
 			StartAudioSource.Play();
-			Application.Quit();
+			SceneManager.LoadScene("_Home");
 		}
 		
 	}

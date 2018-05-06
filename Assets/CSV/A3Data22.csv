@@ -1,0 +1,29 @@
+Time,Name,Id,Action
+0,Menu,57278,GameStarted
+1,Gaze Guidance,-330732,ModulationIntensity
+1,Gaze Guidance,-330732,ModulationIntensity
+3.381141,Enemy(Clone),-672308,MarkedAsPOI
+3.86391,Enemy(Clone),-672308,Appeared
+5.510727,Enemy(Clone),-674624,MarkedAsPOI
+5.980153,Enemy(Clone),-674624,Appeared
+7.681155,Enemy(Clone),-677254,MarkedAsPOI
+8.164649,Enemy(Clone),-677254,Appeared
+9.701846,Enemy(Clone),-679560,MarkedAsPOI
+10.18307,Enemy(Clone),-679560,Appeared
+11.92506,Enemy(Clone),-682030,MarkedAsPOI
+12.40608,Enemy(Clone),-682030,Appeared
+13.94191,Enemy(Clone),-684312,MarkedAsPOI
+14.42017,Enemy(Clone),-684312,Appeared
+15.92931,Enemy(Clone),-686642,MarkedAsPOI
+16.42389,Enemy(Clone),-686642,Appeared
+17.79948,Enemy(Clone),-688898,MarkedAsPOI
+18.28532,Enemy(Clone),-688898,Appeared
+20.03866,Enemy(Clone),-691316,MarkedAsPOI
+20.52412,Enemy(Clone),-691316,Appeared
+22.1626,Enemy(Clone),-693760,MarkedAsPOI
+22.64103,Enemy(Clone),-693760,Appeared
+24.34591,Enemy(Clone),-696178,MarkedAsPOI
+24.83257,Enemy(Clone),-696178,Appeared
+26.26484,Enemy(Clone),-698434,MarkedAsPOI
+26.74079,Enemy(Clone),-698434,Appeared
+27.96248,Data Recorder,57124,GameExited

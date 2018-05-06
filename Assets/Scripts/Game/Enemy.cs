@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
 		_lifeTime = Random.Range(MinLifetime, MaxLifetime)+ BlinkTime;
 		_asteroidMaterial = GetComponent<MeshRenderer>().material;
 		_asteroidMaterial.SetColor("_EmissionColor", StartColor);
-		float newScale = transform.localScale.x * Random.Range(1f, 1.5f);
+		float newScale = transform.localScale.x * Random.Range(1f, 0.9f);
 		transform.localScale = new Vector3(newScale,newScale,newScale);
 		_initScale = transform.localScale.x;
 		transform.localScale = new Vector3(_initScale - 1f, _initScale - 1f, _initScale - 1f);
@@ -133,12 +133,37 @@ public class Enemy : MonoBehaviour
 		}
 	}
 	
+	public void EnemyShot()
+	{
+		if (!_dead && _canBeShot)
+		{
+			_dead = true;
+			if (Explosion != null)
+			{
+				Explosion.Play();
+			}
+			CameraShaker.Instance.ShakeOnce(6f, 10f, 0.1f, 1f);
+			LeanTween.cancel(_tweenId);
+			GetComponent<MeshRenderer>().enabled = false;
+						
+			GameObject.Find("Enemy Explosion Sound").GetComponent<AudioSource>().Play();
+			GameObject.Find("Score Sound").GetComponent<AudioSource>().Play();
+			
+			Destroy(GetComponent<PointOfInterest>());
+			TimeScoreManager.Instance.IncreaseScore();
+			
+			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.Shot);
+			
+			Invoke("Destroy", Explosion.main.duration + Explosion.main.startLifetimeMultiplier - 2.2f);
+		}
+	}
+	
 	public void ShowEnemy()
 	{
 		Invoke("FlashGlow", _lifeTime - BlinkTime);
 
-		LeanTween.value(gameObject, UpdateScale, _initScale - 1f, _initScale, 0.5f).setEaseInOutCirc();
-		_tweenId = LeanTween.value(gameObject, UpdateScale, _initScale, _initScale + 4, _lifeTime).setDelay(0.5f).setEaseOutCirc().id;
+		LeanTween.value(gameObject, UpdateScale, _initScale - 0.2f, _initScale, 0.2f).setEaseInOutCirc();
+		_tweenId = LeanTween.value(gameObject, UpdateScale, _initScale, _initScale + 4, _lifeTime).setDelay(0.2f).setEaseOutCirc().id;
 		
 		GetComponent<MeshRenderer>().enabled = true;
 		_canBeShot = true;

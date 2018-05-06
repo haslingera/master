@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Final Scenes/ConditionA.unity
+- path: Assets/Scenes/Final Scenes/_Home.unity
   isLoaded: 1
   isActive: 1

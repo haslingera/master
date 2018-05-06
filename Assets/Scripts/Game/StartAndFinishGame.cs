@@ -1,5 +1,7 @@
 ﻿using Guidance;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class StartAndFinishGame : MonoBehaviour
 {
@@ -15,6 +17,10 @@ public class StartAndFinishGame : MonoBehaviour
 
 	private void Start()
 	{
+
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+		
 		if (StartGameCanvas.activeInHierarchy)
 		{
 			PauseGame(false);
@@ -39,14 +45,19 @@ public class StartAndFinishGame : MonoBehaviour
 	{
 		if (GetComponent<Renderer>().isVisible)
 		{
+			_endTime = Time.time;
 			GameObject.Find("Exit Game Sound").GetComponent<AudioSource>().Play();
 			PauseGame(true);
 		}
 	}
 
+	private float _endTime;
+
 	public void QuitGame ()
 	{
-		Application.Quit();
+		DataRecorderNew.Instance.AddNewDataSet(_endTime, gameObject, DataRecorderNew.Action.GameEnded);
+		DataRecorderNew.Instance.WriteDataToCsv();
+		SceneManager.LoadScene("_Home");
 	}
 
 	public void PauseGame(bool exit)
