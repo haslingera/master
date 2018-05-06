@@ -15857,7 +15857,7 @@ Prefab:
     - target: {fileID: 114363300244153532, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: BufferWindow
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 114363300244153532, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
@@ -15877,7 +15877,7 @@ Prefab:
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: MinimumSaccadeTime
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114618512161008052, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}

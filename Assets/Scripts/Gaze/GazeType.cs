@@ -19,7 +19,7 @@ public class GazeType : MonoBehaviour {
 	public float FixationRadius = 50;
 	
 	[Header("Debug Settings")]
-	public bool Debug;
+	public bool _Debug;
 	public DebugTypes DebugType = DebugTypes.Fixation;
 	public enum DebugTypes { Fixation, Saccade}
 	
@@ -28,7 +28,7 @@ public class GazeType : MonoBehaviour {
 	{
 		get
 		{
-			if (Debug)
+			if (_Debug)
 			{
 				return DebugType != DebugTypes.Fixation;
 			}
@@ -40,7 +40,7 @@ public class GazeType : MonoBehaviour {
 	{
 		get
 		{
-			if (Debug)
+			if (_Debug)
 			{
 				return DebugType == DebugTypes.Fixation;
 			}
@@ -56,7 +56,6 @@ public class GazeType : MonoBehaviour {
 
 	private void Update()
 	{
-		
 		if (GazeManager.Instance.GazeAvailable)
 		{
 			
@@ -77,7 +76,7 @@ public class GazeType : MonoBehaviour {
 				_saccade = true;
 			}
 
-			if (Input.GetKeyUp(KeyCode.F) && Debug)
+			if (Input.GetKeyUp(KeyCode.F) && _Debug)
 			{
 				if (DebugType == DebugTypes.Fixation)
 				{

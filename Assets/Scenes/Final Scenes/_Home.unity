@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
-  MinimumSaccadeTime: 150
+  MinimumSaccadeTime: 100
   FixationRadius: 50
   Debug: 0
   DebugType: 1
@@ -1670,10 +1670,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf8372e8d7dfe146a2b629bb681254b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BufferWindow: 100
+  BufferWindow: 50
   UseMouseAsGaze: 0
   CursorLocked: 0
   ShowGaze: 0
+  SamplesPerSecond: 70
 --- !u!4 &1612467402
 Transform:
   m_ObjectHideFlags: 0

@@ -23,6 +23,10 @@ namespace Gaze
 			_gazeType = GetComponent<GazeType>();
 		}
 
+		public int SamplesPerSecond = 70;
+
+		private float _currentTime = 0;
+
 		private void Update()
 		{
 
@@ -73,6 +77,8 @@ namespace Gaze
 				_slidingBuffer.Clear();
 				GazeManager.Instance.SetSmoothGazeVector(GazeManager.Instance.GazePointObject.GazePoint);
 			}
+			
+			_currentTime += Time.deltaTime;
 
 		}
 		

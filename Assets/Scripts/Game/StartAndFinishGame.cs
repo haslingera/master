@@ -17,9 +17,6 @@ public class StartAndFinishGame : MonoBehaviour
 
 	private void Start()
 	{
-
-		Cursor.lockState = CursorLockMode.Locked;
-		Cursor.visible = false;
 		
 		if (StartGameCanvas.activeInHierarchy)
 		{
@@ -35,6 +32,8 @@ public class StartAndFinishGame : MonoBehaviour
 	{
 		if (StartGameCanvas.activeInHierarchy && Input.GetMouseButtonUp(0))
 		{
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
 			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.GameStarted);
 			GameObject.Find("Door Opening Sound").GetComponent<AudioSource>().Play();
 			UnPauseGame();
@@ -81,6 +80,7 @@ public class StartAndFinishGame : MonoBehaviour
 		_Movement.Move = false;
 		
 		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
 	}
 
 	public void UnPauseGame()
@@ -97,6 +97,7 @@ public class StartAndFinishGame : MonoBehaviour
 		_Movement.Move = true;
 			
 		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 	}
 	
 }

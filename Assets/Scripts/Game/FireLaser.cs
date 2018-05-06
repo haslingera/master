@@ -81,7 +81,10 @@ public class FireLaser : MonoBehaviour
 			_time = 0f;
 		}
 
-		_lineRenderer.SetPosition(0, Vector3.Lerp(_lineRenderer.GetPosition(0), _currentEnemyPoint, 5 * Time.deltaTime));
+		if (_lineRenderer != null)
+		{
+			_lineRenderer.SetPosition(0, Vector3.Lerp(_lineRenderer.GetPosition(0), _currentEnemyPoint, 5 * Time.deltaTime));
+		}
 
 		if (Vector3.Distance(_lineRenderer.GetPosition(0), _lineRenderer.GetPosition(1)) < 10)
 		{

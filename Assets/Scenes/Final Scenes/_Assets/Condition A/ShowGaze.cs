@@ -1,10 +1,10 @@
 ﻿using Gaze;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 using UnityEngine.UI;
 
 public class ShowGaze : MonoBehaviour {
 	
-	// Update is called once per frame
 	void Update () {
 		if (GazeManager.Instance.GazeAvailable)
 		{
@@ -13,7 +13,12 @@ public class ShowGaze : MonoBehaviour {
 				GetComponent<Image>().enabled = true;
 			}
 			
-			GetComponent<RectTransform>().localPosition = GazeManager.Instance.SmoothGazeVector - new Vector2(Screen.width  * 0.5f, Screen.height * 0.5f);
+
+			if (!float.IsNaN(GazeManager.Instance.SmoothGazeVector.x) && !float.IsNaN(GazeManager.Instance.SmoothGazeVector.y))
+			{
+				GetComponent<RectTransform>().anchoredPosition = GazeManager.Instance.SmoothGazeVector - new Vector2(Screen.width  * 0.5f, Screen.height * 0.5f);
+			}
+			
 		}
 		else
 		{
