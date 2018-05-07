@@ -23,7 +23,7 @@ public class PointsOfInterest : MonoBehaviour
 		return _currentPointOfInterest == go;
 	}
 
-	public GameObject GetRelevantPointOfInterest(PointOfInterest.PoiType type)
+	public GameObject GetCurrentPointOfInterest(PointOfInterest.PoiType type)
 	{
 		
 		if (type == PointOfInterest.PoiType.Essential)

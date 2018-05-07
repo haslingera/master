@@ -24,8 +24,14 @@ namespace Guidance
         private float _timePassedSince;
         private int _caseIndex;
 
-        void OnRenderImage (RenderTexture source, RenderTexture destination)
+        private void Start()
         {
+            _modulateImageSpace = false;
+            Intensity = 0f;
+        }
+
+        void OnRenderImage (RenderTexture source, RenderTexture destination)
+        {   
             if (ImageSpaceModulationMaterial)
             {
                 Graphics.Blit(source,destination,ImageSpaceModulationMaterial);

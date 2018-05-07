@@ -210,8 +210,8 @@ MonoBehaviour:
   StartColor: {r: 0, g: 0.26896477, b: 2.0790005, a: 1}
   EndColor: {r: 3, g: 2.1, b: 3, a: 1}
   FlashColor: {r: 3, g: 2.5770001, b: 3, a: 1}
-  MinLifetime: 0.3
-  MaxLifetime: 0.6
+  MinLifetime: 0.6
+  MaxLifetime: 0.8
   BlinkTime: 0.1
 --- !u!114 &114575024732163966
 MonoBehaviour:

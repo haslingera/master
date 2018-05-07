@@ -728,7 +728,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2406acbce4660b14caf81514ebdb27a3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 25a52d2d86b40434b82152b7af8418d1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7403,7 +7403,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &852585414
 GameObject:
@@ -15917,7 +15917,7 @@ Prefab:
     - target: {fileID: 114618512161008052, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: ModulationIntensityMax
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114618512161008052, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}

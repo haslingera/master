@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/hasli/Desktop/Test Game/TestGame.exe
+C:/Users/hasli/Desktop/Test Game New/TestGame.exe
 SceneListBegin?
 Assets/Scenes/Final Scenes/_Home.unity
 Assets/Scenes/Final Scenes/A1.unity

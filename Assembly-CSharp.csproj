@@ -109,7 +109,11 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\TextureLerper.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition A\GazeCalibrationA.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition A\GazeCalibrationB.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition A\IGazeDirection.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition A\LockOn.cs" />
     <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition A\ShowGaze.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\OvertGazeDirection.cs" />
+    <Compile Include="Assets\Scenes\Final Scenes\_Assets\Condition B\StandardCoinCue.cs" />
     <Compile Include="Assets\Scripts\Game\Bullet.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakeInstance.cs" />
     <Compile Include="Assets\Scripts\Game\Camera Shake\CameraShakePresets.cs" />

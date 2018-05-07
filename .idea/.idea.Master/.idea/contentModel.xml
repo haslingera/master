@@ -214,7 +214,13 @@
             <e p="Condition A" t="Include">
               <e p="GazeCalibrationA.cs" t="Include" />
               <e p="GazeCalibrationB.cs" t="Include" />
+              <e p="IGazeDirection.cs" t="Include" />
+              <e p="LockOn.cs" t="Include" />
               <e p="ShowGaze.cs" t="Include" />
+            </e>
+            <e p="Condition B" t="Include">
+              <e p="OvertGazeDirection.cs" t="Include" />
+              <e p="StandardCoinCue.cs" t="Include" />
             </e>
           </e>
         </e>

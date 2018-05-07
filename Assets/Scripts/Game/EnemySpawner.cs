@@ -42,13 +42,17 @@ public class EnemySpawner : MonoBehaviour
 	private Vector3 _enemyPositionToBe;
 	private bool _positionSet;
 	private float _currentFirstWaitTime;
+	
+	private float _lastX;
+	private float _lastY;
 
-	private SubtleGazeDirection _subtleGazeDirection;
+	private IGazeDirection _subtleGazeDirection;
 
 	void Start()
 	{
 		_currentWaitTime = Random.Range(WaitTimeBetweenEnemySpawnMin, WaitTimeBetweenEnemySpawnMax);
-		_subtleGazeDirection = GameObject.Find("Gaze Guidance").GetComponent<SubtleGazeDirection>();
+		_subtleGazeDirection = GameObject.Find("Gaze Guidance").GetComponent<IGazeDirection>();
+		_lock = GameObject.Find("Lock");
 	}
 
 	void Update () {
@@ -86,6 +90,8 @@ public class EnemySpawner : MonoBehaviour
 		_buffer += Time.deltaTime;
 	}
 
+	private GameObject _lock;
+
 	void SpawnEnemy()
 	{
 		if (_currentEnemy != null) return;
@@ -105,11 +111,19 @@ public class EnemySpawner : MonoBehaviour
 			
 		}
 
-		lastX = screenPointEnemyPosition.x;
-		lastY = screenPointEnemyPosition.y;
-				
+		_lastX = screenPointEnemyPosition.x;
+		_lastY = screenPointEnemyPosition.y;
+		
 		_enemyPositionToBe = Camera.main.ScreenToWorldPoint(screenPointEnemyPosition);
 		_currentEnemy = Instantiate(Enemy, _enemyPositionToBe, Quaternion.identity);
+
+		if (_lock)
+		{
+			for (int i = 0; i < _lock.transform.childCount; i++)
+			{
+				_lock.transform.GetChild(i).GetComponent<LockOn>().SetLockTarget(_currentEnemy, GazeDirectionTime);
+			}
+		}
 		
 		Invoke("ShowEnemy", GazeDirectionTime);
 	}
@@ -125,15 +139,11 @@ public class EnemySpawner : MonoBehaviour
 
 		return false;
 	}
-
-	private float lastX;
-	private float lastY;
-	
 	
 	private bool IsDistanceToGazeEnough(Vector3 pointToDisplay)
 	{
 		
-		if (lastX < Screen.width / 2f)
+		if (_lastX < Screen.width / 2f)
 		{
 			if (pointToDisplay.x < Screen.width / 2f)
 			{
@@ -141,7 +151,7 @@ public class EnemySpawner : MonoBehaviour
 			}
 		}
 		
-		if ( lastX >= Screen.width / 2f)
+		if ( _lastX >= Screen.width / 2f)
 		{
 			if (pointToDisplay.x >= Screen.width / 2f)
 			{
@@ -149,7 +159,7 @@ public class EnemySpawner : MonoBehaviour
 			}
 		}
 		
-		if (lastY < Screen.height / 2f)
+		if (_lastY < Screen.height / 2f)
 		{
 			if (pointToDisplay.y < Screen.height / 2f)
 			{
@@ -157,7 +167,7 @@ public class EnemySpawner : MonoBehaviour
 			}
 		}
 		
-		if ( lastY >= Screen.height / 2f)
+		if ( _lastY >= Screen.height / 2f)
 		{
 			if (pointToDisplay.y >= Screen.height / 2f)
 			{

@@ -1,9 +1,0 @@
-Time,Name,Id,Action
-0.0025,Gaze Guidance,-153482,ModulationIntensity
-0.0025,Gaze Guidance,-153482,ModulationIntensity
-6.397061,Coin L.1,83426,Attended
-6.435434,Coin L.1,83426,Unattended
-7.486311,Wall_5_6,84748,GameStarted
-8.920274,Coin L.1,83426,Attended
-8.985053,Coin L.1,83426,Unattended
-11.26,Wall_5_6,84748,GameEnded

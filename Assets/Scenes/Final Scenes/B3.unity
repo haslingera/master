@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -24195,7 +24195,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -41031,7 +41031,7 @@ Prefab:
     - target: {fileID: 114363300244153532, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: UseMouseAsGaze
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114251766214924150, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
@@ -41058,7 +41058,13 @@ Prefab:
       propertyPath: BufferWindow
       value: 50
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114251766214924150, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
+        type: 2}
+      propertyPath: Size
+      value: 0.12
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114618512161008052, guid: 4eaa9ed6e34ecd24897bf37f346bc85c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4eaa9ed6e34ecd24897bf37f346bc85c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1362533457
@@ -50410,7 +50416,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -52074,6 +52080,28 @@ Prefab:
     - {fileID: 95249568581427408, guid: 57ab0045d840098469755eb151f28679, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 57ab0045d840098469755eb151f28679, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1762505999 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1417630694454708, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1361209636}
+--- !u!114 &1762506001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1762505999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b92bc5ff387c504fbf04b06d0542298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Active: 1
+  PerceptualSpanRadius: 3.8
+  ModulationRate: 10
+  ModulationIntensityMin: 0
+  ModulationIntensityMax: 0.5
+  MaxModulationSize: 3
 --- !u!1 &1766069109
 GameObject:
   m_ObjectHideFlags: 0
@@ -55992,7 +56020,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}

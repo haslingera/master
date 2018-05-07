@@ -26,6 +26,7 @@ public class UserInterface : MonoBehaviour
 
 	private void Update()
 	{
+		
 		if (StartCanvas.activeInHierarchy)
 		{
 			if (!Input.GetMouseButtonDown(0)) return;
@@ -42,6 +43,14 @@ public class UserInterface : MonoBehaviour
 			Time.timeScale = 0;
 			Score.text = "SCORE " + TimeScoreManager.Instance.Score; 
 			if (!Input.GetMouseButtonDown(0)) return;
+			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.GameEnded);
+			DataRecorderNew.Instance.WriteDataToCsv();
+			StartAudioSource.Play();
+			SceneManager.LoadScene("_Home");
+		}
+		
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
 			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.GameEnded);
 			DataRecorderNew.Instance.WriteDataToCsv();
 			StartAudioSource.Play();

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Guidance
 {
-	public class SubtleGazeDirection : MonoBehaviour
+	public class SubtleGazeDirection : MonoBehaviour, IGazeDirection
 	{
 
 		public bool Active = true;
@@ -143,9 +143,9 @@ namespace Guidance
 
 		private bool ChooseGameObjectToDisplay()
 		{
-			if (_pois.GetRelevantPointOfInterest(PointOfInterest.PoiType.Essential) != null)
+			if (_pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.Essential) != null)
 			{
-				_pointToDisplay = _pois.GetRelevantPointOfInterest(PointOfInterest.PoiType.Essential).transform.position;
+				_pointToDisplay = _pois.GetCurrentPointOfInterest(PointOfInterest.PoiType.Essential).transform.position;
 				return true;
 			}
 

@@ -30,6 +30,14 @@ public class StartAndFinishGame : MonoBehaviour
 
 	void Update()
 	{
+		
+		if (Input.GetKeyUp(KeyCode.Escape))
+		{
+			DataRecorderNew.Instance.AddNewDataSet(_endTime, gameObject, DataRecorderNew.Action.GameEnded);
+			DataRecorderNew.Instance.WriteDataToCsv();
+			SceneManager.LoadScene("_Home");
+		}
+		
 		if (StartGameCanvas.activeInHierarchy && Input.GetMouseButtonUp(0))
 		{
 			Cursor.lockState = CursorLockMode.Locked;
@@ -45,7 +53,6 @@ public class StartAndFinishGame : MonoBehaviour
 		if (GetComponent<Renderer>().isVisible)
 		{
 			_endTime = Time.time;
-			GameObject.Find("Exit Game Sound").GetComponent<AudioSource>().Play();
 			PauseGame(true);
 		}
 	}
@@ -56,6 +63,7 @@ public class StartAndFinishGame : MonoBehaviour
 	{
 		DataRecorderNew.Instance.AddNewDataSet(_endTime, gameObject, DataRecorderNew.Action.GameEnded);
 		DataRecorderNew.Instance.WriteDataToCsv();
+		GameObject.Find("Exit Game Sound").GetComponent<AudioSource>().Play();
 		SceneManager.LoadScene("_Home");
 	}
 
