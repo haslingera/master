@@ -1,0 +1,22 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-225490,ModulationIntensity
+0,Gaze Guidance,-225490,ModulationIntensity
+0.7840298,Wall_5_6,113362,GameStarted
+3.5,Bedroom,113164,RoomEnter
+9.600336,Coin B.2,111520,Collected
+12.40036,Coin B.6,110982,Collected
+17.51932,Coin B.1,110130,Collected
+25.12663,Coin B.5,111812,Collected
+28,Bedroom,113164,RoomExit
+30.06,Livingroom,115190,RoomEnter
+44.3273,Coin L.3,111052,Collected
+46.46,Livingroom,115190,RoomExit
+48,Workroom,110546,RoomEnter
+51.45399,Coin W.2,110624,Collected
+57.81715,Coin W.4,110090,Collected
+59.98,Workroom,110546,RoomExit
+61.46,Kitchen,111254,RoomEnter
+63.93273,Coin K.1,113076,Collected
+68.12409,Coin K.3,112168,Collected
+71.68,Kitchen,111254,RoomExit
+73.54,Wall_5_6,113362,GameEnded

@@ -1,0 +1,15 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-225490,ModulationIntensity
+0,Gaze Guidance,-225490,ModulationIntensity
+0,Wall_5_6,113362,GameEnded
+0.2297834,Wall_5_6,113362,GameStarted
+1.86,Kitchen,111254,RoomEnter
+4.717831,Coin K.1,113076,Collected
+9.179999,Kitchen,111254,RoomExit
+12.5,Workroom,110546,RoomEnter
+19.79667,Coin W.4,110090,Collected
+27.17486,Coin W.2,110624,Collected
+29.22,Workroom,110546,RoomExit
+30,Bedroom,113164,RoomEnter
+33.16036,Coin B.6,110982,Collected
+39.34037,Coin B.2,111520,Collected
