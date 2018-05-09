@@ -30,16 +30,6 @@ public class SlidingBuffer<T> : IEnumerable<T> {
 		}
 		_queue.Enqueue(item);
 	}
-	
-	public T Dequeue()
-	{
-		return _queue.Dequeue();
-	}
-
-	public T Peek()
-	{
-		return _queue.Peek();
-	}
 
 	public IEnumerator<T> GetEnumerator()
 	{

@@ -15975,7 +15975,7 @@ Prefab:
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
@@ -15985,7 +15985,7 @@ Prefab:
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: MinimumSaccadeTime
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114618512161008052, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
@@ -20667,7 +20667,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1857216869}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.33, y: -0.32, z: 5.57}
+  m_LocalPosition: {x: 10.69, y: -0.32, z: 5.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1017930455}

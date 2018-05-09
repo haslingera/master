@@ -49,14 +49,6 @@ public class UserInterface : MonoBehaviour
 			SceneManager.LoadScene("_Home");
 		}
 		
-		if (Input.GetKeyDown(KeyCode.Escape))
-		{
-			DataRecorderNew.Instance.AddNewDataSet(Time.time, gameObject, DataRecorderNew.Action.GameEnded);
-			DataRecorderNew.Instance.WriteDataToCsv();
-			StartAudioSource.Play();
-			SceneManager.LoadScene("_Home");
-		}
-		
 	}
 
 }

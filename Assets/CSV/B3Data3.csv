@@ -1,0 +1,48 @@
+Time,Name,Id,Action
+0,Wall_5_6,171270,GameEnded
+0.9039899,Wall_5_6,171270,GameStarted
+3.62,Kitchen,168982,RoomEnter
+3.621267,Coin K.7,169360,MarkedAsPOI
+9.172422,Coin K.7,169360,Attended
+9.602708,Coin K.7,169360,Collected
+9.602708,Coin K.7,169360,UnmarkedAsPOI
+9.602708,Coin K.7,169360,Unattended
+9.889755,Coin K.9,170626,MarkedAsPOI
+12.2752,Coin K.9,170626,Attended
+13.73307,Coin K.9,170626,Unattended
+13.81669,Coin K.9,170626,UnmarkedAsPOI
+14.1141,Coin K.9,170626,MarkedAsPOI
+14.54484,Coin K.9,170626,Attended
+15.37317,Coin K.9,170626,Collected
+15.37317,Coin K.9,170626,UnmarkedAsPOI
+15.37317,Coin K.9,170626,Unattended
+15.7542,Coin K.8,169802,MarkedAsPOI
+17.03015,Coin K.8,169802,Attended
+17.11267,Coin K.8,169802,Unattended
+19.18397,Coin K.8,169802,Attended
+19.21713,Coin K.8,169802,Unattended
+20.34317,Coin K.8,169802,Attended
+21.13873,Coin K.8,169802,Collected
+21.13873,Coin K.8,169802,UnmarkedAsPOI
+21.13873,Coin K.8,169802,Unattended
+30.96,Kitchen,168982,RoomExit
+32.4,Bedroom,171068,RoomEnter
+32.40752,Coin B.7,168822,MarkedAsPOI
+33.63351,Coin B.7,168822,Attended
+33.65006,Coin B.7,168822,Unattended
+34.03111,Coin B.7,168822,Attended
+34.04777,Coin B.7,168822,Unattended
+34.91018,Coin B.7,168822,Attended
+35.37398,Coin B.7,168822,Unattended
+35.68855,Coin B.7,168822,Attended
+36.13573,Coin B.7,168822,Collected
+36.13573,Coin B.7,168822,Unattended
+36.43393,Coin B.9,168180,MarkedAsPOI
+36.89779,Coin B.9,168180,UnmarkedAsPOI
+37.46113,Coin B.9,168180,MarkedAsPOI
+38.07403,Coin B.9,168180,Attended
+38.14029,Coin B.9,168180,Unattended
+40.7083,Coin B.9,168180,Attended
+41.00692,Coin B.9,168180,Collected
+41.00692,Coin B.9,168180,UnmarkedAsPOI
+41.00692,Coin B.9,168180,Unattended

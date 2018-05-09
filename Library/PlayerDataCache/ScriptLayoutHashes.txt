@@ -30,6 +30,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 cdd9baa1ed924fb0b65d905e4f0fd69f Assembly-CSharp.dll:UnityEngine.Rendering.PostProcessing.Bloom
 7285365fe3efdee684e7e2ee30bebbdc Assembly-CSharp.dll:UnityEngine.Rendering.PostProcessing.MotionBlur
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LockOn
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Coin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CoinTextUpdater
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -160,7 +161,7 @@ f16c8bcf5301f0a2b12779d0724339c7 Assembly-CSharp.dll:.UserInterface
 e66f4a78d48609a640abef28435a6674 Assembly-CSharp.dll:UnityEngine.Rendering.PostProcessing.PostProcessResources
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ScoreWinCounter
 9e4c48f122d669679d66cf52b1cbd2b9 Assembly-CSharp.dll:UnityEngine.Rendering.PostProcessing.AutoExposure
-372c0bbab39561a5877d5bc5644957af Assembly-CSharp.dll:.GazeType
+a5ccceccd959db6357ea3d51c0cb5d70 Assembly-CSharp.dll:.GazeType
 d4d59921f876f7500315ffa706eb4a47 Assembly-CSharp.dll:.DataRecorderNew
 853178ec35ebc3a7ff09429b78771c4d Assembly-CSharp.dll:UnityEngine.Rendering.PostProcessing.PostProcessDebug
 c1baa58c93b7a1842aa232fee2e0ed9a Assembly-CSharp.dll:.StartAndFinishGame
@@ -168,6 +169,7 @@ bbaaa0c1bfe91166cc2b2147c63897af Assembly-CSharp.dll:.CollectRoomData
 6b7eaf739aa68e4297c9ecec29080677 Assembly-CSharp.dll:.PlayerGuidanceSystem
 478950f1f4a5f5e001bc85b674411bca Assembly-CSharp.dll:.PointsOfInterest
 aba975ed2533bcf0bc6b9350dfd63db0 Assembly-CSharp.dll:.SmoothRotation
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StandardCoinCue
 783bf6d659235f53a950684dd61ab5b9 Assembly-CSharp.dll:.Rotation
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -214,7 +216,7 @@ fcb626034dbd43a937eb07c78d2be1ec Assembly-CSharp.dll:.TimeScoreManager
 5ec901c8ad9bb61ddd9ca81cb432ef13 Assembly-CSharp.dll:.InfinteStarfield
 476e3a48b8beabc29f841293b800ab4c Assembly-CSharp.dll:.Movement
 6c1f89f87ea727f9cdfa2dff28fe95be Assembly-CSharp.dll:Guidance.SubtleGazeDirection
-8658bdd8dda7af59fa1b23084518b33a Assembly-CSharp.dll:Gaze.GazeInput
+a59ccde1fbbdf6d2435b5edc6f5968c5 Assembly-CSharp.dll:Gaze.GazeInput
 f3a7d6b7ba2834fa390d7aee0d4a2173 Assembly-CSharp.dll:UnityEngine.Rendering.PostProcessing.PostProcessVolume
 35e865cc5175d234df47214c8f8ec47c Assembly-CSharp.dll:UnityEngine.Rendering.PostProcessing.Grain
 e09fb481d99cb4782045e99f8bc29533 Assembly-CSharp.dll:.Grabable
@@ -222,4 +224,6 @@ e09fb481d99cb4782045e99f8bc29533 Assembly-CSharp.dll:.Grabable
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LoadScene
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ScoreFormatter
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShowGaze
+b42b1178efd4b301795178e93942a9d4 Assembly-CSharp.dll:.OvertGazeDirection
 d22e46ba71407e30191c781078cee879 Assembly-CSharp.dll:.IntensityManager
+746008070a9b9a6caf29accce9f8fcf8 Assembly-CSharp.dll:.ExitGame

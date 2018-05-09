@@ -46,12 +46,12 @@ public class EnemySpawner : MonoBehaviour
 	private float _lastX;
 	private float _lastY;
 
-	private IGazeDirection _subtleGazeDirection;
+	private IGazeDirection _gazeDirection;
 
 	void Start()
 	{
 		_currentWaitTime = Random.Range(WaitTimeBetweenEnemySpawnMin, WaitTimeBetweenEnemySpawnMax);
-		_subtleGazeDirection = GameObject.Find("Gaze Guidance").GetComponent<IGazeDirection>();
+		_gazeDirection = GameObject.Find("Gaze Guidance").GetComponent<IGazeDirection>();
 		_lock = GameObject.Find("Lock");
 	}
 
@@ -174,8 +174,13 @@ public class EnemySpawner : MonoBehaviour
 				return false;
 			}
 		}
+
+		if (_gazeDirection != null)
+		{
+			return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _gazeDirection.PerceptualSpanPixel + _gazeDirection.ModulationRadiusPixel;
+		}
 				
-		return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _subtleGazeDirection.PerceptualSpanPixel + _subtleGazeDirection.ModulationRadiusPixel;
+		return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _gazeDirection.PerceptualSpanPixel;
 	}
 
 	void ShowEnemy()

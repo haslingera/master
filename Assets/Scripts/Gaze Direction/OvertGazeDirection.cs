@@ -90,9 +90,9 @@ public class OvertGazeDirection : MonoBehaviour, IGazeDirection {
 		private void CalculateSizeAndIntensityModulation(Vector3 pointToDisplay)
 		{
 			Vector3 viewportPoint = Camera.main.WorldToScreenPoint(pointToDisplay);	
-			_modulationRadius = Mathf.Max(MaxModulationSize * (1f - Mathf.Min(Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), GazeManager.Instance.SmoothGazeVector) / Screen.height, 1f)), MinModulationSize);			
+			_modulationRadius = Mathf.Max(MaxModulationSize * (Mathf.Min(Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), GazeManager.Instance.SmoothGazeVector) / Screen.height, 1f)), MinModulationSize);			
 			_ism.Size = (ModulationRadiusPixel * 2f) / Screen.height;
-			_ism.Intensity = Mathf.Lerp(ModulationIntensityMax, ModulationIntensityMin, Mathf.Min((Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), GazeManager.Instance.SmoothGazeVector) / Screen.height) * 1.2f, 1f));
+			_ism.Intensity = Mathf.Lerp(ModulationIntensityMin, ModulationIntensityMax, Mathf.Min((Vector2.Distance(new Vector2(viewportPoint.x, viewportPoint.y), GazeManager.Instance.SmoothGazeVector) / Screen.height), 1f));
 		}
 }
 

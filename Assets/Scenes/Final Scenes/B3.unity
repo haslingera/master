@@ -15902,8 +15902,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 1
-  sensitivityX: 5
-  sensitivityY: 5
+  sensitivityX: 2.5
+  sensitivityY: 2.5
   minimumX: -360
   maximumX: 360
   minimumY: -60
@@ -15938,7 +15938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Move: 1
-  speed: 5
+  speed: 4
   gravity: 10
   maxVelocityChange: 10
   canJump: 1
@@ -21154,8 +21154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 2
-  sensitivityX: 5
-  sensitivityY: 5
+  sensitivityX: 2.5
+  sensitivityY: 2.5
   minimumX: -360
   maximumX: 360
   minimumY: -80
@@ -41031,7 +41031,7 @@ Prefab:
     - target: {fileID: 114363300244153532, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: UseMouseAsGaze
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114251766214924150, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
@@ -41041,7 +41041,7 @@ Prefab:
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
@@ -52099,8 +52099,9 @@ MonoBehaviour:
   Active: 1
   PerceptualSpanRadius: 3.8
   ModulationRate: 10
-  ModulationIntensityMin: 0
-  ModulationIntensityMax: 0.5
+  ModulationIntensityMin: 0.5
+  ModulationIntensityMax: 1
+  MinModulationSize: 0.5
   MaxModulationSize: 3
 --- !u!1 &1766069109
 GameObject:

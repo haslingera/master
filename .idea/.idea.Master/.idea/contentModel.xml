@@ -232,6 +232,7 @@
             <e p="Crosshair.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
+            <e p="ExitGame.cs" t="Include" />
             <e p="FireLaser.cs" t="Include" />
             <e p="GazeCalibrationA.cs" t="Include" />
             <e p="InfinteStarfield.cs" t="Include" />
@@ -278,7 +279,7 @@
         <e p="Gaze" t="Include">
           <e p="GazeInput.cs" t="Include" />
           <e p="GazeManager.cs" t="Include" />
-          <e p="GazePointObject.cs" t="Include" />
+          <e p="GazeSampleObject.cs" t="Include" />
           <e p="GazeType.cs" t="Include" />
           <e p="SlidingBuffer.cs" t="Include" />
         </e>

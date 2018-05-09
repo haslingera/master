@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Gaze
 {
-	public class GazePointObject
+	public class GazeSampleObject
 	{
 
 		public readonly Vector2 GazePoint;
 		public readonly DateTime DateTime;
 
-		public GazePointObject(Vector2 gazePoint)
+		public GazeSampleObject(Vector2 gazePoint)
 		{
 			GazePoint = gazePoint;
 			DateTime = DateTime.Now;

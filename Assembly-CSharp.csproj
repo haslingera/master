@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\Game\Condition A\Crosshair.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\Enemy.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Game\Condition A\ExitGame.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\FireLaser.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\GazeCalibrationA.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\InfinteStarfield.cs" />
@@ -171,7 +172,7 @@
     <Compile Include="Assets\Scripts\Gaze Mapping\Screenshot.cs" />
     <Compile Include="Assets\Scripts\Gaze\GazeInput.cs" />
     <Compile Include="Assets\Scripts\Gaze\GazeManager.cs" />
-    <Compile Include="Assets\Scripts\Gaze\GazePointObject.cs" />
+    <Compile Include="Assets\Scripts\Gaze\GazeSampleObject.cs" />
     <Compile Include="Assets\Scripts\Gaze\GazeType.cs" />
     <Compile Include="Assets\Scripts\Gaze\SlidingBuffer.cs" />
     <Compile Include="Assets\Tobii\Framework\DisplayInfo.cs" />

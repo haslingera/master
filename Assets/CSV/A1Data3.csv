@@ -1,0 +1,15 @@
+Time,Name,Id,Action
+0,Menu,327400,GameStarted
+3.62811,Enemy(Clone),-345168,Appeared
+4.025718,Enemy(Clone),-345168,Shot
+5.732597,Enemy(Clone),-345938,Appeared
+6.030277,Enemy(Clone),-345938,Shot
+7.554409,Enemy(Clone),-346624,Appeared
+8.068038,Enemy(Clone),-346624,Shot
+9.625245,Enemy(Clone),-347266,Appeared
+9.973144,Enemy(Clone),-347266,Shot
+11.41469,Enemy(Clone),-347866,Appeared
+11.82861,Enemy(Clone),-347866,Shot
+13.18708,Enemy(Clone),-348466,Appeared
+15.02926,Enemy(Clone),-348992,Appeared
+15.29376,Data Recorder,327246,GameExited

@@ -1,0 +1,5 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-259596,ModulationIntensity
+0,Menu,280412,GameStarted
+1,Gaze Guidance,-259596,ModulationIntensity
+2.170235,Data Recorder,280258,GameExited

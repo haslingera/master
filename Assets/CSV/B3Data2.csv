@@ -1,0 +1,9 @@
+Time,Name,Id,Action
+0,Wall_5_6,171270,GameEnded
+0.6199299,Wall_5_6,171270,GameStarted
+1.8,Kitchen,168982,RoomEnter
+1.813329,Coin K.7,169360,MarkedAsPOI
+9.766129,Coin K.7,169360,Attended
+10.61135,Coin K.7,169360,Collected
+10.61135,Coin K.7,169360,UnmarkedAsPOI
+10.61135,Coin K.7,169360,Unattended

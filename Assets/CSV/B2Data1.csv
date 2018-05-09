@@ -1,0 +1,31 @@
+Time,Name,Id,Action
+0,Wall_5_6,345656,GameEnded
+0.7527235,Wall_5_6,345656,GameStarted
+1,Gaze Guidance,-379942,ModulationIntensity
+1,Gaze Guidance,-379942,ModulationIntensity
+3.9,Workroom,342598,RoomEnter
+4.493691,Coin W.3,346456,MarkedAsPOI
+5.889899,Coin W.3,346456,UnmarkedAsPOI
+6.419973,Coin W.1,343782,MarkedAsPOI
+7.133314,Coin W.1,343782,UnmarkedAsPOI
+7.7,Workroom,342598,RoomExit
+10.98,Kitchen,343368,RoomEnter
+10.98059,Coin K.5,346754,MarkedAsPOI
+11.41132,Coin K.5,346754,UnmarkedAsPOI
+11.41132,Coin K.6,342948,MarkedAsPOI
+12.67057,Coin K.6,342948,UnmarkedAsPOI
+14.12018,Coin K.6,342948,MarkedAsPOI
+14.28579,Coin K.6,342948,UnmarkedAsPOI
+14.56849,Coin K.6,342948,MarkedAsPOI
+15.87785,Coin K.6,342948,UnmarkedAsPOI
+15.87785,Coin K.4,345340,MarkedAsPOI
+16.35841,Coin K.4,345340,UnmarkedAsPOI
+16.65648,Coin K.6,342948,MarkedAsPOI
+17.70852,Coin K.6,342948,UnmarkedAsPOI
+17.70852,Coin K.2,344768,MarkedAsPOI
+18.22351,Coin K.2,344768,UnmarkedAsPOI
+18.22351,Coin K.5,346754,MarkedAsPOI
+18.53766,Coin K.5,346754,UnmarkedAsPOI
+19.88034,Coin K.5,346754,MarkedAsPOI
+24.83573,Coin K.5,346754,UnmarkedAsPOI
+25.13393,Coin K.6,342948,MarkedAsPOI

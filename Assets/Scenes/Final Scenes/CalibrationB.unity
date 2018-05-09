@@ -14211,8 +14211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 1
-  sensitivityX: 3
-  sensitivityY: 3
+  sensitivityX: 2.5
+  sensitivityY: 2.5
   minimumX: -360
   maximumX: 360
   minimumY: -60
@@ -14247,7 +14247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Move: 1
-  speed: 5
+  speed: 4
   gravity: 10
   maxVelocityChange: 10
   canJump: 1
@@ -18943,8 +18943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 2
-  sensitivityX: 3
-  sensitivityY: 3
+  sensitivityX: 2
+  sensitivityY: 2
   minimumX: -360
   maximumX: 360
   minimumY: -80
@@ -36572,17 +36572,22 @@ Prefab:
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: MinimumSaccadeTime
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114468553921299840, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: Debug
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114363300244153532, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
+        type: 2}
+      propertyPath: BufferWindow
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114812914777129556, guid: 4eaa9ed6e34ecd24897bf37f346bc85c, type: 2}

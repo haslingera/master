@@ -1,0 +1,9 @@
+Time,Name,Id,Action
+0,Menu,155294,GameStarted
+3.793767,Enemy(Clone),-135388,Appeared
+4.358914,Enemy(Clone),-135388,Shot
+5.929488,Enemy(Clone),-135832,Appeared
+6.37679,Enemy(Clone),-135832,Shot
+7.983755,Enemy(Clone),-136246,Appeared
+8.364978,Enemy(Clone),-136246,Shot
+9.425241,Data Recorder,155140,GameExited

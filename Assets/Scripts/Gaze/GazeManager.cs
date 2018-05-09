@@ -6,16 +6,23 @@ namespace Gaze
 	{
 
 		private static GazeManager _instance ;
-
+		
+		private bool _gazeAvailable;
+		
+		private Vector2 _gaze;
+				
 		public static GazeManager Instance
 		{
 			get { return _instance ?? (_instance = new GazeManager()); }
 		}
-
-		private bool _gazeAvailable;
 	
 		public bool GazeAvailable
 		{
+			set
+			{
+				_gazeAvailable = value;
+			}
+			
 			get
 			{
 				if (!_gazeAvailable)
@@ -29,11 +36,23 @@ namespace Gaze
 				return !float.IsNaN(_gaze.x);
 			}
 		}
-	
-		private Vector2 _gaze;
-	
+		
+		public bool Saccade;
+
+		public bool Fixation;
+		
+		public float DistanceToComputer = 75;
+
+		public GazeSampleObject GazeSampleObject;
+		
 		public Vector2 GazeVector
 		{
+			set
+			{
+				_gaze = value;
+				GazeSampleObject gpo = new GazeSampleObject(value);
+				GazeSampleObject = gpo;
+			}
 			get {return _gaze; }
 		}
 	
@@ -42,52 +61,7 @@ namespace Gaze
 			get { return new Vector2(_gaze.x / Screen.width, _gaze.y / Screen.height); }
 		}
 	
-		private GazePointObject _gazePointObject;
-	
-		public GazePointObject GazePointObject
-		{
-			get {return _gazePointObject; }
-		}
-	
-		private Vector2 _smoothGaze;
-	
-		public Vector2 SmoothGazeVector
-		{
-			get {return _smoothGaze; }
-		}
-	
-		public Vector2 SmoothGazeVectorNormalized
-		{
-			get { return new Vector2(_smoothGaze.x / Screen.width, _smoothGaze.y / Screen.height); }
-		}
-
-		public float DistanceToComputer = 75;
-
-		public void SetGazeVector(Vector2 gaze)
-		{	
-			_gaze = gaze;
-			GazePointObject gpo = new GazePointObject(gaze);
-			_gazePointObject = gpo;
-		}
-	
-		public void SetSmoothGazeVector(Vector2 gaze)
-		{
-			_smoothGaze = gaze;
-		}
-	
-		public void SetGazeAvailable()
-		{
-			if (!_gazeAvailable)
-			{
-				_gazeAvailable = true;
-			}
-		}
-
-		public bool Saccade;
-
-		public bool Fixation;
-
-		public bool MouseAsGaze;
+		public Vector2 SmoothGazeVector = Vector2.zero;
 
 	}
 }
