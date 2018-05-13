@@ -1,0 +1,84 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-83306,ModulationIntensity
+0.5,Gaze Guidance,-83306,ModulationIntensity
+0.8091137,Wall_5_6,98952,GameStarted
+2.04,Kitchen,96664,RoomEnter
+2.051813,Coin K.5,100050,MarkedAsPOI
+3.178373,Coin K.5,100050,UnmarkedAsPOI
+4.420854,Coin K.2,98064,MarkedAsPOI
+4.636211,Coin K.2,98064,UnmarkedAsPOI
+4.93459,Coin K.2,98064,MarkedAsPOI
+5.464712,Coin K.2,98064,UnmarkedAsPOI
+5.464712,Coin K.6,96244,MarkedAsPOI
+6.756746,Coin K.6,96244,UnmarkedAsPOI
+7.005247,Coin K.6,96244,MarkedAsPOI
+9.541694,Coin K.6,96244,UnmarkedAsPOI
+9.541694,Coin K.2,98064,MarkedAsPOI
+10.46904,Coin K.2,98064,UnmarkedAsPOI
+11.2,Kitchen,96664,RoomExit
+13.06,Bedroom,98750,RoomEnter
+13.07133,Coin B.8,100078,MarkedAsPOI
+13.56833,Coin B.8,100078,UnmarkedAsPOI
+14.61203,Coin B.3,98690,MarkedAsPOI
+15.80542,Coin B.3,98690,UnmarkedAsPOI
+15.80542,Coin B.4,98704,MarkedAsPOI
+17.57805,Coin B.4,98704,UnmarkedAsPOI
+17.57805,Coin B.3,98690,MarkedAsPOI
+18.88682,Coin B.3,98690,UnmarkedAsPOI
+19.18502,Coin B.4,98704,MarkedAsPOI
+20.87489,Coin B.4,98704,UnmarkedAsPOI
+21.17302,Coin B.3,98690,MarkedAsPOI
+21.76942,Coin B.3,98690,UnmarkedAsPOI
+22.06778,Coin B.4,98704,MarkedAsPOI
+23.90652,Coin B.4,98704,UnmarkedAsPOI
+23.90652,Coin B.8,100078,MarkedAsPOI
+26.29363,Coin B.8,100078,UnmarkedAsPOI
+26.29363,Coin B.3,98690,MarkedAsPOI
+29.21111,Coin B.3,98690,UnmarkedAsPOI
+30.58,Bedroom,98750,RoomExit
+32.48,Livingroom,100874,RoomEnter
+32.49163,Coin L.5,97860,MarkedAsPOI
+32.50788,Coin L.5,97860,UnmarkedAsPOI
+32.80608,Coin L.2,96032,MarkedAsPOI
+33.68411,Coin L.2,96032,UnmarkedAsPOI
+34.19768,Coin L.2,96032,MarkedAsPOI
+41.80178,Coin L.2,96032,UnmarkedAsPOI
+42.51414,Coin L.5,97860,MarkedAsPOI
+45.64588,Coin L.5,97860,UnmarkedAsPOI
+47.2,Livingroom,100874,RoomExit
+49.04,Workroom,95894,RoomEnter
+49.25792,Coin W.1,97078,MarkedAsPOI
+50.18523,Coin W.1,97078,UnmarkedAsPOI
+50.48343,Coin W.1,97078,MarkedAsPOI
+52.5874,Coin W.1,97078,UnmarkedAsPOI
+52.5874,Coin W.3,99752,MarkedAsPOI
+53.00316,Coin W.3,99752,UnmarkedAsPOI
+53.00316,Coin W.1,97078,MarkedAsPOI
+54.16287,Coin W.1,97078,UnmarkedAsPOI
+54.16287,Coin W.3,99752,MarkedAsPOI
+55.28936,Coin W.3,99752,UnmarkedAsPOI
+57.7081,Coin W.3,99752,MarkedAsPOI
+60.02743,Coin W.3,99752,UnmarkedAsPOI
+60.3263,Coin W.1,97078,MarkedAsPOI
+60.62402,Coin W.1,97078,UnmarkedAsPOI
+62.04875,Coin W.1,97078,MarkedAsPOI
+68.494,Coin W.1,97078,UnmarkedAsPOI
+68.93999,Workroom,95894,RoomExit
+70.1,Bedroom,-93840,RoomEnter
+70.10094,Coin B.8,100078,MarkedAsPOI
+71.57561,Coin B.8,100078,UnmarkedAsPOI
+71.57561,Coin B.4,98704,MarkedAsPOI
+72.20515,Coin B.4,98704,UnmarkedAsPOI
+72.50334,Coin B.8,100078,MarkedAsPOI
+74.77409,Coin B.8,100078,UnmarkedAsPOI
+75.25447,Coin B.4,98704,MarkedAsPOI
+75.99997,Coin B.4,98704,UnmarkedAsPOI
+75.99997,Coin B.3,98690,MarkedAsPOI
+76.28212,Coin B.3,98690,UnmarkedAsPOI
+76.5798,Coin B.4,98704,MarkedAsPOI
+77.34187,Coin B.4,98704,UnmarkedAsPOI
+77.7726,Coin B.4,98704,MarkedAsPOI
+82.8917,Coin B.4,98704,UnmarkedAsPOI
+82.8917,Coin B.8,100078,MarkedAsPOI
+84.7476,Coin B.8,100078,UnmarkedAsPOI
+87.31944,Data Recorder,100470,GameExited

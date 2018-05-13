@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StandardCoinCue : MonoBehaviour
+public class CoinCue : MonoBehaviour
 {
 
 	private GameObject _coin;

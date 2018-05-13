@@ -120,8 +120,6 @@
     <Compile Include="Assets\Scripts\Game\Condition A\Bullet.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\Crosshair.cs" />
-    <Compile Include="Assets\Scripts\Game\Condition A\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Game\Condition A\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\ExitGame.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\FireLaser.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\GazeCalibrationA.cs" />
@@ -132,9 +130,12 @@
     <Compile Include="Assets\Scripts\Game\Condition A\ScoreFormatter.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\ScoreWinCounter.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\SpaceshipControls.cs" />
+    <Compile Include="Assets\Scripts\Game\Condition A\Target.cs" />
+    <Compile Include="Assets\Scripts\Game\Condition A\TargetSpawner.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\TimeFormatter.cs" />
     <Compile Include="Assets\Scripts\Game\Condition A\UserInterface.cs" />
     <Compile Include="Assets\Scripts\Game\Condition B\Coin.cs" />
+    <Compile Include="Assets\Scripts\Game\Condition B\CoinCue.cs" />
     <Compile Include="Assets\Scripts\Game\Condition B\CoinTextUpdater.cs" />
     <Compile Include="Assets\Scripts\Game\Condition B\CollectCoinData.cs" />
     <Compile Include="Assets\Scripts\Game\Condition B\CollectRoomData.cs" />
@@ -145,7 +146,6 @@
     <Compile Include="Assets\Scripts\Game\Condition B\PointOfInterestSelectionProcessB.cs" />
     <Compile Include="Assets\Scripts\Game\Condition B\Rotation.cs" />
     <Compile Include="Assets\Scripts\Game\Condition B\SmoothRotation.cs" />
-    <Compile Include="Assets\Scripts\Game\Condition B\StandardCoinCue.cs" />
     <Compile Include="Assets\Scripts\Game\Condition B\StartAndFinishGame.cs" />
     <Compile Include="Assets\Scripts\Game\Menu\IntensityManager.cs" />
     <Compile Include="Assets\Scripts\Game\Menu\LoadScene.cs" />

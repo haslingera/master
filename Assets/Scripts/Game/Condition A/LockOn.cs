@@ -8,6 +8,9 @@ public class LockOn : MonoBehaviour
 	private float _lerpTime;
 	private float _currentTime;
 	private bool _lerp;
+	private float _time;
+	private Vector2 _initalPosition = Vector2.zero;
+	private Color _initalColor = new Color(1f, 1f, 1f, 0f);
 
 	void Start () {
 		ResetLock(Vector2.zero);
@@ -28,9 +31,6 @@ public class LockOn : MonoBehaviour
 
 		_currentTime += Time.deltaTime;
 	}
-
-	private Vector2 _initalPosition = Vector2.zero;
-	private Color _initalColor = new Color(1f, 1f, 1f, 0f);
 	
 	private void ResetLock(Vector2 screenPosition)
 	{
@@ -72,20 +72,12 @@ public class LockOn : MonoBehaviour
 		_currentTime = 0;
 	}
 
-	private float _time;
-
 	private void LockOnTarget()
-	{
-		//ResetLock(screenPosition);
-		
+	{		
 		Vector3 enemyScreenPosition = Camera.main.WorldToScreenPoint(_enemy.transform.position);
 		_time += Time.deltaTime / _lerpTime;
 		
 		GetComponent<RectTransform>().anchoredPosition = Vector2.Lerp(GetComponent<RectTransform>().anchoredPosition, new Vector2(enemyScreenPosition.x, enemyScreenPosition.y), _time);
 		GetComponent<Image>().color = Color.Lerp(_initalColor, Color.white, _time);
-
-		//LeanTween.moveX(GetComponent<RectTransform>(), screenPosition.x, time).setEaseInOutCirc();
-		//LeanTween.moveY(GetComponent<RectTransform>(), screenPosition.y, time).setEaseInOutCirc();
-		//LeanTween.color(GetComponent<RectTransform>(), Color.white, time).setEaseInOutCirc();
 	}
 }

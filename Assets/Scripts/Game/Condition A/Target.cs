@@ -2,7 +2,7 @@
 using Random = UnityEngine.Random;
 using EZCameraShake;
 
-public class Enemy : MonoBehaviour
+public class Target : MonoBehaviour
 {
 	public ParticleSystem Explosion;
 	
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
 
 		if (_currentTime > _lifeTime)
 		{
-			DestroyEnemy();
+			DestroyTarget();
 			_currentTime = 0;
 		}
 
@@ -97,7 +97,7 @@ public class Enemy : MonoBehaviour
 		transform.localScale = new Vector3(scale, scale, scale);
 	}
 
-	public void DestroyEnemy()
+	public void DestroyTarget()
 	{
 		if (!_dead)
 		{
@@ -107,7 +107,7 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
-	public void EnemyShot(Bullet bullet)
+	public void TargetShot(Bullet bullet)
 	{
 		if (!_dead && _canBeShot)
 		{
@@ -133,7 +133,7 @@ public class Enemy : MonoBehaviour
 		}
 	}
 	
-	public void EnemyShot()
+	public void TargetShot()
 	{
 		if (!_dead && _canBeShot)
 		{
@@ -158,7 +158,7 @@ public class Enemy : MonoBehaviour
 		}
 	}
 	
-	public void ShowEnemy()
+	public void ShowTarget()
 	{
 		Invoke("FlashGlow", _lifeTime - BlinkTime);
 

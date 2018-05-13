@@ -18,11 +18,6 @@ public class PointsOfInterest : MonoBehaviour
 
 	private GameObject _currentPointOfInterest;
 
-	public bool IsPointOfInterest(GameObject go)
-	{
-		return _currentPointOfInterest == go;
-	}
-
 	public GameObject GetCurrentPointOfInterest(PointOfInterest.PoiType type)
 	{
 		

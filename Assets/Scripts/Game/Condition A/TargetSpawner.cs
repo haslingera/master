@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class EnemySpawner : MonoBehaviour
+public class TargetSpawner : MonoBehaviour
 {
 
 	[Header("Scripts")]
@@ -47,6 +47,7 @@ public class EnemySpawner : MonoBehaviour
 	private float _lastY;
 
 	private IGazeDirection _gazeDirection;
+	private GameObject _lock;
 
 	void Start()
 	{
@@ -89,8 +90,6 @@ public class EnemySpawner : MonoBehaviour
 		if (SpaceshipControls.GetSpaceShipTurn().x >= SpaceshipHorizontalThreshold || SpaceshipControls.GetSpaceShipTurn().y >= SpaceshipVerticalThreshold) _buffer = 0;
 		_buffer += Time.deltaTime;
 	}
-
-	private GameObject _lock;
 
 	void SpawnEnemy()
 	{
@@ -180,15 +179,23 @@ public class EnemySpawner : MonoBehaviour
 			return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _gazeDirection.PerceptualSpanPixel + _gazeDirection.ModulationRadiusPixel;
 		}
 				
-		return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > _gazeDirection.PerceptualSpanPixel;
+		return Vector2.Distance(new Vector2(pointToDisplay.x, pointToDisplay.y), GazeManager.Instance.SmoothGazeVector) > CalculateDegreesToPixel(0.76f);
 	}
 
 	void ShowEnemy()
 	{
 		if (_currentEnemy != null)
 		{
-			_currentEnemy.GetComponent<Enemy>().ShowEnemy();
+			_currentEnemy.GetComponent<Target>().ShowTarget();
 		}
+	}
+	
+	float CalculateDegreesToPixel (float degrees)
+	{
+		float distanceToComputerSquared = GazeManager.Instance.DistanceToComputer * GazeManager.Instance.DistanceToComputer;
+		float radiusCm = Mathf.Sqrt(distanceToComputerSquared + distanceToComputerSquared - 2f * distanceToComputerSquared * Mathf.Cos(degrees * Mathf.Deg2Rad));
+		float diameterPx = radiusCm * Screen.dpi / 2.54f;
+		return diameterPx / 2f;
 	}
 
 }

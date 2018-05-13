@@ -15888,7 +15888,7 @@ Prefab:
     - target: {fileID: 114363300244153532, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: UseMouseAsGaze
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114363300244153532, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}

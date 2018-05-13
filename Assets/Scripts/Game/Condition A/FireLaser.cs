@@ -113,9 +113,9 @@ public class FireLaser : MonoBehaviour
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		
 		if (Physics.Raycast(ray, out hit, 500f, IgnoreShip)) {
-			if (hit.collider.gameObject.GetComponent<Enemy>())
+			if (hit.collider.gameObject.GetComponent<Target>())
 			{
-				hit.collider.gameObject.GetComponent<Enemy>().EnemyShot();
+				hit.collider.gameObject.GetComponent<Target>().TargetShot();
 				return hit.collider.gameObject.transform.position;
 			}
 		}

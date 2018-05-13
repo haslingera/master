@@ -1,0 +1,9 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-138968,ModulationIntensity
+0.5,Gaze Guidance,-138968,ModulationIntensity
+0.5541903,Wall_5_6,216602,GameStarted
+4.62,Livingroom,218524,RoomEnter
+4.62934,Coin L.5,215510,MarkedAsPOI
+4.960673,Coin L.5,215510,UnmarkedAsPOI
+4.960673,Coin L.2,213682,MarkedAsPOI
+14.58736,Data Recorder,218120,GameExited

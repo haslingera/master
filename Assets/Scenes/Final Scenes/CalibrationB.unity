@@ -36589,6 +36589,11 @@ Prefab:
       propertyPath: BufferWindow
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 114251766214924150, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
+        type: 2}
+      propertyPath: Size
+      value: 0.12
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114812914777129556, guid: 4eaa9ed6e34ecd24897bf37f346bc85c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4eaa9ed6e34ecd24897bf37f346bc85c, type: 2}

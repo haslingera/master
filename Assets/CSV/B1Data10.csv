@@ -1,0 +1,8 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-43340,ModulationIntensity
+0,Gaze Guidance,-43340,ModulationIntensity
+1.034378,Wall_5_6,36424,GameStarted
+4.18,Kitchen,34316,RoomEnter
+5.48,Kitchen,34316,RoomExit
+8.059999,Bedroom,36226,RoomEnter
+64.42794,Data Recorder,37884,GameExited

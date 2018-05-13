@@ -1,0 +1,17 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-15012,ModulationIntensity
+0.5,Gaze Guidance,-15012,ModulationIntensity
+0.5114948,Wall_5_6,26390,GameStarted
+2.72,Kitchen,24102,RoomEnter
+2.735112,Coin K.5,27488,MarkedAsPOI
+5.83321,Coin K.5,27488,UnmarkedAsPOI
+6.13141,Coin K.6,23682,MarkedAsPOI
+22.5892,Coin K.6,23682,UnmarkedAsPOI
+24.56063,Coin K.4,26074,MarkedAsPOI
+25.38897,Coin K.4,26074,UnmarkedAsPOI
+25.9191,Coin K.4,26074,MarkedAsPOI
+27.57597,Coin K.4,26074,UnmarkedAsPOI
+27.57597,Coin K.2,25502,MarkedAsPOI
+27.92366,Coin K.2,25502,UnmarkedAsPOI
+27.92366,Coin K.6,23682,MarkedAsPOI
+36.36574,Data Recorder,27908,GameExited

@@ -8,9 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: dfc8368109720704483ef9aabbf8af8b
-  m_OcclusionCullingData: {fileID: 36300000, guid: e66cd63785eacc340a4b91d7dcc1dd3a,
-    type: 2}
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -41041,12 +41040,12 @@ Prefab:
     - target: {fileID: 114618512161008052, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: ModulationIntensityMin
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114618512161008052, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}
       propertyPath: ModulationIntensityMax
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114251766214924150, guid: 4eaa9ed6e34ecd24897bf37f346bc85c,
         type: 2}

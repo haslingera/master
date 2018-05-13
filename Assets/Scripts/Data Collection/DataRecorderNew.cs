@@ -59,8 +59,6 @@ public class DataRecorderNew : MonoBehaviour {
 		{
 			writer.WriteLine (sortedList[0].GetDataSetHeader());
 		}
-
-		int currentObjectID = 0;
 		
 		for (int i = 0; i < sortedList.Count; i++)
 		{

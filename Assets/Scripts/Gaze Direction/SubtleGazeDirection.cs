@@ -34,6 +34,8 @@ namespace Guidance
 		private bool _lastFixationPointSet;
 		private float _originalModulationRadius;
 		private ImageSpaceModulationImageEffect _ism;
+		private Vector3 _pointToDisplay;
+		private bool _showPoi = true;
 
 		public float ModulationRadiusPixel
 		{
@@ -77,8 +79,6 @@ namespace Guidance
 			_ism.ModulateImageSpace = false;
 			
 		}
-
-		Vector3 _pointToDisplay;
 
 		private void Update()
 		{
@@ -151,7 +151,6 @@ namespace Guidance
 
 			return false;
 		}
-	
 
 		private void SetLastFixationPoint()
 		{
@@ -170,9 +169,7 @@ namespace Guidance
 			Debug.DrawLine(lastFixationPointWorld, poiPosition, Color.green);
 			Debug.DrawLine(lastFixationPointWorld, currentGazePointWorld, Color.green);
 		}
-
-		private bool _showPoi = true;
-		
+	
 		private bool ShowPoi(Vector3 pointToDisplay)
 		{
 			
@@ -208,9 +205,7 @@ namespace Guidance
 			Vector2 poiPositionScreen = Camera.main.WorldToScreenPoint(pointToDisplay);
 
 			return IsDistanceToGazeEnough(poiPositionScreen);
-		}
-		
-		
+		}	
 
 		private float AngleBetweenDirections(Vector2 vec1, Vector2 vec2)
 		{

@@ -1,0 +1,4 @@
+Time,Name,Id,Action
+0,Menu,23142,GameStarted
+3.893165,Enemy(Clone),-25852,Appeared
+4.941269,Data Recorder,22988,GameExited

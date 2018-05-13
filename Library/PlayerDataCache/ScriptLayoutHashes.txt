@@ -169,7 +169,7 @@ bbaaa0c1bfe91166cc2b2147c63897af Assembly-CSharp.dll:.CollectRoomData
 6b7eaf739aa68e4297c9ecec29080677 Assembly-CSharp.dll:.PlayerGuidanceSystem
 478950f1f4a5f5e001bc85b674411bca Assembly-CSharp.dll:.PointsOfInterest
 aba975ed2533bcf0bc6b9350dfd63db0 Assembly-CSharp.dll:.SmoothRotation
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.StandardCoinCue
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CoinCue
 783bf6d659235f53a950684dd61ab5b9 Assembly-CSharp.dll:.Rotation
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -208,12 +208,13 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
-0f9b68367c536481adcef72268b51725 Assembly-CSharp.dll:.Enemy
-8feac12239eb126c319b0b867151dd9e Assembly-CSharp.dll:.EnemySpawner
+0f9b68367c536481adcef72268b51725 Assembly-CSharp.dll:.Target
+8feac12239eb126c319b0b867151dd9e Assembly-CSharp.dll:.TargetSpawner
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 fcb626034dbd43a937eb07c78d2be1ec Assembly-CSharp.dll:.TimeScoreManager
 0ebb19cbec3ef6fda4601cd5d105b942 Assembly-CSharp.dll:.DrawRing
 5ec901c8ad9bb61ddd9ca81cb432ef13 Assembly-CSharp.dll:.InfinteStarfield
+746008070a9b9a6caf29accce9f8fcf8 Assembly-CSharp.dll:.ExitGame
 476e3a48b8beabc29f841293b800ab4c Assembly-CSharp.dll:.Movement
 6c1f89f87ea727f9cdfa2dff28fe95be Assembly-CSharp.dll:Guidance.SubtleGazeDirection
 a59ccde1fbbdf6d2435b5edc6f5968c5 Assembly-CSharp.dll:Gaze.GazeInput
@@ -226,4 +227,3 @@ e09fb481d99cb4782045e99f8bc29533 Assembly-CSharp.dll:.Grabable
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ShowGaze
 b42b1178efd4b301795178e93942a9d4 Assembly-CSharp.dll:.OvertGazeDirection
 d22e46ba71407e30191c781078cee879 Assembly-CSharp.dll:.IntensityManager
-746008070a9b9a6caf29accce9f8fcf8 Assembly-CSharp.dll:.ExitGame

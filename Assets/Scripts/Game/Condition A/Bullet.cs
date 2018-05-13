@@ -37,8 +37,8 @@ public class Bullet : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other)
 	{		
-		if(other.gameObject.GetComponent<Enemy>()){
-			other.gameObject.GetComponent<Enemy>().EnemyShot(this);
+		if(other.gameObject.GetComponent<Target>()){
+			other.gameObject.GetComponent<Target>().TargetShot(this);
 			Destroy(gameObject);
 		}
 	}

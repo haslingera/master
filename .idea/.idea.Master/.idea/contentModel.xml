@@ -230,8 +230,6 @@
             <e p="Bullet.cs" t="Include" />
             <e p="CameraFollow.cs" t="Include" />
             <e p="Crosshair.cs" t="Include" />
-            <e p="Enemy.cs" t="Include" />
-            <e p="EnemySpawner.cs" t="Include" />
             <e p="ExitGame.cs" t="Include" />
             <e p="FireLaser.cs" t="Include" />
             <e p="GazeCalibrationA.cs" t="Include" />
@@ -242,11 +240,14 @@
             <e p="ScoreFormatter.cs" t="Include" />
             <e p="ScoreWinCounter.cs" t="Include" />
             <e p="SpaceshipControls.cs" t="Include" />
+            <e p="Target.cs" t="Include" />
+            <e p="TargetSpawner.cs" t="Include" />
             <e p="TimeFormatter.cs" t="Include" />
             <e p="UserInterface.cs" t="Include" />
           </e>
           <e p="Condition B" t="Include">
             <e p="Coin.cs" t="Include" />
+            <e p="CoinCue.cs" t="Include" />
             <e p="CoinTextUpdater.cs" t="Include" />
             <e p="CollectCoinData.cs" t="Include" />
             <e p="CollectRoomData.cs" t="Include" />
@@ -257,7 +258,6 @@
             <e p="PointOfInterestSelectionProcessB.cs" t="Include" />
             <e p="Rotation.cs" t="Include" />
             <e p="SmoothRotation.cs" t="Include" />
-            <e p="StandardCoinCue.cs" t="Include" />
             <e p="StartAndFinishGame.cs" t="Include" />
           </e>
           <e p="Menu" t="Include">
