@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 852585414}
-  GameTimeMinutes: 2
+  GameTimeMinutes: 1.5
   GameHasTime: 1
   Score: 0
   RemainingGameTime: 0

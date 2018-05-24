@@ -1,0 +1,9 @@
+Time,Name,Id,Action
+0,Gaze Guidance,-7846,ModulationIntensity
+0,Gaze Guidance,-7846,ModulationIntensity
+0,Wall_5_6,18884,GameEnded
+0.9235854,Wall_5_6,18884,GameStarted
+2.3,Kitchen,16776,RoomEnter
+2.96494,Coin K.1,18598,Attended
+4.240077,Coin K.1,18598,Unattended
+4.372438,Coin K.1,18598,Collected
